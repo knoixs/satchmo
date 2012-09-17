@@ -15,14 +15,14 @@ MANAGERS = ADMINS
 
 # Local time zone for this installation. All choices can be found here:
 # http://www.postgresql.org/docs/current/static/datetime-keywords.html#DATETIME-TIMEZONE-SET-TABLE
-TIME_ZONE = 'US/Pacific'
+TIME_ZONE = 'Europe/Berlin'
 
 # Language code for this installation. All choices can be found here:
 # http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
 # http://blogs.law.harvard.edu/tech/stories/storyReader$15
 LANGUAGE_CODE = 'en-us'
 
-SITE_ID = 1
+SITE_ID = 2
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
@@ -84,8 +84,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 ROOT_URLCONF = 'store.urls'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(DIRNAME, 'templates'),
 )
@@ -139,7 +137,7 @@ INSTALLED_APPS = (
     #'typogrify',            # dependency on  http://code.google.com/p/typogrify/
     #'debug_toolbar',
     'app_plugins',
-    'store.localsite',
+    #'store.localsite',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -154,12 +152,12 @@ AUTHENTICATION_BACKENDS = (
 #### Satchmo unique variables ####
 #from django.conf.urls.defaults import patterns, include
 SATCHMO_SETTINGS = {
-    'SHOP_BASE' : '',
-    'MULTISHOP' : False,
+    'SHOP_BASE': '',
+    'MULTISHOP': False,
     #'SHOP_URLS' : patterns('satchmo_store.shop.views',)
 }
 
-SKIP_SOUTH_TESTS=True
+SKIP_SOUTH_TESTS = True
 
 # Load the local settings
 from local_settings import *
