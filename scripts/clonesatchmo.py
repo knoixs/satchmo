@@ -21,27 +21,28 @@ import sys
 from random import choice
 import re
 from optparse import OptionParser
-import string
 
 __VERSION__ = "0.3"
+
 
 def parse_command_line():
     usage = 'usage: %prog [options]'
     version = 'Version: %prog ' + '%s' % __VERSION__
     parser = OptionParser(usage=usage, version=version)
 
-    parser.add_option('-s', '--site', action='store',type='string', default='store',
+    parser.add_option('-s', '--site', action='store', type='string', default='store',
                      dest='site_name', help="Top level directory name for the site. [default: %default]")
 
-    parser.add_option('-l', '--localsite', action='store',type='string', default='localsite',
+    parser.add_option('-l', '--localsite', action='store', type='string', default='localsite',
                      dest='local_site_name', help="Name for the local application stub. [default: %default]")
 
-    parser.add_option('--skel', action='store', type='string', default = None,
+    parser.add_option('--skel', action='store', type='string', default=None,
                       dest='skeleton_dir', help="Path to the skeleton directory")
 
     opts, args = parser.parse_args()
 
     return opts, args
+
 
 def check_skeleton_dir(skel_dir):
     """
@@ -58,6 +59,7 @@ def check_skeleton_dir(skel_dir):
         return (False, "Invalid skeleton directory. Path should be /path/to/satchmo/projects/skeleton")
     return (True, "")
 
+
 def create_satchmo_site(site_name, skeleton_dir):
     """
     If we are passed a skeleton_dir, use it
@@ -69,13 +71,14 @@ def create_satchmo_site(site_name, skeleton_dir):
         src_dir = os.path.abspath(skeleton_dir)
     else:
         clone_dir = os.path.dirname(__file__)
-        src_dir = os.path.abspath(os.path.join(clone_dir,'../satchmo/projects/skeleton'))
-        result,msg = check_skeleton_dir(src_dir)
+        src_dir = os.path.abspath(os.path.join(clone_dir, '../satchmo/projects/skeleton'))
+        result, msg = check_skeleton_dir(src_dir)
         if not result:
             return (False, msg)
-    dest_dir = os.path.join('./',site_name)
+    dest_dir = os.path.join('./', site_name)
     shutil.copytree(src_dir, dest_dir)
     return (True, "")
+
 
 def customize_files(site_name, local_site_name):
     """
@@ -86,7 +89,7 @@ def customize_files(site_name, local_site_name):
     Set the DJANGO_SETTINGS_MODULE
     We also need to change the directory name to local_site_name
     """
-    dest_dir = os.path.join('./',site_name)
+    dest_dir = os.path.join('./', site_name)
     # Create a random SECRET_KEY hash, and put it in the main settings.
     main_settings_file = os.path.join(dest_dir, 'settings.py')
     settings_contents = open(main_settings_file, 'r').read()
@@ -95,22 +98,24 @@ def customize_files(site_name, local_site_name):
     settings_contents = re.sub(r"(?<=SECRET_KEY = ')'", secret_key + "'", settings_contents)
     # Configure the other variables that need to be modified
     root_urlconf = site_name + '.urls'
-    settings_contents = re.sub(r"(?<=ROOT_URLCONF = ')'", root_urlconf + "'",settings_contents)
+    settings_contents = re.sub(r"(?<=ROOT_URLCONF = ')'", root_urlconf + "'", settings_contents)
     django_settings = site_name + '.settings'
-    settings_contents = re.sub(r"(?<=DJANGO_PROJECT = ')'", site_name + "'",settings_contents)
-    settings_contents = re.sub(r"(?<=DJANGO_SETTINGS_MODULE = ')'", django_settings + "'",settings_contents)
-    local_app = "%s.%s" % (site_name,local_site_name)
-    settings_contents = settings_contents.replace("simple.localsite",local_app)
+    settings_contents = re.sub(r"(?<=DJANGO_PROJECT = ')'", site_name + "'", settings_contents)
+    settings_contents = re.sub(r"(?<=DJANGO_SETTINGS_MODULE = ')'", django_settings + "'", settings_contents)
+    local_app = "%s.%s" % (site_name, local_site_name)
+    settings_contents = settings_contents.replace("simple.localsite", local_app)
     fp.write(settings_contents)
     fp.close()
     # rename the local_app directory
-    os.rename(os.path.join(dest_dir,'localsite'), os.path.join(dest_dir,local_site_name))
+    os.rename(os.path.join(dest_dir, 'localsite'), os.path.join(dest_dir, local_site_name))
+
 
 def setup_satchmo(site_name, local_site_name):
     """
     Do the final configs for satchmo
     """
-    variables = {'site_name':site_name, 'python':sys.executable}
+    variables = {'site_name': site_name,
+                 'python': sys.executable}
     errors = []
     copy_check = os.system('cd %(site_name)s && %(python)s manage.py satchmo_copy_static' % variables)
     if copy_check != 0:
@@ -134,7 +139,7 @@ if __name__ == '__main__':
     opts, args = parse_command_line()
 
     errors = []
-    dest_dir = os.path.join('./',opts.site_name)
+    dest_dir = os.path.join('./', opts.site_name)
 
     result, msg = check_skeleton_dir(opts.skeleton_dir)
     if not result:
