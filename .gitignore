@@ -28,4 +28,6 @@ build
 .*.sw?
 *.egg
 .hg
-
+local_settings.py
+simple.db
+*.log
