@@ -1,0 +1,76 @@
+#navbar{
+    line-height:3em;
+}
+
+#navbar ul {
+    margin: 1em 0 0 1em;
+    padding: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+}
+
+.fl {
+    float: left;
+}
+
+.frmr{
+    float: right;
+    margin-right:20px;
+}
+
+.main-footer {
+    background-color:#000;
+    color:#fff;
+    padding-bottom:1em;
+    padding-top:1em;
+}
+
+.main-footer section {
+    border-right: 1px solid #595959;
+    height: 185px;
+}
+
+.main-footer .account_information {
+    color: #aeaeae;
+    padding-left: 28px;
+    width: 173px;
+}
+
+.main-footer .copyright {
+    border: 0 none;
+    padding-left: 28px;
+    width: 200px;
+}
+
+.main-footer .quicklinks {
+    color: #fff;
+    padding-right: 28px;
+    width: 173px;
+}
+
+.main-footer .tbr {
+    color: #fff;
+    padding-left: 28px;
+    width: 173px;
+}
+
+.navbar img {
+    height:24px;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
