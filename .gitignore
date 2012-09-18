@@ -1,4 +1,4 @@
-satchmo/static/images/productimage-picture-*_*.jpg
+store/static/images/productimage-picture-*.jp[e]g
 brand*translation-picture-*.jpg
 bannerimage-*jpg
 syntax: glob
@@ -31,3 +31,4 @@ build
 local_settings.py
 simple.db
 *.log
+store/static/cache/*
