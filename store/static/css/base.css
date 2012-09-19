@@ -9,6 +9,14 @@ footer ul {
     padding: 0;
 }
 
+img.flag {
+    height: 10px!important;
+}
+
+ul.language_settings > li > a{
+    padding:10px 5px!important;
+}
+
 #navbar{
     line-height:3em;
 }

@@ -81,6 +81,12 @@
                         {% url satchmo_contact as contact_url %}
                         {% if contact_url %}<li><a href="{{ contact_url }}">{% trans "Contact Us" %}</a></li>{% endif %}
                     </ul>
+                    <ul class="nav language_settings">
+                        <li><a href="/set_language?language=de">
+                            <img class="flag" src="/static/images/ico/de.png"></a></li>
+                        <li><a href="/set_language?language=en">
+                            <img class="flag" src="/static/images/ico/en.png"></a></li>
+                    </ul>
                 </div><!--/.nav-collapse -->
             </div>
         </div>

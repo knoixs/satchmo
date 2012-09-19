@@ -1,5 +1,5 @@
-from django.conf.urls.defaults import *
+from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('',
-    (r'^setlang/$', 'django.views.i18n.set_language', {}, 'satchmo_set_language'),
+    url(r'^set_language/$', 'util.i18n.set_language', name='set_language'),
 )
