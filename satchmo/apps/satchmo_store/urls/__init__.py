@@ -27,10 +27,10 @@ earlier in your custom urls.py file, and you want the shop at "store/"::
 from base import urlpatterns as basepatterns
 from default import urlpatterns as defaultpatterns
 from django.conf.urls.defaults import patterns, include
-from satchmo_utils import urlhelper
 
+from l10n.urls import urlpatterns as l10npatterns
 from satchmo_store.shop import get_satchmo_setting
-from satchmo_store.shop.views.sitemaps import sitemaps
+from satchmo_utils import urlhelper
 
 shop_base = get_satchmo_setting('SHOP_BASE')
 if shop_base in ('', '/'):
@@ -41,6 +41,6 @@ else:
         (shopregex, include('satchmo_store.shop.urls')),
     )
 
-urlpatterns = basepatterns + shoppatterns + defaultpatterns
+urlpatterns = basepatterns + shoppatterns + defaultpatterns + l10npatterns
 
 urlhelper.remove_duplicate_urls(urlpatterns, [])
