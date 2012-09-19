@@ -65,7 +65,7 @@ MIDDLEWARE_CLASSES = (
     "threaded_multihost.middleware.ThreadLocalMiddleware",
     "satchmo_store.shop.SSLMiddleware.SSLRedirect",
     #"satchmo_ext.recentlist.middleware.RecentProductMiddleware",
-    #'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 #this is used to add additional config variables to each request
@@ -135,7 +135,7 @@ INSTALLED_APPS = (
     #'shipping.modules.tieredquantity',
     #'satchmo_ext.tieredpricing',
     #'typogrify',            # dependency on  http://code.google.com/p/typogrify/
-    #'debug_toolbar',
+    'debug_toolbar',
     'app_plugins',
     #'store.localsite',
 )
@@ -145,9 +145,9 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-#DEBUG_TOOLBAR_CONFIG = {
-#    'INTERCEPT_REDIRECTS' : False,
-#}
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+}
 
 #### Satchmo unique variables ####
 #from django.conf.urls.defaults import patterns, include
