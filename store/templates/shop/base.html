@@ -23,7 +23,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="shortcut icon" href="{{ STATIC_URL }}assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="{{ STATIC_URL }}images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href=".{{ STATIC_URL }}assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-72-precomposed.png">
@@ -45,7 +45,20 @@
                 <a class="brand" href="/"><img src="{{ STATIC_URL }}images/potstar-logo-white.png" /></a>
                 <div class="nav-collapse collapse">
                     <p class="navbar-text pull-right">
-                        Logged in as <a href="#" class="navbar-link">Username</a>
+                        {% if user.is_staff %}
+                            <a href="{% url admin:index %}" class="navbar-link" target="blank">{% trans "Admin" %}</a>
+                        {% endif %}
+                        {% if user.is_authenticated %}
+                            Logged in as
+                            {% if user.is_staff %} Admin {% else %} {{ user.get_full_name }} {% endif %}&#9733;
+                            {% url satchmo_account_info as accounturl %}
+                            {% if accounturl %}
+                                <a href="{{ accounturl }}" class="navbar-link">{% trans "Account Details" %}</a> &#9733;
+                            {% endif %}
+                            <a href="{{ logout_url }}?next={{request.path}}" class="navbar-link">{% trans "Log out" %}</a>
+                        {% else %}
+                            <a href="{{ login_url }}?next={{request.path}}" class="navbar-link">{% trans "Log in" %}</a>
+                        {% endif %}
                     </p>
                     <p class="navbar-text frmr">
                         {% url satchmo_cart as carturl %}
@@ -63,7 +76,7 @@
                         {% endif %}
                     </p>
                     <ul class="nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="active"><a href="/">Home</a></li>
                         <li><a href="#about">About</a></li>
                         {% url satchmo_contact as contact_url %}
                         {% if contact_url %}<li><a href="{{ contact_url }}">{% trans "Contact Us" %}</a></li>{% endif %}
@@ -129,6 +142,7 @@
 
         </div>
     </div><!--/.fluid-container-->
+
     {% block footer %}
     <footer>
     <div class="main-footer">
@@ -146,17 +160,13 @@
             {% plugin_point "sidebar_links" %}
             </section>
 
-            <section class="account_information fl">
-            {% if user.is_staff %}
-            <a href="{% url admin:index %}" target="blank">{% trans "Admin" %}</a><br/>
-            {% endif %}
-            {% if user.is_authenticated %}
-            {% url satchmo_account_info as accounturl %}
-            {% if accounturl %}<a href="{{ accounturl }}" target="blank">{% trans "Account Details" %}</a><br/>{% endif %}
-            <a href="{{ logout_url }}?next={{request.path}}">{% trans "Log out" %}</a><br/>
-            {% else %}
-            <a href="{{ login_url }}?next={{request.path}}">{% trans "Log in" %}</a><br/>
-            {% endif %}
+            <section class="misc fl">
+            <ul>
+                <li>Help</li>
+                <li>Community</li>
+                <li>History</li>
+                <li>Social Life</li>
+            <ul>
             </section>
 
             <section class="tbr fl">
@@ -170,11 +180,19 @@
             </section>
 
             <section class="copyright fl">
-                &copy; potstar -<br/>
-                satchmo<br/>
-                django<br/>
-                jquery<br/>
-                bootstrap<br/>
+            <p>
+                &copy; potstar 2012 - 2055
+            </p>
+            <p>
+                potstar is powered by:
+            </p>
+            <ul>
+                <li><a href="http://www.satchmoproject.com/">Satchmo</a></li>
+                <li><a href="https://www.djangoproject.com/">django</a></li>
+                <li><a href="http://jquery.com/">jQuery</a></li>
+                <li><a href="http://twitter.github.com/bootstrap/">Bootstrap</a></li>
+                <li><a href="http://www.vim.org/">Vim</a></li>
+            </ul>
             </section>
        </div>
     </div>

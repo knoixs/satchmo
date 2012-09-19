@@ -1,10 +1,25 @@
+/*
+ * - elements
+ * - ids
+ * - classes
+ */
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 #navbar{
     line-height:3em;
 }
 
 #navbar ul {
-    margin: 1em 0 0 1em;
+    margin: 2em 0 0 1em;
     padding: 0;
+}
+
+.centered {
+    margin: 0 auto;
 }
 
 .clearfix:after {
@@ -27,7 +42,7 @@
 
 .frmr{
     float: right;
-    margin-right:20px;
+    margin-right:50px;
 }
 
 .main-footer {
@@ -38,11 +53,11 @@
 }
 
 .main-footer section {
-    border-right: 1px solid #595959;
+    border-right: 1px dotted #595959;
     height: 185px;
 }
 
-.main-footer .account_information {
+.main-footer .misc {
     color: #aeaeae;
     padding-left: 28px;
     width: 173px;
