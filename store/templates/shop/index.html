@@ -3,26 +3,35 @@
 {% load thumbnail %}
 {% load satchmo_util %}
 
+{% block extra-css %}
+    <link href="{{ STATIC_URL }}css/nivo-slider.css" rel="stylesheet">
+{% endblock %}
 {% block navbar %}
    <li class="first">{% trans "Home" %}</li>
 {% endblock %}
 
 {% block content %}
-ASHOLe
-    {% trans "Welcome to the shop." %}
-    <div id="wrapper">
-        <div class="slider-wrapper theme-default">
-            <div class="ribbon"></div>
-            <div id="slider" class="nivoSlider">
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-1.jpg" alt="potstar-1"/>
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-1.jpg" alt="potstar-1"/>
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-1.jpg" alt="potstar-1"/>
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-1.jpg" alt="potstar-1"/>
+    <div id="myCarousel" class="span12 carousel slide">
+        <div class="carousel-inner">
+            <div class="active item">
                 <img src="{{ STATIC_URL }}images/products/gallery/potstar-1.jpg" alt="potstar-1"/>
             </div>
+            <div class="item">
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-2.jpg" alt="potstar-1"/>
+            </div>
+            <div class="item">
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-3.jpg" alt="potstar-1"/>
+            </div>
+            <div class="item">
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-4.jpg" alt="potstar-1"/>
+            </div>
+            <div class="item">
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-5.jpg" alt="potstar-1"/>
+            </div>
         </div>
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
-
     {% if all_products_list %}
         <h4>{% trans "Featured Items" %}</h4>
         {% for product in all_products_list %}
@@ -74,9 +83,10 @@ ASHOLe
 {% endblock %}
 
 {% block extra-js %}
-assi
-    <script src="js/jquery.nivo.slider.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.nivo.slider.js"></script>
     <script type="text/javascript">
-        $(function(){$('#slider').nivoSlider();});
+    $('.carousel').carousel({
+        interval: 7000,
+    });
     </script>
 {% endblock %}

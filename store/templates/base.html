@@ -1,0 +1,267 @@
+{% load i18n satchmo_category satchmo_google satchmo_util satchmo_currency satchmo_discounts app_plugins normalize_decimal %}
+{% block doctype %}
+<!DOCTYPE html>
+<html lang="en">
+{% endblock %}
+<head>
+    {% plugin_point "page_head" %}
+    <meta charset="utf-8">
+    <title>{% block title %}{{ shop_name }}{% if pagetitle %}: {{ pagetitle }}{% endif %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="author" content="Thomas Rega">
+
+    {% block stylesheet %}
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
+    {% endblock %}
+    <link href="{{ STATIC_URL }}assets/css/bootstrap.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/base.css" rel="stylesheet">
+    {% block extra-css %}{% endblock %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-57-precomposed.png">
+    {% block extra-head %}{% endblock %}
+</head>
+{% block body %}
+<body{% if bodyid %} id="{{ bodyid }}"{% endif %}{% if bodyclass %} class="{{ bodyclass }}"{% endif %}>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    {% plugin_point "page_top" %}
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/"><img src="{{ STATIC_URL }}images/potstar-logo-white.png" /></a>
+                <div class="nav-collapse collapse">
+                    <p class="navbar-text pull-right">
+                        {% if user.is_staff %}
+                            <a href="{% url admin:index %}" class="navbar-link" target="blank">{% trans "Admin" %}</a>
+                        {% endif %}
+                        {% if user.is_authenticated %}
+                            Logged in as
+                            {% if user.is_staff %} Admin {% else %} {{ user.get_full_name }} {% endif %}&#9733;
+                            {% url satchmo_account_info as accounturl %}
+                            {% if accounturl %}
+                                <a href="{{ accounturl }}" class="navbar-link">{% trans "Account Details" %}</a> &#9733;
+                            {% endif %}
+                            <a href="{{ logout_url }}?next={{request.path}}" class="navbar-link">{% trans "Log out" %}</a>
+                        {% else %}
+                            <a href="{{ login_url }}?next={{request.path}}" class="navbar-link">{% trans "Log in" %}</a>
+                        {% endif %}
+                    </p>
+                    <p class="navbar-text frmr">
+                        {% url satchmo_cart as carturl %}
+                        {% if carturl %}<a href="{{ carturl }}">{% trans "Cart" %}</a>{% endif %}
+
+                        {% if not cart.is_empty %}
+                            ({{ cart_count|normalize_decimal }} -
+                            {% if sale %}
+                                {{ cart|discount_cart_total:sale|currency }}
+                            {% else %}
+                                {{cart.total|currency}}
+                            {% endif%})
+                            {% url satchmo_checkout-step1 as checkouturl %}
+                            {% if checkouturl %}<a href="{{ checkouturl }}">{% trans "Check out" %}</a>{% endif %}
+                        {% endif %}
+                    </p>
+                    <ul class="nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        {% url satchmo_contact as contact_url %}
+                        {% if contact_url %}<li><a href="{{ contact_url }}">{% trans "Contact Us" %}</a></li>{% endif %}
+                    </ul>
+                    <ul class="nav language_settings">
+                        <li><a href="/set_language?language=de">
+                            <img class="flag" src="/static/images/ico/de.png"></a></li>
+                        <li><a href="/set_language?language=en">
+                            <img class="flag" src="/static/images/ico/en.png"></a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <!-- breadcrumbs -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="navbar">
+	                <ul>
+                        {% block navbar %}Breadcrumbs here{% endblock %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar left -->
+        <div class="row-fluid">
+		    {% block sidebar-secondary %}
+            <div class="span2">
+                {% comment %}
+                later ...
+                <div>
+			        {% satchmo_search_form %}
+		        </div>
+                {% endcomment %}
+			    {% block sidebar %}
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">{% trans "Shop Categories" %}</li>
+			            {% block sidebar-categories %}
+                        {% comment %}
+                        mark the current as active ...
+                        <li class="active"><a href="#">Link</a></li>
+                        {% endcomment %}
+                        {% if category.id %}
+                            {% category_tree category.id %}
+                        {% else %}
+                            {% if product.get_category %}
+                                {% category_tree product.get_category.id %}
+                            {% else %}
+                                {% category_tree %}
+                            {% endif %}
+                        {% endif %}
+                        {% endblock sidebar-categories %}
+                    </ul>
+                </div><!--/.well -->
+                {% endblock sidebar %}
+                {% block sidebar-secondary-bottom %}
+                    {% plugin_point "sidebar_secondary_bottom" %}
+                {% endblock %}
+            </div><!--/span-->
+		    {% endblock sidebar-secondary %}
+
+
+            <div class="span9">
+            {% block content %}{% endblock %}
+	        </div>
+
+        </div>
+    </div><!--/.fluid-container-->
+
+    {% block footer %}
+    <footer>
+    <div class="main-footer">
+        <div class="container clearfix">
+
+            <section class="quicklinks fl">
+            {% url satchmo_product_recently_added as recenturl %}
+            {% if recenturl %}<a href="{{ recenturl }}">{% trans "Recently Added" %}</a>{% endif %}
+            {% url satchmo_product_best_selling as popularurl %}
+            {% if popularurl %}<br/><a href="{{ popularurl }}">{% trans "Best Sellers" %}</a><br/>{% endif %}
+            {% url satchmo_category_index as category_index %}
+            {% if category_index %} <a href="{{ category_index }}">{% trans "Category Index" %}</a><br /> {% endif %}
+            {% url satchmo_quick_order as quick_order %}
+            {% if quick_order %}<a href="{{ quick_order }}">{% trans "Quick Order" %}</a> {% endif %}
+            {% plugin_point "sidebar_links" %}
+            </section>
+
+            <section class="misc fl">
+            <ul>
+                <li>Help</li>
+                <li>Community</li>
+                <li>History</li>
+                <li>Social Life</li>
+            <ul>
+            </section>
+
+            <section class="copyright fl">
+            <p>
+                &copy; potstar 2012 - 2055
+            </p>
+            <img class="logo" src="{{ STATIC_URL }}images/ico/potstar-logo-white-on-black.jpg" />
+            <p>
+                potstar is powered by:
+            </p>
+            <ul>
+                <li><a href="http://www.satchmoproject.com/" target="_blank">Satchmo</a></li>
+                <li><a href="https://www.djangoproject.com/" target="_blank">django</a></li>
+                <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+                <li><a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a></li>
+                <li><a href="http://www.vim.org/" target="_blank">Vim</a></li>
+            </ul>
+            </section>
+
+            <section class="social_networks fl">
+            <div class="fb-like"
+                 data-href="http://www.facebook.com/pages/Potstar/412725818794376"
+                 data-send="false"
+                 data-width="450"
+                 data-show-faces="true"
+                 data-colorscheme="dark"
+                 data-font="arial">
+            </div>
+            <div class="g-plusone"
+                 data-annotation="inline"
+                 data-width="300"
+                 data-href="http://www.potstar.de">
+            </div>
+            <div class="tweet">
+            <a href="https://twitter.com/share"
+               class="twitter-share-button"
+               data-lang="en"
+               data-url="http://www.potstar.de"
+               data-text="Beautiful solar powered flowerpots from Berlin - Check this out:">Tweet</a>
+            </div>
+            {% plugin_point "shop_sidebar_actions" %}
+            {% block sidebar-primary-bottom %}
+            {% plugin_point "shop_sidebar_primary" %}
+            {% endblock %}
+            </section>
+        </div>
+    </div>
+    </footer>
+	{% endblock %}
+
+	{% block page-close %}
+    {% block google-tracker %}
+    {% if shop.options.GOOGLE.ANALYTICS.value %}
+        {% show_tracker is_secure %}
+    {% endif %}
+    {% endblock %}
+	{% endblock %}
+
+    <script src="{{ STATIC_URL }}assets/js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/bootstrap-transition.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/bootstrap-alert.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/bootstrap-modal.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/bootstrap-dropdown.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/bootstrap-scrollspy.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/bootstrap-tab.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/bootstrap-tooltip.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/bootstrap-popover.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/bootstrap-button.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/bootstrap-collapse.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/bootstrap-carousel.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/bootstrap-typeahead.js"></script>
+    <script src="https://apis.google.com/js/plusone.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+                              if(!d.getElementById(id)){js=d.createElement(s);
+                                  js.id=id;js.src="https://platform.twitter.com/widgets.js";
+                                  fjs.parentNode.insertBefore(js,fjs);}
+                              }(document,"script","twitter-wjs");
+    </script>
+    {% block extra-js %}
+    {% endblock %}
+</body>
+{% endblock %}
+</html>
