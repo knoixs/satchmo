@@ -3,6 +3,11 @@
  * - ids
  * - classes
  */
+footer img.logo {
+    margin-left: 30px;
+    width: 80px;
+}
+
 footer ul {
     list-style-type: none;
     margin: 0;
@@ -22,7 +27,7 @@ ul.language_settings > li > a{
 }
 
 #navbar ul {
-    margin: 2em 0 0 1em;
+    margin: 4em 0 0 1em;
     padding: 0;
 }
 
@@ -56,13 +61,14 @@ ul.language_settings > li > a{
 .main-footer {
     background-color:#000;
     color:#fff;
-    padding-bottom:1em;
+    display: block;
+    padding-bottom:2em;
     padding-top:1em;
 }
 
 .main-footer section {
-    border-right: 1px dotted #595959;
-    height: 185px;
+    border-left: 1px dotted #595959;
+    display: block;
 }
 
 .main-footer .misc {
@@ -72,21 +78,21 @@ ul.language_settings > li > a{
 }
 
 .main-footer .copyright {
-    border: 0 none;
     padding-left: 28px;
     width: 200px;
 }
 
 .main-footer .quicklinks {
+    border: 0 none;
     color: #fff;
     padding-right: 28px;
     width: 173px;
 }
 
-.main-footer .tbr {
+.main-footer .social_networks {
     color: #fff;
     padding-left: 28px;
-    width: 173px;
+    width: 451px;
 }
 
 .navbar img {
@@ -97,3 +103,6 @@ ul.language_settings > li > a{
     padding: 9px 0;
 }
 
+.tweet {
+    margin-top: 5px;
+}
