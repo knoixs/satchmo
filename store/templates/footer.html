@@ -1,0 +1,48 @@
+{% load i18n satchmo_category satchmo_google satchmo_util satchmo_currency satchmo_discounts app_plugins normalize_decimal %}
+<footer>
+    <div class="main-footer">
+        <div class="container centered">
+
+            <section class="quicklinks fl">
+            {% url satchmo_product_recently_added as recenturl %}
+            {% if recenturl %}<a href="{{ recenturl }}">{% trans "Recently Added" %}</a>{% endif %}
+            {% url satchmo_product_best_selling as popularurl %}
+            {% if popularurl %}<br/><a href="{{ popularurl }}">{% trans "Best Sellers" %}</a><br/>{% endif %}
+            {% url satchmo_category_index as category_index %}
+            {% if category_index %} <a href="{{ category_index }}">{% trans "Category Index" %}</a><br /> {% endif %}
+            {% url satchmo_quick_order as quick_order %}
+            {% if quick_order %}<a href="{{ quick_order }}">{% trans "Quick Order" %}</a> {% endif %}
+            {% plugin_point "sidebar_links" %}
+            </section>
+
+            <section class="misc fl">
+            <ul>
+                <li>Help</li>
+                <li>Community</li>
+                <li>History</li>
+                <li>Social Life</li>
+            <ul>
+            </section>
+
+            <section class="copyright fl">
+            <p>
+                &copy; potstar 2012 - 2055
+            </p>
+            <p>
+                <img src="/static/images/ico/potstar-logo-white-on-black.jpg" />
+            </p>
+            <p>
+                potstar is powered by:
+            </p>
+            <ul>
+                <li><a href="http://www.satchmoproject.com/">Satchmo</a></li>
+                <li><a href="https://www.djangoproject.com/">django</a></li>
+                <li><a href="http://jquery.com/">jQuery</a></li>
+                <li><a href="http://twitter.github.com/bootstrap/">Bootstrap</a></li>
+                <li><a href="http://www.vim.org/">Vim</a></li>
+            </ul>
+            </section>
+        </div>
+    </div>
+</footer>
+

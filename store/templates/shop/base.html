@@ -24,10 +24,14 @@
     <![endif]-->
 
     <link rel="shortcut icon" href="{{ STATIC_URL }}images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href=".{{ STATIC_URL }}assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+     href="{{ STATIC_URL }}assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+     href="{{ STATIC_URL }}assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+     href="{{ STATIC_URL }}assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed"
+     href="{{ STATIC_URL }}assets/ico/apple-touch-icon-57-precomposed.png">
     {% block extra-head %}{% endblock %}
 </head>
 {% block body %}
@@ -41,8 +45,6 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-    {% plugin_point "page_top" %}
-
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container-fluid">
@@ -55,18 +57,22 @@
                 <div class="nav-collapse collapse">
                     <p class="navbar-text pull-right">
                         {% if user.is_staff %}
-                            <a href="{% url admin:index %}" class="navbar-link" target="blank">{% trans "Admin" %}</a>
+                        <a href="{% url admin:index %}" class="navbar-link" target="blank">
+                            {% trans "Admin" %}</a>
                         {% endif %}
                         {% if user.is_authenticated %}
                             Logged in as
                             {% if user.is_staff %} Admin {% else %} {{ user.get_full_name }} {% endif %}&#9733;
                             {% url satchmo_account_info as accounturl %}
                             {% if accounturl %}
-                                <a href="{{ accounturl }}" class="navbar-link">{% trans "Account Details" %}</a> &#9733;
+                            <a href="{{ accounturl }}" class="navbar-link">{% trans "Account Details" %}
+                            </a> &#9733;
                             {% endif %}
-                            <a href="{{ logout_url }}?next={{request.path}}" class="navbar-link">{% trans "Log out" %}</a>
+                            <a href="{{ logout_url }}?next={{request.path}}" class="navbar-link">
+                                {% trans "Log out" %}</a>
                         {% else %}
-                            <a href="{{ login_url }}?next={{request.path}}" class="navbar-link">{% trans "Log in" %}</a>
+                        <a href="{{ login_url }}?next={{request.path}}" class="navbar-link">
+                            {% trans "Log in" %}</a>
                         {% endif %}
                     </p>
                     <p class="navbar-text frmr">
@@ -151,85 +157,19 @@
 		    {% endblock sidebar-secondary %}
 
 
-            <div class="span9">
+            <div class="span7 content">
             {% block content %}{% endblock %}
 	        </div>
 
+            <div class="span2">
+            {% block right_sidebar %}
+                {% include "shop/right.html" %}
+            {% endblock %}
+	        </div>
         </div>
     </div><!--/.fluid-container-->
 
-    {% block footer %}
-    <footer>
-    <div class="main-footer">
-        <div class="container clearfix">
-
-            <section class="quicklinks fl">
-            {% url satchmo_product_recently_added as recenturl %}
-            {% if recenturl %}<a href="{{ recenturl }}">{% trans "Recently Added" %}</a>{% endif %}
-            {% url satchmo_product_best_selling as popularurl %}
-            {% if popularurl %}<br/><a href="{{ popularurl }}">{% trans "Best Sellers" %}</a><br/>{% endif %}
-            {% url satchmo_category_index as category_index %}
-            {% if category_index %} <a href="{{ category_index }}">{% trans "Category Index" %}</a><br /> {% endif %}
-            {% url satchmo_quick_order as quick_order %}
-            {% if quick_order %}<a href="{{ quick_order }}">{% trans "Quick Order" %}</a> {% endif %}
-            {% plugin_point "sidebar_links" %}
-            </section>
-
-            <section class="misc fl">
-            <ul>
-                <li>Help</li>
-                <li>Community</li>
-                <li>History</li>
-                <li>Social Life</li>
-            <ul>
-            </section>
-
-            <section class="copyright fl">
-            <p>
-                &copy; potstar 2012 - 2055
-            </p>
-            <p>
-                potstar is powered by:
-            </p>
-            <ul>
-                <li><a href="http://www.satchmoproject.com/">Satchmo</a></li>
-                <li><a href="https://www.djangoproject.com/">django</a></li>
-                <li><a href="http://jquery.com/">jQuery</a></li>
-                <li><a href="http://twitter.github.com/bootstrap/">Bootstrap</a></li>
-                <li><a href="http://www.vim.org/">Vim</a></li>
-            </ul>
-            </section>
-
-            <section class="social_networks fl">
-            <div class="fb-like"
-                 data-href="http://www.facebook.com/pages/Potstar/412725818794376"
-                 data-send="false"
-                 data-width="450"
-                 data-show-faces="true"
-                 data-colorscheme="dark"
-                 data-font="arial">
-            </div>
-            <div class="g-plusone"
-                 data-annotation="inline"
-                 data-width="300"
-                 data-href="http://www.potstar.de">
-            </div>
-            <div class="tweet">
-            <a href="https://twitter.com/share"
-               class="twitter-share-button"
-               data-lang="en"
-               data-url="http://www.potstar.de"
-               data-text="Beautiful solar powered flowerpots from Berlin - Check this out:">Tweet</a>
-            </div>
-            {% plugin_point "shop_sidebar_actions" %}
-            {% block sidebar-primary-bottom %}
-            {% plugin_point "shop_sidebar_primary" %}
-            {% endblock %}
-            </section>
-        </div>
-    </div>
-    </footer>
-	{% endblock %}
+    {% include "footer.html" %}
 
 	{% block page-close %}
     {% block google-tracker %}

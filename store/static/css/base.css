@@ -1,9 +1,4 @@
-/*
- * - elements
- * - ids
- * - classes
- */
-footer img.logo {
+footer img {
     margin-left: 30px;
     width: 80px;
 }
@@ -18,8 +13,16 @@ img.flag {
     height: 10px!important;
 }
 
+section.social_networks {
+    padding-top: 1em;
+}
+
 ul.language_settings > li > a{
     padding:10px 5px!important;
+}
+
+ul.nav li{
+    list-style: none;
 }
 
 #navbar{
@@ -45,7 +48,7 @@ ul.language_settings > li > a{
 }
 
 .container {
-    margin: 0 auto;
+    margin-left: 100px;
     position: relative;
 }
 
@@ -89,20 +92,11 @@ ul.language_settings > li > a{
     width: 173px;
 }
 
-.main-footer .social_networks {
-    color: #fff;
-    padding-left: 28px;
-    width: 451px;
-}
-
 .navbar img {
     height:24px;
 }
 
 .sidebar-nav {
+    margin-top: 1em;
     padding: 9px 0;
-}
-
-.tweet {
-    margin-top: 5px;
 }
