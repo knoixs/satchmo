@@ -34,3 +34,5 @@ simple.db
 store/static/cache/*
 *.mo
 tags
+store/static/images/products/*
+clear.sh
