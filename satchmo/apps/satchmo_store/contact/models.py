@@ -11,6 +11,7 @@ import logging
 
 log = logging.getLogger('contact.models')
 
+
 class ContactRole(models.Model):
     key = models.CharField(_('Key'), max_length=30, unique=True, primary_key=True)
     name = models.CharField(_('Name'), max_length=40)
@@ -36,6 +37,7 @@ class ContactOrganizationRole(models.Model):
 
     def __unicode__(self):
         return ugettext(self.name)
+
 
 class ContactInteractionType(models.Model):
     key = models.CharField(_('Key'), max_length=30, unique=True, primary_key=True)
@@ -64,6 +66,7 @@ class OrganizationManager(models.Manager):
 
         return org
 
+
 class Organization(models.Model):
     """
     An organization can be a company, government or any kind of group.
@@ -89,6 +92,7 @@ class Organization(models.Model):
         verbose_name = _("Organization")
         verbose_name_plural = _("Organizations")
 
+
 class ContactManager(models.Manager):
 
     def from_request(self, request, create=False):
@@ -109,7 +113,7 @@ class ContactManager(models.Manager):
         else:
             # Don't create a Contact if the user isn't authenticated.
             create = False
-            
+
         if request.session.get(CUSTOMER_ID):
             try:
                 contactBySession = Contact.objects.get(id=request.session[CUSTOMER_ID])
@@ -216,9 +220,9 @@ class Contact(models.Model):
         """ Return all non primary shipping and billing addresses
         """
         return AddressBook.objects.filter(contact=self.pk).exclude(is_default_shipping=True).exclude(is_default_billing=True)
-        
-    address_book_entries=property(_get_address_book_entries)
-        
+
+    address_book_entries = property(_get_address_book_entries)
+
     class Meta:
         verbose_name = _("Contact")
         verbose_name_plural = _("Contacts")
@@ -229,6 +233,7 @@ PHONE_CHOICES = (
     ('Fax', _('Fax')),
     ('Mobile', _('Mobile')),
 )
+
 
 class Interaction(models.Model):
     """
@@ -246,6 +251,7 @@ class Interaction(models.Model):
     class Meta:
         verbose_name = _("Interaction")
         verbose_name_plural = _("Interactions")
+
 
 class PhoneNumber(models.Model):
     """
@@ -281,6 +287,7 @@ class PhoneNumber(models.Model):
         verbose_name = _("Phone Number")
         verbose_name_plural = _("Phone Numbers")
 
+
 class AddressBook(models.Model):
     """
     Address information associated with a contact.
@@ -301,7 +308,7 @@ class AddressBook(models.Model):
         default=False)
 
     def __unicode__(self):
-       return u'%s - %s' % (self.contact.full_name, self.description)
+        return u'%s - %s' % (self.contact.full_name, self.description)
 
     def save(self, **kwargs):
         """
