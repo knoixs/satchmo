@@ -1,0 +1,1605 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-29 23:48+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: local_settings.py:23
+msgid "German"
+msgstr ""
+
+#: local_settings.py:24
+msgid "English"
+msgstr ""
+
+#: templates/404.html:5 templates/500.html:5
+#: templates/contact/address_form.html:9
+#: templates/contact/address_form_delete.html:6
+#: templates/contact/login_signup.html:9 templates/contact/profile_base.html:6
+#: templates/contact/update_form.html:5 templates/product/best_ratings.html:8
+#: templates/product/best_sellers.html:7 templates/product/category.html:13
+#: templates/product/category_index.html:7
+#: templates/product/minimum_order.html:5 templates/product/product.html:23
+#: templates/product/recently_added.html:7
+#: templates/product/admin/inventory_form.html:67
+#: templates/product/admin/product_export_form.html:51
+#: templates/product/admin/product_import_result.html:11
+#: templates/product/admin/variation_manager.html:6
+#: templates/product/admin/variation_manager_list.html:6
+#: templates/registration/account_info.html:5
+#: templates/registration/activate.html:6 templates/registration/login.html:5
+#: templates/registration/logout.html:5
+#: templates/registration/password_change_done.html:5
+#: templates/registration/password_change_form.html:5
+#: templates/registration/password_reset_complete.html:5
+#: templates/registration/password_reset_confirm.html:5
+#: templates/registration/password_reset_done.html:5
+#: templates/registration/password_reset_form.html:5
+#: templates/registration/registration_complete.html:6
+#: templates/registration/registration_form.html:5
+#: templates/registration/repeat_activation.html:5 templates/shop/404.html:5
+#: templates/shop/500.html:5 templates/shop/cart.html:11
+#: templates/shop/contact_form.html:5 templates/shop/contact_thanks.html:5
+#: templates/shop/download.html:5 templates/shop/index.html:10
+#: templates/shop/multiple_product_form.html:10
+#: templates/shop/order_history.html:8 templates/shop/order_tracking.html:6
+#: templates/shop/search.html:6
+msgid "Home"
+msgstr ""
+
+#: templates/404.html:10 templates/500.html:10 templates/shop/404.html:10
+#: templates/shop/500.html:10
+msgid "Error"
+msgstr ""
+
+#: templates/404.html:11 templates/shop/404.html:11
+msgid "Could not find the page you were looking for."
+msgstr ""
+
+#: templates/500.html:11 templates/shop/500.html:11
+msgid "There was an error with the store.  The admin has been notified."
+msgstr ""
+
+#: templates/base.html:61 templates/shop/base.html:61
+msgid "Admin"
+msgstr ""
+
+#: templates/base.html:68 templates/contact/profile_base.html:17
+#: templates/shop/base.html:68
+msgid "Account Details"
+msgstr "Konto Details"
+
+#: templates/base.html:72 templates/product/admin/inventory_form.html:64
+#: templates/product/admin/product_export_form.html:48
+#: templates/product/admin/product_import_result.html:8
+#: templates/shop/base.html:72
+msgid "Log out"
+msgstr "Abmelden"
+
+#: templates/base.html:75
+#: templates/registration/password_reset_complete.html:14
+#: templates/shop/base.html:75
+msgid "Log in"
+msgstr "Anmelden"
+
+#: templates/base.html:80 templates/product/minimum_order.html:6
+#: templates/shop/base.html:80 templates/shop/cart.html:12
+msgid "Cart"
+msgstr "Einkaufswagen"
+
+#: templates/base.html:90 templates/shop/base.html:90
+#: templates/shop/cart.html:73
+msgid "Check out"
+msgstr "Bestellen"
+
+#: templates/base.html:97 templates/shop/base.html:97
+#: templates/shop/contact_form.html:6 templates/shop/contact_thanks.html:6
+msgid "Contact Us"
+msgstr "Kontakt"
+
+#: templates/base.html:135 templates/shop/base.html:135
+msgid "Shop Categories"
+msgstr "Kategorien"
+
+#: templates/footer.html:8 templates/product/recently_added.html:8
+#: templates/product/recently_added.html:12
+msgid "Recently Added"
+msgstr ""
+
+#: templates/footer.html:10 templates/product/best_sellers.html:8
+msgid "Best Sellers"
+msgstr ""
+
+#: templates/footer.html:12 templates/product/category_index.html:8
+msgid "Category Index"
+msgstr ""
+
+#: templates/footer.html:14
+msgid "Quick Order"
+msgstr ""
+
+#: templates/admin/base_site.html:46 templates/admin/base_site.html.py:49
+#: templates/shop/admin/base_site.html:46
+#: templates/shop/admin/base_site.html:49
+msgid "Site Administration"
+msgstr ""
+
+#: templates/admin/index.html:27 templates/shop/admin/index.html:27
+msgid "(show)"
+msgstr ""
+
+#: templates/admin/index.html:28 templates/shop/admin/index.html:28
+msgid "(hide)"
+msgstr ""
+
+#: templates/admin/index.html:73 templates/shop/admin/index.html:73
+#, python-format
+msgid "Models available in the %(name)s application."
+msgstr ""
+
+#: templates/admin/index.html:74 templates/shop/admin/index.html:74
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#: templates/admin/index.html:84 templates/shop/admin/index.html:84
+msgid "Add"
+msgstr ""
+
+#: templates/admin/index.html:90 templates/shop/admin/index.html:90
+msgid "Change"
+msgstr ""
+
+#: templates/admin/index.html:100 templates/shop/admin/index.html:100
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: templates/admin/index.html:108 templates/shop/admin/index.html:108
+msgid "Recent Actions"
+msgstr ""
+
+#: templates/admin/index.html:110 templates/shop/admin/index.html:110
+msgid "My Actions"
+msgstr ""
+
+#: templates/admin/index.html:114 templates/shop/admin/index.html:114
+msgid "None available"
+msgstr ""
+
+#: templates/admin/index.html:127 templates/shop/admin/index.html:127
+msgid "Admin Tools"
+msgstr ""
+
+#: templates/admin/index.html:131 templates/shop/admin/index.html:131
+msgid "Edit Site Settings"
+msgstr ""
+
+#: templates/admin/index.html:134 templates/shop/admin/index.html:134
+msgid "Edit Inventory"
+msgstr ""
+
+#: templates/admin/index.html:137 templates/shop/admin/index.html:137
+msgid "Export Product Defs"
+msgstr ""
+
+#: templates/admin/index.html:140
+#: templates/product/admin/variation_manager.html:7
+#: templates/product/admin/variation_manager_list.html:7
+#: templates/shop/admin/index.html:140
+msgid "Product Variation Manager"
+msgstr ""
+
+#: templates/admin/index.html:143 templates/shop/admin/index.html:143
+msgid "Cache Status"
+msgstr ""
+
+#: templates/admin/configurable/configurableproduct/change_form.html:15
+#: templates/admin/configurable/productvariation/change_form.html:10
+#: templates/product/admin/inventory_form.html:113
+#: templates/product/admin/product_export_form.html:110
+msgid "Helpers"
+msgstr ""
+
+#: templates/admin/configurable/configurableproduct/change_form.html:16
+#: templates/admin/configurable/productvariation/change_form.html:11
+msgid "Variation Manager"
+msgstr ""
+
+#: templates/admin/configurable/configurableproduct/change_form.html:19
+#: templates/product/admin/variation_manager.html:237
+msgid "Variations"
+msgstr ""
+
+#: templates/admin/product/product/change_form.html:8
+msgid "Product Subtypes"
+msgstr ""
+
+#: templates/contact/_addressblock.html:14
+msgid "Not set"
+msgstr ""
+
+#: templates/contact/_contact_info_form_billing.html:5
+#: templates/shop/_order_details.html:22
+#: templates/shop/email/_order_detail.txt:11
+#: templates/shop/email/_order_detail_table.html:23
+msgid "Billing Information"
+msgstr ""
+
+#: templates/contact/_contact_info_form_billing.html:8
+msgid "Bill To"
+msgstr ""
+
+#: templates/contact/_contact_info_form_billing.html:9
+#: templates/contact/_contact_info_form_shipping.html:9
+msgid "If different from the first and last names above"
+msgstr ""
+
+#: templates/contact/_contact_info_form_billing.html:18
+#: templates/contact/_contact_info_form_billing.html:28
+#: templates/contact/_contact_info_form_shipping.html:12
+#: templates/contact/_contact_info_form_shipping.html:15
+#: templates/contact/address_form.html:41
+#: templates/contact/address_form.html:44
+msgid "Street"
+msgstr ""
+
+#: templates/contact/_contact_info_form_billing.html:36
+#: templates/contact/_contact_info_form_shipping.html:18
+#: templates/contact/address_form.html:47
+msgid "City"
+msgstr ""
+
+#: templates/contact/_contact_info_form_billing.html:54
+#: templates/contact/_contact_info_form_billing.html:64
+#: templates/contact/_contact_info_form_shipping.html:24
+#: templates/contact/_contact_info_form_shipping.html:30
+#: templates/contact/address_form.html:53
+#: templates/contact/address_form.html:59
+msgid "State/Province"
+msgstr ""
+
+#: templates/contact/_contact_info_form_billing.html:75
+#: templates/contact/_contact_info_form_shipping.html:36
+#: templates/contact/address_form.html:65
+msgid "Zipcode/Postcode"
+msgstr ""
+
+#: templates/contact/_contact_info_form_billing.html:86
+#: templates/contact/_contact_info_form_shipping.html:40
+#: templates/contact/address_form.html:69
+msgid "Country"
+msgstr ""
+
+#: templates/contact/_contact_info_form_shipping.html:4
+msgid "Shipping Information"
+msgstr ""
+
+#: templates/contact/_contact_info_form_shipping.html:6
+msgid "Shipping same as billing?"
+msgstr ""
+
+#: templates/contact/_contact_info_form_shipping.html:9
+msgid "Ship To"
+msgstr ""
+
+#: templates/contact/_login_form.html:10
+msgid "Existing members login"
+msgstr ""
+
+#: templates/contact/_login_form.html:21
+msgid "Email Address:"
+msgstr ""
+
+#: templates/contact/_login_form.html:30
+msgid "Password:"
+msgstr ""
+
+#: templates/contact/_login_form.html:39 templates/registration/login.html:23
+msgid "Login"
+msgstr ""
+
+#: templates/contact/address_form.html:10
+#: templates/contact/address_form_delete.html:7
+#: templates/contact/profile_base.html:7 templates/contact/update_form.html:6
+#: templates/registration/password_change_done.html:7
+#: templates/registration/password_change_form.html:7
+#: templates/shop/order_history.html:9 templates/shop/order_tracking.html:7
+msgid "Account"
+msgstr ""
+
+#: templates/contact/address_form.html:11
+#: templates/contact/address_form_delete.html:8
+msgid "Add Address"
+msgstr ""
+
+#: templates/contact/address_form.html:17
+msgid "Edit address book entry"
+msgstr ""
+
+#: templates/contact/address_form.html:19
+msgid "Add address to your address book"
+msgstr ""
+
+#: templates/contact/address_form.html:22
+#: templates/contact/update_form.html:17 templates/shop/contact_form.html:13
+#, fuzzy
+msgid "Please correct the following error:"
+msgstr ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#: templates/contact/address_form.html:32
+#: templates/contact/update_form.html:24
+msgid "You&apos;ll need to fill out at least the fields with a *"
+msgstr ""
+
+#: templates/contact/address_form.html:34
+msgid "Address Information"
+msgstr ""
+
+#: templates/contact/address_form.html:35
+msgid "Addressee Full Name"
+msgstr ""
+
+#: templates/contact/address_form.html:38
+msgid "Address Description"
+msgstr ""
+
+#: templates/contact/address_form.html:74
+#: templates/contact/update_form.html:110
+msgid "Update"
+msgstr ""
+
+#: templates/contact/address_form.html:76
+msgid "Save"
+msgstr ""
+
+#: templates/contact/address_form_delete.html:13
+msgid "Delete address book entry"
+msgstr ""
+
+#: templates/contact/address_form_delete.html:19
+#: templates/contact/profile_base.html:56
+msgid "Delete"
+msgstr ""
+
+#: templates/contact/login_signup.html:13
+#: templates/contact/login_signup_address.html:13
+msgid "Login, or sign up to the store"
+msgstr ""
+
+#: templates/contact/login_signup.html:23
+#: templates/contact/login_signup_address.html:23
+msgid "New Members, Create Your Account Below"
+msgstr ""
+
+#: templates/contact/login_signup.html:29
+#: templates/contact/login_signup_address.html:29
+#: templates/product/admin/inventory_form.html:75
+#: templates/product/admin/product_export_form.html:61
+#: templates/product/admin/product_export_form.html:72
+#: templates/product/admin/variation_manager.html:233
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/contact/login_signup.html:47
+#: templates/contact/login_signup_address.html:51
+msgid "Sign me up for Email Updates about new products and special offers!"
+msgstr ""
+
+#: templates/contact/login_signup.html:53
+#: templates/contact/login_signup_address.html:65
+msgid "Create"
+msgstr ""
+
+#: templates/contact/login_signup_address.html:47
+#: templates/contact/update_form.html:86
+msgid "Phone number"
+msgstr ""
+
+#: templates/contact/profile_base.html:15
+msgid "Profiles Settings"
+msgstr "Einstellungen"
+
+#: templates/contact/profile_base.html:19
+msgid "Change your address"
+msgstr "Adresse ändern"
+
+#: templates/contact/profile_base.html:21
+msgid "Add address book entry"
+msgstr "Adresse hinzufügen"
+
+#: templates/contact/profile_base.html:23
+#: templates/registration/account_info.html:15
+#: templates/registration/password_change_form.html:12
+msgid "Change your password"
+msgstr "Passwort ändern"
+
+#: templates/contact/profile_base.html:25 templates/shop/order_history.html:10
+#: templates/shop/order_history.html:15
+msgid "Order History"
+msgstr "Alte Bestellungen"
+
+#: templates/contact/profile_base.html:34
+#: templates/registration/account_info.html:9
+msgid "Your Account info"
+msgstr "Kontoinformation"
+
+#: templates/contact/profile_base.html:37
+#: templates/registration/account_info.html:11
+#, python-format
+msgid "Welcome, %(full_name)s."
+msgstr "Willkommen %(full_name)s"
+
+#: templates/contact/profile_base.html:40
+msgid "Your profile"
+msgstr "Ihr Profil"
+
+#: templates/contact/profile_base.html:42
+msgid "Email:"
+msgstr "Email:"
+
+#: templates/contact/profile_base.html:43
+msgid "Newsletter:"
+msgstr "Newsletter"
+
+#: templates/contact/profile_base.html:45
+msgid "Yes"
+msgstr "Ja"
+
+#: templates/contact/profile_base.html:47
+msgid "No"
+msgstr "Nein"
+
+#: templates/contact/profile_base.html:49
+msgid "Billing Address:"
+msgstr "Rechnungsadresse"
+
+#: templates/contact/profile_base.html:50
+msgid "Shipping Address:"
+msgstr "Versandadresse"
+
+#: templates/contact/profile_base.html:53
+msgid "Address Book Entries"
+msgstr "Adressen"
+
+#: templates/contact/profile_base.html:56
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: templates/contact/profile_base.html:63
+msgid ""
+"Sorry, the user you've logged in as doesn't have any contact information."
+msgstr "Keine Informationen vorhanden"
+
+#: templates/contact/profile_base.html:65
+msgid "Probably because you are an admin."
+msgstr "Als Admin eingelogt?"
+
+#: templates/contact/update_form.html:7
+msgid "Update Profile"
+msgstr "Profil bearbeiten"
+
+#: templates/contact/update_form.html:15
+msgid "Your Profile"
+msgstr "Ihr Profil"
+
+#: templates/contact/update_form.html:27
+msgid "Basic Information"
+msgstr ""
+
+#: templates/contact/update_form.html:30 templates/registration/login.html:17
+#: templates/registration/password_reset_form.html:16
+msgid "Email address"
+msgstr ""
+
+#: templates/contact/update_form.html:45
+msgid "First name"
+msgstr "Vorname"
+
+#: templates/contact/update_form.html:57
+msgid "Last name"
+msgstr "Nachname"
+
+#: templates/contact/update_form.html:67
+msgid "Organization"
+msgstr ""
+
+#: templates/contact/update_form.html:77
+msgid "Birthday"
+msgstr ""
+
+#: templates/contact/update_form.html:96
+msgid "Newsletter"
+msgstr ""
+
+#: templates/product/best_ratings.html:9
+msgid "Most Popular"
+msgstr ""
+
+#: templates/product/best_ratings.html:13
+msgid "Best Rated Products"
+msgstr ""
+
+#: templates/product/best_ratings.html:26
+#, python-format
+msgid "Rating %(rating)s"
+msgstr ""
+
+#: templates/product/best_sellers.html:13
+msgid "Best Selling Products"
+msgstr ""
+
+#: templates/product/cart_detail_customproduct.html:7
+msgid "Base Price: "
+msgstr ""
+
+#: templates/product/cart_detail_customproduct.html:8
+msgid ""
+"price at right is your deposit, you will receive a bill for the remainder "
+"when your item is ready."
+msgstr ""
+
+#: templates/product/cart_detail_subscriptionproduct.html:8
+#, python-format
+msgid ""
+"This is the trial price to be charged today, see <a href=\"%(url)s\">the "
+"product description</a> for full pricing details."
+msgstr ""
+
+#: templates/product/cart_detail_subscriptionproduct.html:10
+#, python-format
+msgid ""
+"Free trial, see <a href=\"%(url)s\">the product description</a> for full "
+"pricing details."
+msgstr ""
+
+#: templates/product/cart_detail_subscriptionproduct.html:13
+#, python-format
+msgid ""
+"For full pricing details, see <a href=\"%(url)s\">the product description</"
+"a>."
+msgstr ""
+
+#: templates/product/category_index.html:12 templates/shop/search.html:19
+msgid "Categories"
+msgstr ""
+
+#: templates/product/detail_configurableproduct.html:38
+#: templates/product/detail_customproduct.html:14
+#: templates/product/product.html:34 templates/shop/cart.html:39
+#: templates/shop/multiple_product_form.html:22
+msgid "Price"
+msgstr ""
+
+#: templates/product/detail_configurableproduct.html:38
+#: templates/product/product.html:34
+msgid "(incl. tax)"
+msgstr ""
+
+#: templates/product/detail_configurableproduct.html:62
+msgid "Please choose your options"
+msgstr ""
+
+#: templates/product/detail_configurableproduct.html:77
+#: templates/product/detail_customproduct.html:51
+#: templates/product/detail_subscriptionproduct.html:50
+#: templates/product/product.html:55 templates/shop/cart.html:33
+msgid "Quantity"
+msgstr ""
+
+#: templates/product/detail_configurableproduct.html:79
+#: templates/product/detail_customproduct.html:53
+#: templates/product/detail_subscriptionproduct.html:52
+#: templates/product/product.html:57
+msgid "Add to cart"
+msgstr ""
+
+#: templates/product/detail_customproduct.html:12
+#, python-format
+msgid "Custom order for %(name)s"
+msgstr ""
+
+#: templates/product/detail_customproduct.html:47
+msgid "more"
+msgstr ""
+
+#: templates/product/detail_subscriptionproduct.html:10
+#, python-format
+msgid "Subscription product %(name)s"
+msgstr ""
+
+#: templates/product/detail_subscriptionproduct.html:12
+msgid "Only "
+msgstr ""
+
+#: templates/product/detail_subscriptionproduct.html:12
+msgid "easy payments of:"
+msgstr ""
+
+#: templates/product/detail_subscriptionproduct.html:21
+msgid "This product has trial subscription pricing "
+msgstr ""
+
+#: templates/product/detail_subscriptionproduct.html:22
+msgid "Free"
+msgstr ""
+
+#: templates/product/detail_subscriptionproduct.html:22
+msgid "for trial period of "
+msgstr ""
+
+#: templates/product/detail_subscriptionproduct.html:22
+msgid "days"
+msgstr ""
+
+#: templates/product/detail_subscriptionproduct.html:22
+msgid "months"
+msgstr ""
+
+#: templates/product/minimum_order.html:7
+msgid "Notice"
+msgstr ""
+
+#: templates/product/minimum_order.html:14
+#, python-format
+msgid ""
+"This store requires a minimum order of %(value)s before you can check out."
+msgstr ""
+
+#: templates/product/product_discount_eligible.html:4
+#, python-format
+msgid ""
+"<p>This item is eligible to receive a discount of %(pct)s during checkout "
+"when you enter the code \"%(code)s\" during our %(desc)s which ends on "
+"%(enddate)s.</p>\n"
+msgstr ""
+
+#: templates/product/recently_added.html:32
+#: templates/product/recently_added.html:34 templates/shop/index.html:64
+#: templates/shop/index.html.py:67
+msgid "Previous"
+msgstr ""
+
+#: templates/product/recently_added.html:37
+#: templates/product/recently_added.html:39 templates/shop/index.html:78
+#: templates/shop/index.html.py:81
+msgid "Next"
+msgstr ""
+
+#: templates/product/recently_added.html:46
+msgid "Bad Page"
+msgstr ""
+
+#: templates/product/sale_details.html:5
+#, python-format
+msgid ""
+"<p>Products in your cart are eligible to receive a discount of %(pct)s when "
+"you enter the code \"%(code)s\" during our %(desc)s which ends on "
+"%(enddate)s.</p>\n"
+msgstr ""
+
+#: templates/product/some_discount_eligible.html:4
+#, python-format
+msgid ""
+"<p>Products on this page are eligible to receive a discount of %(pct)s "
+"during checkout when you enter the code \"%(code)s\" during our %(desc)s "
+"which ends on %(enddate)s.</p>\n"
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:64
+#: templates/product/admin/product_export_form.html:48
+#: templates/product/admin/product_import_result.html:8
+msgid "Documentation"
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:64
+#: templates/product/admin/product_export_form.html:48
+#: templates/product/admin/product_import_result.html:8
+#: templates/registration/password_change_form.html:37
+msgid "Change password"
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:68
+#: templates/product/admin/product_export_form.html:52
+msgid "Inventory Management"
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:82
+#: templates/product/admin/product_export_form.html:80
+#: templates/product/admin/variation_manager.html:319
+msgid "Slug"
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:83
+#: templates/product/admin/product_export_form.html:81
+#: templates/product/admin/variation_manager.html:317
+msgid "Name"
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:84
+msgid "Inventory"
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:85
+msgid "Unit Price"
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:86
+msgid "Active"
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:87
+msgid "Featured"
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:114
+msgid "Mark all featured"
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:115
+msgid "Clear all featured"
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:116
+msgid "Disable all Products with 0 quantity."
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:117
+msgid "Disable ProductVariations with 0 quantity."
+msgstr ""
+
+#: templates/product/admin/inventory_form.html:121
+msgid "No inventory items."
+msgstr ""
+
+#: templates/product/admin/product_export_form.html:57
+msgid ""
+"WARNING: THIS FUNCTION IS STILL EXPERIMENTAL.  DO NOT USE IN PRODUCTION."
+msgstr ""
+
+#: templates/product/admin/product_export_form.html:58
+#: templates/product/admin/product_export_form.html:66
+msgid "Import"
+msgstr ""
+
+#: templates/product/admin/product_export_form.html:65
+msgid "Import from fixture file:"
+msgstr ""
+
+#: templates/product/admin/product_export_form.html:69
+#: templates/product/admin/product_export_form.html:108
+msgid "Export"
+msgstr ""
+
+#: templates/product/admin/product_export_form.html:79
+msgid "Export?"
+msgstr ""
+
+#: templates/product/admin/product_export_form.html:105
+msgid "Include images?"
+msgstr ""
+
+#: templates/product/admin/product_export_form.html:106
+msgid "Include categories?"
+msgstr ""
+
+#: templates/product/admin/product_export_form.html:107
+msgid "Format?"
+msgstr ""
+
+#: templates/product/admin/product_export_form.html:109
+msgid "Reset"
+msgstr ""
+
+#: templates/product/admin/product_export_form.html:111
+msgid "Check all"
+msgstr ""
+
+#: templates/product/admin/product_export_form.html:112
+msgid "Uncheck all"
+msgstr ""
+
+#: templates/product/admin/product_export_form.html:115
+msgid "No products."
+msgstr ""
+
+#: templates/product/admin/product_import_result.html:12
+msgid "Product import/export"
+msgstr ""
+
+#: templates/product/admin/product_import_result.html:13
+msgid "Results"
+msgstr ""
+
+#: templates/product/admin/product_import_result.html:18
+msgid "Import Results"
+msgstr ""
+
+#: templates/product/admin/product_import_result.html:20
+msgid "Errors"
+msgstr ""
+
+#: templates/product/admin/product_import_result.html:27
+msgid "results"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:230
+#, python-format
+msgid "Variation Manager for %(product_name)s"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:239
+msgid ""
+"\n"
+"    <p>The Variation Manager helps create the exact set of variations you "
+"need for your Configurable Product</p>\n"
+"    <p>Make choices from the Option Groups below, and then click one of the "
+"helper links \n"
+"    below them to select or deselect variations which have those options.</"
+"p>\n"
+"    <p>Fine tune the active variations by putting a checkmark next to those "
+"that you want to keep or \n"
+"    create, then then click <b>Update Variations</b>.\n"
+"    </p>\n"
+"    "
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:253
+msgid "Options"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:273
+msgid "Helper Links"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:280
+msgid "Select These Options"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:283
+msgid "Select Only These Options"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:286
+msgid "Select All"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:289
+msgid "Deselect These Options"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:292
+msgid "Deselect All"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:295
+msgid "Show All"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:298
+msgid "Hide Inactive Rows"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:305
+msgid "Update Variations"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:306
+msgid "Reset Form"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:314
+msgid "Variation"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:315
+msgid "Exists"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:316
+msgid "Create/Keep"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:318
+msgid "SKU"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:332
+msgid "yes"
+msgstr ""
+
+#: templates/product/admin/variation_manager.html:332
+msgid "no"
+msgstr ""
+
+#: templates/product/admin/variation_manager_list.html:12
+msgid "Select the Configurable Product to manage."
+msgstr ""
+
+#: templates/registration/account_info.html:13
+msgid "Account options"
+msgstr ""
+
+#: templates/registration/activate.html:7
+msgid "Registration Complete"
+msgstr ""
+
+#: templates/registration/activate.html:12
+#: templates/registration/repeat_activation.html:11
+msgid "Account Activation"
+msgstr ""
+
+#: templates/registration/activate.html:16
+msgid "Thanks for signing up! You are now logged in."
+msgstr ""
+
+#: templates/registration/activate.html:17
+#, python-format
+msgid "In the future, you can log in using your email address (%(email)s)."
+msgstr ""
+
+#: templates/registration/activate.html:21
+#, python-format
+msgid ""
+"Either your activation link was incorrect, or the activation key for your "
+"account has expired. Activation keys are only valid for %(expiration_days)s "
+"days after registration."
+msgstr ""
+
+#: templates/registration/activation_email.txt:1
+#, python-format
+msgid ""
+"Someone, hopefully you, signed up for a new account at %(site)s using this "
+"email address. If it was you, and you'd like to activate and use your "
+"account, click the link below or copy and paste it into your web browser's "
+"address bar."
+msgstr ""
+
+#: templates/registration/activation_email.txt:5
+#, python-format
+msgid ""
+"If you didn't request this, you don't need to do anything; you won't receive "
+"any more email from us, and the account will expire automatically in "
+"%(expiration_days)s days."
+msgstr ""
+
+#: templates/registration/activation_email_subject.txt:1
+msgid "Registration Confirmation"
+msgstr ""
+
+#: templates/registration/login.html:19
+msgid "Password"
+msgstr ""
+
+#: templates/registration/login.html:37
+msgid "If you do not have an account, please"
+msgstr ""
+
+#: templates/registration/login.html:37
+msgid "click here"
+msgstr ""
+
+#: templates/registration/login.html:40
+msgid "If you do not remember your password, please"
+msgstr ""
+
+#: templates/registration/login.html:40
+msgid "click here</a> to have it reset."
+msgstr ""
+
+#: templates/registration/logout.html:9
+msgid "You have been successfully logged out."
+msgstr ""
+
+#: templates/registration/password_change_done.html:8
+msgid "Password Change Done"
+msgstr ""
+
+#: templates/registration/password_change_done.html:13
+msgid "Password change successful"
+msgstr ""
+
+#: templates/registration/password_change_done.html:15
+msgid "Your password change has been completed."
+msgstr ""
+
+#: templates/registration/password_change_form.html:8
+msgid "Password Change"
+msgstr ""
+
+#: templates/registration/password_change_form.html:13
+msgid ""
+"For the sake of security, please enter your old password, and then enter "
+"your new password twice."
+msgstr ""
+
+#: templates/registration/password_change_form.html:20
+msgid "Old password"
+msgstr ""
+
+#: templates/registration/password_change_form.html:27
+msgid "New password"
+msgstr ""
+
+#: templates/registration/password_change_form.html:34
+msgid "Confirm new password"
+msgstr ""
+
+#: templates/registration/password_reset.txt:2
+msgid "You're receiving this e-mail because you requested a password reset"
+msgstr ""
+
+#: templates/registration/password_reset.txt:3
+#, python-format
+msgid "for your user account at %(site_name)s"
+msgstr ""
+
+#: templates/registration/password_reset.txt:5
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: templates/registration/password_reset.txt:9
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: templates/registration/password_reset.txt:11
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: templates/registration/password_reset.txt:13
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:10
+msgid "Password reset complete"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:12
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:12
+msgid "Enter new password"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:14
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:17
+msgid "New password:"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:21
+msgid "Confirm password:"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:25
+msgid "Change my password"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:30
+msgid "Password reset unsuccessful"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:32
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:10
+msgid "Password reset successful"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:12
+msgid ""
+"We've e-mailed a new password to the e-mail address you submitted. You "
+"should receive it shortly."
+msgstr ""
+
+#: templates/registration/password_reset_form.html:10
+msgid "Reset your password"
+msgstr ""
+
+#: templates/registration/password_reset_form.html:12
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send a "
+"new password to you."
+msgstr ""
+
+#: templates/registration/password_reset_form.html:20
+msgid "Be sure to enter the same e-mail address you used to register."
+msgstr ""
+
+#: templates/registration/password_reset_form.html:21
+msgid "Reset password"
+msgstr ""
+
+#: templates/registration/registration_complete.html:7
+#: templates/registration/registration_complete.html:11
+msgid "Account Creation"
+msgstr ""
+
+#: templates/registration/registration_complete.html:12
+msgid "Thank you for signing up."
+msgstr ""
+
+#: templates/registration/registration_complete.html:14
+msgid ""
+"An activation link has been sent to the email address you supplied, along "
+"with instructions for activating your account."
+msgstr ""
+
+#: templates/registration/registration_form.html:6
+msgid "Registration"
+msgstr ""
+
+#: templates/registration/registration_form.html:10
+msgid "Please Enter Your Account Information"
+msgstr ""
+
+#: templates/registration/registration_form.html:42
+msgid "Create Account"
+msgstr ""
+
+#: templates/registration/repeat_activation.html:6
+msgid "Repeat Activation"
+msgstr ""
+
+#: templates/registration/repeat_activation.html:13
+msgid "This account has already been activated. Please login."
+msgstr ""
+
+#: templates/registration/welcome.txt:1
+#: templates/shop/email/order_complete.txt:3
+#: templates/shop/email/order_shipped.txt:1
+#, python-format
+msgid "Dear %(first_name)s %(last_name)s,"
+msgstr ""
+
+#: templates/registration/welcome.txt:3
+#, python-format
+msgid "Thank you for signing up with %(shop_name)s."
+msgstr ""
+
+#: templates/registration/welcome.txt:5
+msgid "Your new username is this email address, and you can login at"
+msgstr ""
+
+#: templates/registration/welcome.txt:7
+#: templates/shop/email/gift_certificate_recipient.html:13
+#: templates/shop/email/gift_certificate_recipient.txt:13
+#: templates/shop/email/order_complete.html:12
+#: templates/shop/email/order_complete.txt:35
+msgid "Regards"
+msgstr ""
+
+#: templates/registration/welcome.txt:9
+#: templates/shop/email/gift_certificate_recipient.html:14
+#: templates/shop/email/gift_certificate_recipient.txt:14
+#: templates/shop/email/order_complete.html:13
+#: templates/shop/email/order_complete.txt:37
+msgid "Store Management"
+msgstr ""
+
+#: templates/shop/_order_details.html:8
+#: templates/shop/_order_tracking_details.html:16
+#: templates/shop/email/_order_detail.txt:1
+msgid "Items Ordered"
+msgstr ""
+
+#: templates/shop/_order_details.html:17 templates/shop/contact_form.html:10
+#: templates/shop/contact_thanks.html:10
+#: templates/shop/email/_order_detail.txt:5
+#: templates/shop/email/_order_detail_table.html:8
+msgid "Contact Information"
+msgstr ""
+
+#: templates/shop/_order_details.html:31
+#: templates/shop/email/_order_detail.txt:20
+#: templates/shop/email/_order_detail_table.html:24
+#: templates/shop/email/order_shipped.txt:7
+msgid "Shipping Address"
+msgstr ""
+
+#: templates/shop/_order_details.html:39
+#: templates/shop/_order_tracking_details.html:22
+#: templates/shop/email/_order_detail.txt:29
+msgid "Shipping Method"
+msgstr ""
+
+#: templates/shop/_order_details.html:49 templates/shop/_order_details.html:71
+#: templates/shop/_order_tracking_details.html:28
+#: templates/shop/_order_tracking_details.html:36 templates/shop/cart.html:41
+#: templates/shop/order_history.html:24
+#: templates/shop/email/_order_detail.txt:35
+#: templates/shop/email/_order_detail.txt:40
+msgid "Total"
+msgstr ""
+
+#: templates/shop/_order_details.html:50
+msgid "Subtotal"
+msgstr ""
+
+#: templates/shop/_order_details.html:56
+#: templates/shop/_order_tracking_details.html:30
+#: templates/shop/email/_order_detail.txt:37
+msgid "Discount"
+msgstr ""
+
+#: templates/shop/_order_details.html:59
+msgid "Base Shipping"
+msgstr ""
+
+#: templates/shop/_order_details.html:60
+msgid "Shipping Discount"
+msgstr ""
+
+#: templates/shop/_order_details.html:61
+msgid "Shipping (incl. Tax)"
+msgstr ""
+
+#: templates/shop/_order_details.html:63
+#: templates/shop/_order_tracking_details.html:32
+#: templates/shop/email/_order_detail.txt:38
+msgid "Shipping"
+msgstr ""
+
+#: templates/shop/_order_details.html:67
+msgid "Tax included"
+msgstr ""
+
+#: templates/shop/_order_details.html:69
+#: templates/shop/_order_tracking_details.html:34
+#: templates/shop/email/_order_detail.txt:39
+msgid "Tax"
+msgstr ""
+
+#: templates/shop/_order_tracking_details.html:8
+#: templates/shop/order_history.html:20
+msgid "Order #"
+msgstr ""
+
+#: templates/shop/_order_tracking_details.html:9
+#: templates/shop/order_history.html:21
+msgid "Status"
+msgstr ""
+
+#: templates/shop/_order_tracking_details.html:41
+msgid "Shipping To"
+msgstr ""
+
+#: templates/shop/_search.html:2 templates/shop/_search.html.py:13
+msgid "Search"
+msgstr ""
+
+#: templates/shop/_search.html:6
+msgid "All Products"
+msgstr ""
+
+#: templates/shop/cart.html:29
+msgid "Your cart is empty."
+msgstr ""
+
+#: templates/shop/cart.html:31
+msgid "Your Cart"
+msgstr ""
+
+#: templates/shop/cart.html:34
+msgid "Item"
+msgstr ""
+
+#: templates/shop/cart.html:36
+msgid "Regular Price"
+msgstr ""
+
+#: templates/shop/cart.html:37
+msgid "Sale Price"
+msgstr ""
+
+#: templates/shop/cart.html:41
+msgid "Total<br/>(incl.&nbsp;tax)"
+msgstr ""
+
+#: templates/shop/cart.html:48
+msgid "Remove"
+msgstr ""
+
+#: templates/shop/cart.html:55
+msgid "update amount"
+msgstr ""
+
+#: templates/shop/cart.html:66
+msgid "Cart Total"
+msgstr ""
+
+#: templates/shop/contact_form.html:19
+msgid "Send Email"
+msgstr ""
+
+#: templates/shop/contact_thanks.html:12
+msgid "Thank you for contacting us."
+msgstr ""
+
+#: templates/shop/contact_thanks.html:14
+msgid "We will attempt to get back to you within 48 hours."
+msgstr ""
+
+#: templates/shop/download.html:13
+msgid "Downloading of"
+msgstr ""
+
+#: templates/shop/download.html:13
+msgid "will commence after clicking the link below:"
+msgstr ""
+
+#: templates/shop/download.html:15
+msgid ""
+"Once you click the link, the download will be counted.  If you have trouble "
+"with the download, please refresh your browser and try the download again"
+msgstr ""
+
+#: templates/shop/index.html:39
+msgid "Featured Items"
+msgstr ""
+
+#: templates/shop/multiple_product_form.html:11
+#: templates/shop/multiple_product_form.html:15
+msgid "Quick Order Form"
+msgstr ""
+
+#: templates/shop/multiple_product_form.html:23
+msgid "Qty"
+msgstr ""
+
+#: templates/shop/multiple_product_form.html:55
+msgid "Add to Cart"
+msgstr ""
+
+#: templates/shop/order_history.html:22
+msgid "Date"
+msgstr ""
+
+#: templates/shop/order_history.html:23
+msgid "Items"
+msgstr ""
+
+#: templates/shop/order_history.html:53
+msgid "You haven't made any orders yet."
+msgstr ""
+
+#: templates/shop/order_tracking.html:8 templates/shop/order_tracking.html:13
+msgid "Order Tracking"
+msgstr ""
+
+#: templates/shop/search.html:12 templates/shop/search.html.py:38
+msgid "Nothing found"
+msgstr ""
+
+#: templates/shop/search.html:15
+#, python-format
+msgid "Search results for %(category_name)s products"
+msgstr ""
+
+#: templates/shop/search.html:29
+msgid "Products"
+msgstr ""
+
+#: templates/shop/search.html:33
+msgid "for"
+msgstr ""
+
+#: templates/shop/admin/_customorder_management.html:3
+msgid "Custom Order Management"
+msgstr ""
+
+#: templates/shop/admin/_customorder_management.html:8
+msgid "Fully charged"
+msgstr ""
+
+#: templates/shop/admin/_customorder_management.html:10
+msgid "Charge remaining amount"
+msgstr ""
+
+#: templates/shop/admin/_customorder_management.html:13
+msgid "Product Details"
+msgstr ""
+
+#: templates/shop/admin/_ordercount_list.html:7
+msgid "on"
+msgstr ""
+
+#: templates/shop/admin/_orderpayment_list.html:3
+msgid "Order Payments"
+msgstr ""
+
+#: templates/shop/admin/_orderpayment_list.html:8
+#: templates/shop/email/order_complete.txt:13
+#: templates/shop/email/order_placed_notice.txt:9
+msgid "Payment"
+msgstr ""
+
+#: templates/shop/admin/_orderpayment_list.html:9
+msgid "Amount"
+msgstr ""
+
+#: templates/shop/admin/_orderpayment_list.html:10
+msgid "Method"
+msgstr ""
+
+#: templates/shop/admin/_orderpayment_list.html:11
+msgid "Timestamp"
+msgstr ""
+
+#: templates/shop/admin/_orderpayment_list.html:12
+msgid "Transaction ID"
+msgstr ""
+
+#: templates/shop/admin/_orderpayment_list.html:35
+msgid "No payments."
+msgstr ""
+
+#: templates/shop/admin/_orderpayment_list.html:40
+msgid "Paid in full"
+msgstr ""
+
+#: templates/shop/admin/_orderpayment_list.html:42
+msgid "Balance on order:"
+msgstr ""
+
+#: templates/shop/admin/order_sidebar.html:4
+msgid "Satchmo Orders"
+msgstr ""
+
+#: templates/shop/admin/order_sidebar.html:6
+msgid "New Orders"
+msgstr ""
+
+#: templates/shop/admin/order_sidebar.html:8
+msgid "Orders in Process"
+msgstr ""
+
+#: templates/shop/admin/order_sidebar.html:10
+msgid "View all Orders"
+msgstr ""
+
+#: templates/shop/email/_order_detail_table.html:65
+msgid "Discount:"
+msgstr ""
+
+#: templates/shop/email/_order_detail_table.html:74
+msgid "Shipping:"
+msgstr ""
+
+#: templates/shop/email/_order_detail_table.html:83
+msgid "Tax:"
+msgstr ""
+
+#: templates/shop/email/_order_detail_table.html:91
+msgid "Total:"
+msgstr ""
+
+#: templates/shop/email/_order_detail_table.html:99
+#: templates/shop/email/order_complete.txt:19
+msgid "Your"
+msgstr ""
+
+#: templates/shop/email/_order_detail_table.html:99
+#: templates/shop/email/order_complete.txt:19
+msgid "ending in"
+msgstr ""
+
+#: templates/shop/email/_order_detail_table.html:99
+#: templates/shop/email/_order_detail_table.html:101
+#: templates/shop/email/order_complete.txt:19
+#: templates/shop/email/order_complete.txt:21
+msgid "will be charged"
+msgstr ""
+
+#: templates/shop/email/_order_detail_table.html:112
+#: templates/shop/email/order_placed_notice.txt:15
+msgid "This is a downloadable product"
+msgstr ""
+
+#: templates/shop/email/contact_us.txt:1
+#, python-format
+msgid ""
+"Here's a %(request_type)s from %(name)s ( %(email)s ) sent via the web "
+"contact form."
+msgstr ""
+
+#: templates/shop/email/gift_certificate_recipient.html:6
+#: templates/shop/email/gift_certificate_recipient.txt:5
+#, python-format
+msgid ""
+"Congratulations, you have received a gift certificate for %(shop_name)s."
+msgstr ""
+
+#: templates/shop/email/gift_certificate_recipient.html:7
+#: templates/shop/email/gift_certificate_recipient.txt:6
+msgid "Your gift certificate was purchased by"
+msgstr ""
+
+#: templates/shop/email/gift_certificate_recipient.html:8
+#: templates/shop/email/gift_certificate_recipient.txt:7
+msgid "This gift certificate is for"
+msgstr ""
+
+#: templates/shop/email/gift_certificate_recipient.html:8
+#: templates/shop/email/gift_certificate_recipient.txt:7
+msgid "and may be redeemed online using the following code"
+msgstr ""
+
+#: templates/shop/email/gift_certificate_recipient.html:10
+#: templates/shop/email/gift_certificate_recipient.txt:9
+msgid "This gift certificate includes the following message: "
+msgstr ""
+
+#: templates/shop/email/order_complete.html:7
+#: templates/shop/email/order_complete.txt:5
+#: templates/shop/email/order_shipped.txt:3
+#, python-format
+msgid "Thank you for ordering with %(shop_name)s."
+msgstr ""
+
+#: templates/shop/email/order_complete.html:8
+#: templates/shop/email/order_complete.txt:7
+msgid "Your order is summarized below:"
+msgstr ""
+
+#: templates/shop/email/order_complete.txt:28
+msgid "Your order contains products that can be downloaded"
+msgstr ""
+
+#: templates/shop/email/order_complete.txt:29
+msgid "Please click the link to begin the download"
+msgstr ""
+
+#: templates/shop/email/order_placed_notice.txt:3
+#, python-format
+msgid "Order placed on %(shop_name)s by %(customer)s<%(email)s>."
+msgstr ""
+
+#: templates/shop/email/order_placed_notice.txt:12
+#, python-format
+msgid ""
+"%(credit_card_type)s card ending in %(credit_card_number)s will be charged "
+"%(order_total)s."
+msgstr ""
+
+#: templates/shop/email/order_placed_notice.txt:12
+#, python-format
+msgid ""
+"This order will be charged on the customer's account for %(order_total)s."
+msgstr ""
+
+#: templates/shop/email/order_shipped.txt:5
+#, python-format
+msgid "Your order #%(orderid)s has shipped today via %(shippingmethod)s."
+msgstr ""
+
+#: templates/shop/email/order_shipped.txt:15
+msgid "This completes your order."
+msgstr ""
