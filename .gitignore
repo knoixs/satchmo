@@ -33,3 +33,4 @@ simple.db
 *.log
 store/static/cache/*
 *.mo
+tags
