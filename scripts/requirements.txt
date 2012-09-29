@@ -1,8 +1,9 @@
 Django==1.4.1
+django-debug-toolbar
 PIL==1.1.7
 PyYAML==3.10
 South==0.7.6
-TRML2PDF==1.0
+#TRML2PDF
 -e hg+https://bitbucket.org/bkroeze/django-caching-app-plugins/@e2f6afd8cd40e75066e01dc9b7806e57823d1530#egg=django_caching_app_plugins-dev
 -e hg+https://bitbucket.org/bkroeze/django-keyedcache/@49f24c71151893549d42a30adf706b986ad1ac94#egg=django_keyedcache-dev
 -e hg+https://bitbucket.org/bkroeze/django-livesettings/@fe16a426b27320b0be307df6c1319fa8c26847b7#egg=django_livesettings-dev
