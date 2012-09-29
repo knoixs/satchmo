@@ -1,3 +1,8 @@
+import datetime
+import logging
+import pdb
+import signals
+
 from django import forms
 from django.db.models import Q
 from django.forms.extras.widgets import SelectDateWidget
@@ -8,29 +13,29 @@ from satchmo_store.contact.models import Contact, AddressBook, PhoneNumber, Orga
 from satchmo_store.shop.models import Config
 from satchmo_store.shop.utils import clean_field
 from signals_ahoy.signals import form_init, form_initialdata, form_postsave
-import datetime
-import logging
-import signals
 
 log = logging.getLogger('satchmo_store.contact.forms')
 
 selection = ''
 
+
 def area_choices_for_country(country, translator=_):
-    choices = [('',translator("Not Applicable"))]
+    choices = [('', translator("Not Applicable"))]
 
     if country:
         areas = country.adminarea_set.filter(active=True)
-        if areas.count()>0:
-            choices = [('',translator("---Please Select---"))]
+        if areas.count() > 0:
+            choices = [('', translator("---Please Select---"))]
             choices.extend([(area.abbrev or area.name, area.name) for area in areas])
 
     return choices
+
 
 class ProxyContactForm(forms.Form):
     def __init__(self, *args, **kwargs):
         self._contact = kwargs.pop('contact', None)
         super(ProxyContactForm, self).__init__(*args, **kwargs)
+
 
 class ContactInfoForm(ProxyContactForm):
     email = forms.EmailField(max_length=75, label=_('Email'), required=False)
@@ -56,7 +61,7 @@ class ContactInfoForm(ProxyContactForm):
 
     def __init__(self, *args, **kwargs):
         initial = kwargs.get('initial', {})
-        form_initialdata.send(ContactInfoForm, form=self, initial=initial, contact = kwargs.get('contact', None))
+        form_initialdata.send(ContactInfoForm, form=self, initial=initial, contact=kwargs.get('contact', None))
         kwargs['initial'] = initial
 
         shop = kwargs.pop('shop', None)
@@ -70,7 +75,7 @@ class ContactInfoForm(ProxyContactForm):
         self.required_billing_data = config_value('SHOP', 'REQUIRED_BILLING_DATA')
         self.required_shipping_data = config_value('SHOP', 'REQUIRED_SHIPPING_DATA')
         self._local_only = shop.in_country_only
-        self.enforce_state = config_value('SHOP','ENFORCE_STATE')
+        self.enforce_state = config_value('SHOP', 'ENFORCE_STATE')
 
         self._default_country = shop.sales_country
         billing_country = (self._contact and getattr(self._contact.billing_address, 'country', None)) or self._default_country
@@ -103,11 +108,13 @@ class ContactInfoForm(ProxyContactForm):
             shipping_areas = area_choices_for_country(shipping_country)
 
             billing_state = (self._contact and getattr(self._contact.billing_address, 'state', None)) or selection
-            self.fields['state'] = forms.ChoiceField(choices=billing_areas, initial=billing_state, label=_('State'),
+            self.fields['state'] = forms.ChoiceField(choices=billing_areas,
+                                                     initial=billing_state,
+                                                     label=_('State'),
                 # if there are not states, then don't make it required. (first
                 # choice is always either "--Please Select--", or "Not
                 # Applicable")
-                required=len(billing_areas)>1)
+                required=len(billing_areas) > 1)
 
             shipping_state = (self._contact and getattr(self._contact.shipping_address, 'state', None)) or selection
             self.fields['ship_state'] = forms.ChoiceField(choices=shipping_areas, initial=shipping_state, required=False, label=_('State'))
@@ -143,16 +150,17 @@ class ContactInfoForm(ProxyContactForm):
     def _check_state(self, data, country):
         if country and self.enforce_state and country.adminarea_set.filter(active=True).count() > 0:
             if not data or data == selection:
+                pdb.set_trace()
                 raise forms.ValidationError(
                     self._local_only and _('This field is required.') \
                                or _('State is required for your country.'))
             if (country.adminarea_set
                         .filter(active=True)
-                        .filter(Q(name__iexact=data)|Q(abbrev__iexact=data))
+                        .filter(Q(name__iexact=data) | Q(abbrev__iexact=data))
                         .count() != 1):
                 raise forms.ValidationError(_('Invalid state or province.'))
+        print "_check_state_returns: %s" % data
         return data
-
 
     def clean_email(self):
         """Prevent account hijacking by disallowing duplicate emails."""
@@ -169,8 +177,12 @@ class ContactInfoForm(ProxyContactForm):
         return email
 
     def clean_postal_code(self):
+        print
+        print ">>> in_clean_postal_code"
         postcode = self.cleaned_data.get('postal_code')
+        print "postcode: %s" % postcode
         if not postcode and 'postal_code' not in self.required_billing_data:
+            print "return_postcode_1"
             return postcode
         country = None
 
@@ -184,8 +196,10 @@ class ContactInfoForm(ProxyContactForm):
             # Either the store is misconfigured, or the country was
             # not supplied, so the country validation will fail and
             # we can defer the postcode validation until that's fixed.
+            print "return_postcode_2"
             return postcode
 
+        print "return_postcode_3"
         return self.validate_postcode_by_country(postcode, country)
 
     def clean_state(self):
@@ -195,6 +209,7 @@ class ContactInfoForm(ProxyContactForm):
         else:
             country = clean_field(self, 'country')
             if country == None:
+                pdb.set_trace()
                 raise forms.ValidationError(_('This field is required.'))
         self._check_state(data, country)
         return data
@@ -222,6 +237,7 @@ class ContactInfoForm(ProxyContactForm):
         else:
             if not self.cleaned_data.get('country'):
                 log.error("No country! Got '%s'" % self.cleaned_data.get('country'))
+                pdb.set_trace()
                 raise forms.ValidationError(_('This field is required.'))
         return self.cleaned_data['country']
 
@@ -235,6 +251,7 @@ class ContactInfoForm(ProxyContactForm):
             return self.cleaned_data.get('country')
         shipcountry = self.cleaned_data.get('ship_country')
         if not shipcountry:
+            pdb.set_trace()
             raise forms.ValidationError(_('This field is required.'))
         if config_value('PAYMENT', 'COUNTRY_MATCH'):
             country = self.cleaned_data.get('country')
@@ -250,6 +267,7 @@ class ContactInfoForm(ProxyContactForm):
             val = clean_field(self, 'ship_' + field_name)
             # REQUIRED_SHIPPING_DATA doesn't contain 'ship_' prefix
             if (not val) and field_name in self.required_shipping_data:
+                pdb.set_trace()
                 raise forms.ValidationError(_('This field is required.'))
             return val
 
@@ -263,25 +281,35 @@ class ContactInfoForm(ProxyContactForm):
         return self.cleaned_data.get('ship_street2')
 
     def clean_ship_city(self):
-        return self.ship_charfield_clean('city')
+        rc = self.ship_charfield_clean('city')
+        print "clean_city_rc: %s" % rc
+        return rc
 
     def clean_ship_postal_code(self):
         code = self.ship_charfield_clean('postal_code')
+        print
+        print "in_clean_ship_postal_code: %s" % code
         if not self._shippable:
+            print "  not_shippable_return: %s" % code
             return code
 
         if clean_field(self, 'copy_address'):
             # We take it that the country for shipping and billing is the same;
             # don't bother validating again
+            print "  shipping and billing country is the same - clean_field: %s" % code
+            print "  return: %s" % code
             return code
 
         country = None
 
         if self._local_only:
+            print "  local_only"
             shop_config = Config.objects.get_current()
             country = shop_config.sales_country
         else:
             country = self.ship_charfield_clean('country')
+
+        print "  country: %s" % country
 
         if not country:
             # Either the store is misconfigured, or the country was
@@ -289,6 +317,7 @@ class ContactInfoForm(ProxyContactForm):
             # we can defer the postcode validation until that's fixed.
             return code
 
+        print "  return_validate_postcode_by_country: code: %s country: %s" % (code, country)
         return self.validate_postcode_by_country(code, country)
 
     def clean_ship_state(self):
@@ -308,15 +337,17 @@ class ContactInfoForm(ProxyContactForm):
         return data
 
     def save(self, **kwargs):
-        if not kwargs.has_key('contact'):
+        if "contact" in kwargs:
             kwargs['contact'] = None
         return self.save_info(**kwargs)
 
     def save_info(self, contact=None, **kwargs):
-        """Save the contact info into the database.
+        """
+        Save the contact info into the database.
         Checks to see if contact exists. If not, creates a contact
-        and copies in the address and phone number."""
+        and copies in the address and phone number.
 
+        """
         if not contact:
             customer = Contact()
             log.debug('creating new contact')
@@ -362,7 +393,6 @@ class ContactInfoForm(ProxyContactForm):
         # this isn't ideal, but until we have a way to manage addresses
         # this will force just the two addresses, shipping and billing
         # TODO: add address management like Amazon.
-
         bill_address = customer.billing_address
         if not bill_address:
             bill_address = AddressBook(contact=customer)
@@ -379,13 +409,11 @@ class ContactInfoForm(ProxyContactForm):
                 pass
 
         bill_address.is_default_billing = True
-
         copy_address = data['copy_address']
-
         ship_address = customer.shipping_address
         try:
-            setattr(ship_address, "addressee",data.get('ship_addressee', ""))
-            setattr(bill_address, "addressee",data.get('addressee', ""))
+            setattr(ship_address, "addressee", data.get('ship_addressee', ""))
+            setattr(bill_address, "addressee", data.get('addressee', ""))
         except AttributeError:
             pass
         # If we are copying the address and one isn't in place for shipping
@@ -395,7 +423,7 @@ class ContactInfoForm(ProxyContactForm):
                 ship_address.addressee = bill_address.addressee
             except AttributeError:
                 pass
-                
+
         # Make sure not to overwrite a custom ship to name
         if copy_address and getattr(ship_address, "addressee", "") == getattr(bill_address, "addressee", ""):
             # make sure we don't have any other default shipping address
@@ -441,6 +469,7 @@ class ContactInfoForm(ProxyContactForm):
 
     def validate_postcode_by_country(self, postcode, country):
         responses = signals.validate_postcode.send(self, postcode=postcode, country=country)
+        print "responses: %s" % responses
         # allow responders to reformat the code, but if they don't return
         # anything, then just use the existing code
         for responder, response in responses:
@@ -449,21 +478,30 @@ class ContactInfoForm(ProxyContactForm):
 
         return postcode
 
+
 class DateTextInput(forms.TextInput):
     def render(self, name, value, attrs=None):
         if isinstance(value, datetime.date):
             value = value.strftime("%m.%d.%Y")
         return super(DateTextInput, self).render(name, value, attrs)
 
+
 class ExtendedContactInfoForm(ContactInfoForm):
     """Contact form which includes birthday and newsletter."""
-    years_to_display = range(datetime.datetime.now().year-100,datetime.datetime.now().year+1)
-    dob = forms.DateField(widget=SelectDateWidget(years=years_to_display), required=False)
-    newsletter = forms.BooleanField(label=_('Newsletter'), widget=forms.CheckboxInput(), required=False)
+    years_to_display = range(datetime.datetime.now().year - 100,
+                             datetime.datetime.now().year + 1)
+    dob = forms.DateField(widget=SelectDateWidget(years=years_to_display),
+                          required=False)
+    newsletter = forms.BooleanField(label=_('Newsletter'),
+                                    widget=forms.CheckboxInput(),
+                                    required=False)
+
 
 class AddressBookForm(forms.Form):
     addressee_name = forms.CharField(max_length=61, label=_('Addressee Name'), required=True)
-    description = forms.CharField(max_length=20, label=_('Description'),required=False)
+    description = forms.CharField(max_length=20,
+                  label=_('Description'),
+                  required=False)
     street1 = forms.CharField(max_length=30, label=_('Street'), required=True)
     street2 = forms.CharField(max_length=30, required=False)
     city = forms.CharField(max_length=30, label=_('City'), required=True)
@@ -479,7 +517,7 @@ class AddressBookForm(forms.Form):
         shipping_areas = area_choices_for_country(self._default_country)
         self.fields['country'] = forms.ModelChoiceField(shop.countries(), required=False, label=_('Country'), empty_label=None, initial=shop.sales_country.pk)
         self.fields['state'] = forms.ChoiceField(choices=shipping_areas, required=False, label=_('State'))
-        
+
     def save(self, contact, address_entry=None, **kwargs):
         data = self.cleaned_data.copy()
         if not address_entry:
@@ -490,14 +528,16 @@ class AddressBookForm(forms.Form):
             log.debug('Saving Addressbook info for %s', address_entry)
         for field in data.keys():
             # Getting around the issue where we normally want this auto created on the front end
-            if field <> 'addressee_name':
+            if field != 'addressee_name':
                 setattr(address_entry, field, data[field])
         address_entry.addressee = data['addressee_name']
         address_entry.contact = contact
         address_entry.save()
 
-YES_NO_CHOICES = (('Yes',_('Yes')),
-                   ('No',_('No')))
-                   
+
+YES_NO_CHOICES = (('Yes', _('Yes')),
+                   ('No', _('No')))
+
+
 class YesNoForm(forms.Form):
     delete_entry = forms.MultipleChoiceField(label=_('Delete entry?'), required=True, widget=forms.widgets.RadioSelect, choices=YES_NO_CHOICES, initial="No")

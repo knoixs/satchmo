@@ -1,3 +1,7 @@
+# -*- coding: utf8 -*-
+import logging
+import pdb
+
 from django import http
 from django.contrib.auth import REDIRECT_FIELD_NAME
 from django.contrib.auth.decorators import login_required
@@ -7,15 +11,17 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.forms.models import model_to_dict
 from django.utils.translation import ugettext
+from django.utils.translation import ugettext_lazy as _
+
 from satchmo_store.contact import signals, CUSTOMER_ID
 from satchmo_store.contact.forms import ExtendedContactInfoForm, ContactInfoForm, area_choices_for_country, AddressBookForm, YesNoForm
 from satchmo_store.contact.models import Contact, AddressBook
 from satchmo_store.shop.models import Config
-import logging
-from django.utils.translation import ugettext, ugettext_lazy as _
 
 log = logging.getLogger('satchmo_store.contact.views')
 
+
+@login_required
 def view(request):
     """View contact info."""
     try:
@@ -31,11 +37,11 @@ def view(request):
 
     context = RequestContext(request, contact_dict)
 
-    return render_to_response('contact/view_profile.html',
+    return render_to_response('contact/profile_base.html',
                               context_instance=context)
 
-view = login_required(view)
 
+@login_required
 def update(request):
     """Update contact info"""
 
@@ -47,11 +53,13 @@ def update(request):
     except Contact.DoesNotExist:
         contact = None
 
-
     if request.method == "POST":
         new_data = request.POST.copy()
-        form = ExtendedContactInfoForm(data=new_data, shop=shop, contact=contact, shippable=True,
-            initial=init_data)
+        form = ExtendedContactInfoForm(data=new_data,
+                                       shop=shop,
+                                       contact=contact,
+                                       shippable=True,
+                                       initial=init_data)
 
         if form.is_valid():
             if contact is None and request.user:
@@ -70,13 +78,13 @@ def update(request):
         if contact:
             #If a person has their contact info, make sure we populate it in the form
             for item in contact.__dict__.keys():
-                init_data[item] = getattr(contact,item)
+                init_data[item] = getattr(contact, item)
             if contact.shipping_address:
                 for item in contact.shipping_address.__dict__.keys():
-                    init_data["ship_"+item] = getattr(contact.shipping_address,item)
+                    init_data["ship_" + item] = getattr(contact.shipping_address, item)
             if contact.billing_address:
                 for item in contact.billing_address.__dict__.keys():
-                    init_data[item] = getattr(contact.billing_address,item)
+                    init_data[item] = getattr(contact.billing_address, item)
             if contact.primary_phone:
                 init_data['phone'] = contact.primary_phone.phone
             if contact.organization:
@@ -87,7 +95,6 @@ def update(request):
                 for field in ('email', 'first_name', 'last_name'):
                     if getattr(request.user, field, False):
                         init_data[field] = getattr(request.user, field)
-
 
         signals.satchmo_contact_view.send(contact, contact=contact, contact_dict=init_data)
         form = ExtendedContactInfoForm(shop=shop, contact=contact, shippable=True, initial=init_data)
@@ -100,23 +107,21 @@ def update(request):
         if countries and countries.count() == 1:
             init_data['country'] = countries[0]
 
-
     init_data['next'] = request.REQUEST.get(REDIRECT_FIELD_NAME, '')
     context = RequestContext(request, init_data)
 
     return render_to_response('contact/update_form.html',
                               context_instance=context)
 
-update = login_required(update)
 
-
+@login_required
 def address_create_edit(request, id=None):
     """Create and edit new address book entries
     """
     initial_entry = None
     initial_data = {}
     editing = False
-    next_url = request.GET.get('next',None)
+    next_url = request.GET.get('next', None)
     try:
         contact = Contact.objects.from_request(request, create=False)
     except Contact.DoesNotExist:
@@ -124,7 +129,7 @@ def address_create_edit(request, id=None):
     if id:
         initial_entry = get_object_or_404(AddressBook, pk=id)
         # Make sure we only edit entries associated with this contact
-        if initial_entry.contact <> contact:
+        if initial_entry.contact != contact:
             return http.HttpResponseRedirect(urlresolvers.reverse('satchmo_account_info'))
         initial_data = model_to_dict(initial_entry, fields=[], exclude=['contact'])
         # This is a bit of a hack because we normally use jquery to populate the addressee
@@ -142,10 +147,14 @@ def address_create_edit(request, id=None):
         form = AddressBookForm(initial=initial_data)
     if initial_entry:
         editing = True
-    context = RequestContext(request, {'form':form, 'editing':editing, 'entry':initial_entry, 'next':next_url})    
-    return render_to_response('contact/address_form.html',context_instance=context)
-address_create_edit = login_required(address_create_edit)
+    context = RequestContext(request, {'form': form,
+                                       'editing': editing,
+                                       'entry': initial_entry,
+                                       'next': next_url})
+    return render_to_response('contact/address_form.html', context_instance=context)
 
+
+@login_required
 def address_delete(request, id=None):
     """Delete an addressbook entry
     """
@@ -157,7 +166,7 @@ def address_delete(request, id=None):
     if id:
         initial_entry = get_object_or_404(AddressBook, pk=id)
         # Make sure we only edit entries associated with this contact
-        if initial_entry.contact <> contact:
+        if initial_entry.contact != contact:
             return http.HttpResponseRedirect(urlresolvers.reverse('satchmo_account_info'))
     if request.method == 'POST' and initial_entry:
         if request.POST['delete_entry'] == 'Yes':
@@ -165,9 +174,8 @@ def address_delete(request, id=None):
         return http.HttpResponseRedirect(urlresolvers.reverse('satchmo_account_info'))
     else:
         form = YesNoForm()
-    context = RequestContext(request, {'form':form,'entry':initial_entry})    
-    return render_to_response('contact/address_form_delete.html',context_instance=context)
-address_delete = login_required(address_delete)
+    context = RequestContext(request, {'form': form, 'entry': initial_entry})
+    return render_to_response('contact/address_form_delete.html', context_instance=context)
 
 
 class AjaxGetStateException(Exception):
@@ -175,13 +183,14 @@ class AjaxGetStateException(Exception):
     def __init__(self, message):
         self.message = message
 
+
 def ajax_get_state(request, **kwargs):
     formdata = request.REQUEST.copy()
 
     try:
-        if formdata.has_key("country"):
+        if "country" in formdata:
             country_field = 'country'
-        elif formdata.has_key("ship_country"):
+        elif "ship_country" in formdata:
             country_field = 'ship_country'
         else:
             raise AjaxGetStateException("No country specified")

@@ -1,0 +1,70 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load satchmo_contact %}
+
+{% block navbar %}
+   <li class="first"><a href="{{ shop_base }}/">{% trans "Home" %}</a></li>
+   <li>{% trans "Account" %}</li>
+{% endblock %}
+
+ {% block sidebar-secondary %}
+<div class="span2">
+    {% block sidebar %}
+    <div class="well sidebar-nav">
+        <ul class="nav nav-list">
+            <li class="nav-header">{% trans "Profiles Settings" %}</li>
+            <li><a href="{{ accounturl }}">
+                {% trans "Account Details" %}</a></li>
+            <li><a href="{% url satchmo_profile_update %}">
+                {% trans "Change your address" %}</a></li>
+            <li><a href="{% url satchmo_address_create %}">
+                {% trans "Add address book entry" %}</a></li>
+            <li><a href="{% url auth_password_change %}">
+                {% trans "Change your password" %}</a></li>
+            <li><a href="{% url satchmo_order_history %}">
+                {% trans "Order History" %}</a></li>
+        </ul>
+    </div><!--/.well -->
+    {% endblock sidebar %}
+</div><!--/span-->
+{% endblock sidebar-secondary %}
+
+{% block content %}
+<div class="span5">
+<h4>{% trans "Your Account info" %}</h4>
+{% if user_data %}
+    {% with user_data.full_name as full_name %}
+    <p>{% blocktrans %}Welcome, {{ full_name }}.{% endblocktrans %}</p>
+{% endwith %}
+
+<h5>{% trans "Your profile" %}</h5>
+    <ul class="profile">
+        <li>{% trans 'Email:' %} {{ user_data.email }}</li>
+        <li>{% trans 'Newsletter:' %}
+            {% if newsletter %}
+                {% trans 'Yes' %}
+            {% else %}
+                {% trans 'No' %}
+            {% endif %}</li>
+        <li>{% trans 'Billing Address:'%}<br/>{% addressblock user_data.billing_address %}</li>
+        <li>{% trans 'Shipping Address:'%}<br/>{% addressblock user_data.shipping_address %}</li>
+    </ul>
+
+    <h5>{% trans "Address Book Entries" %}</h5>
+<ul class="profile">
+{% for address in user_data.address_book_entries %}
+    <li>{{ address.description }} <a href="{% url satchmo_address_edit address.pk%}">{% trans 'Edit' %}</a> | <a href="{% url satchmo_address_delete address.pk%}">{% trans 'Delete' %}</a></li>
+    {% addressblock address %}
+{% endfor %}
+</ul>
+</ul>
+{% else %}
+    <p>
+        {% trans "Sorry, the user you've logged in as doesn't have any contact information." %}
+        {% if request.user.is_staff %}
+            {% trans 'Probably because you are an admin.' %}
+        {% endif %}
+    </p>
+{% endif %}
+</div>
+{% endblock %}
