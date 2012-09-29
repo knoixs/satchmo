@@ -121,7 +121,7 @@
         <!-- sidebar left -->
         <div class="row-fluid">
 		    {% block sidebar-secondary %}
-            <div class="span3">
+            <div class="span2">
                 {% comment %}
                 later ...
                 <div>
@@ -156,10 +156,10 @@
             </div><!--/span-->
 		    {% endblock sidebar-secondary %}
 
-
-            <div class="span7 content">
-            {% block content %}{% endblock %}
+            {% block content %}
+            <div class="span8 content">
 	        </div>
+            {% endblock %}
 
             <div class="span2">
             {% block right_sidebar %}
