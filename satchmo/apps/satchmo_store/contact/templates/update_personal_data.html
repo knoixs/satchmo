@@ -1,4 +1,4 @@
-{% extends "contact/profile_base.html" %}
+{% extends "profile_base.html" %}
 {% load i18n %}
 
 {% block navbar %}
@@ -102,10 +102,6 @@
     {% else %}
         <input type='hidden' name='newsletter' value="False" />
     {% endif %}
-
-    {% block billing-info %}{% include "contact/_contact_info_form_billing.html" %}{% endblock %}
-
-    {% block shipping-info %}{% include "contact/_contact_info_form_shipping.html" %}{% endblock %}
 
 	<tr><td></td><td><input type="submit" value="{% trans "Update" %}"/></td></tr>
 </table>

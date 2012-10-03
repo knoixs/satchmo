@@ -1,4 +1,4 @@
-# -*- coding: utf8 -*-
+# -*- coding: utf-8 -*-
 import logging
 import pdb
 
@@ -37,8 +37,7 @@ def view(request):
 
     context = RequestContext(request, contact_dict)
 
-    return render_to_response('contact/profile_base.html',
-                              context_instance=context)
+    return render_to_response('profile_base.html', context_instance=context)
 
 
 @login_required
