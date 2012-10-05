@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-03 13:30+0200\n"
+"POT-Creation-Date: 2012-10-04 08:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,39 +76,39 @@ msgstr ""
 
 #: templates/base.html:68 templates/shop/base.html:68
 msgid "Account Details"
-msgstr "Konto Details"
+msgstr ""
 
 #: templates/base.html:72 templates/product/admin/inventory_form.html:64
 #: templates/product/admin/product_export_form.html:48
 #: templates/product/admin/product_import_result.html:8
 #: templates/shop/base.html:72
 msgid "Log out"
-msgstr "Abmelden"
+msgstr ""
 
 #: templates/base.html:75
 #: templates/registration/password_reset_complete.html:14
 #: templates/shop/base.html:75
 msgid "Log in"
-msgstr "Anmelden"
+msgstr ""
 
 #: templates/base.html:80 templates/product/minimum_order.html:6
 #: templates/shop/base.html:80 templates/shop/cart.html:12
 msgid "Cart"
-msgstr "Einkaufswagen"
+msgstr ""
 
 #: templates/base.html:90 templates/shop/base.html:90
 #: templates/shop/cart.html:73
 msgid "Check out"
-msgstr "Bestellen"
+msgstr ""
 
 #: templates/base.html:97 templates/shop/base.html:97
 #: templates/shop/contact_form.html:6 templates/shop/contact_thanks.html:6
 msgid "Contact Us"
-msgstr "Kontakt"
+msgstr ""
 
 #: templates/base.html:135 templates/shop/base.html:135
 msgid "Shop Categories"
-msgstr "Kategorien"
+msgstr ""
 
 #: templates/footer.html:8 templates/product/recently_added.html:8
 #: templates/product/recently_added.html:12
@@ -638,12 +638,12 @@ msgstr ""
 
 #: templates/registration/account_info.html:9
 msgid "Your Account info"
-msgstr "Kontoinformation"
+msgstr ""
 
 #: templates/registration/account_info.html:11
 #, python-format
 msgid "Welcome, %(full_name)s."
-msgstr "Willkommen %(full_name)s"
+msgstr ""
 
 #: templates/registration/account_info.html:13
 msgid "Account options"
@@ -652,7 +652,7 @@ msgstr ""
 #: templates/registration/account_info.html:15
 #: templates/registration/password_change_form.html:12
 msgid "Change your password"
-msgstr "Passwort ändern"
+msgstr ""
 
 #: templates/registration/activate.html:7
 msgid "Registration Complete"
@@ -1073,17 +1073,10 @@ msgid "Cart Total"
 msgstr ""
 
 #: templates/shop/contact_form.html:13
-#, fuzzy
 msgid "Please correct the following error:"
 msgid_plural "Please correct the following errors:"
 msgstr[0] ""
-"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
-"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
-"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
 msgstr[1] ""
-"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
-"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
-"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
 
 #: templates/shop/contact_form.html:19
 msgid "Send Email"
@@ -1130,7 +1123,7 @@ msgstr ""
 
 #: templates/shop/order_history.html:10 templates/shop/order_history.html:15
 msgid "Order History"
-msgstr "Alte Bestellungen"
+msgstr ""
 
 #: templates/shop/order_history.html:22
 msgid "Date"
@@ -1357,161 +1350,3 @@ msgstr ""
 #: templates/shop/email/order_shipped.txt:15
 msgid "This completes your order."
 msgstr ""
-
-#, fuzzy
-#~ msgid "Email"
-#~ msgstr "Email:"
-
-#~ msgid "First name"
-#~ msgstr "Vorname"
-
-#~ msgid "Last name"
-#~ msgstr "Nachname"
-
-#, fuzzy
-#~ msgid "Addressee"
-#~ msgstr "Vollständiger Name"
-
-#~ msgid "Street"
-#~ msgstr "Straße"
-
-#~ msgid "City"
-#~ msgstr "Stadt"
-
-#~ msgid "State/Province"
-#~ msgstr "Bundesland"
-
-#~ msgid "Country"
-#~ msgstr "Land"
-
-#, fuzzy
-#~ msgid "Account Verification"
-#~ msgstr "Konto Details"
-
-#, fuzzy
-#~ msgid "First Name"
-#~ msgstr "Vorname"
-
-#, fuzzy
-#~ msgid "Last Name"
-#~ msgstr "Nachname"
-
-#, fuzzy
-#~ msgid "ZIP code/Postcode"
-#~ msgstr "Postleitzahl"
-
-#, fuzzy
-#~ msgid "Addressee Name"
-#~ msgstr "Vollständiger Name"
-
-#, fuzzy
-#~ msgid "Description"
-#~ msgstr "Zusatz-Information"
-
-#~ msgid "Yes"
-#~ msgstr "Ja"
-
-#~ msgid "No"
-#~ msgstr "Nein"
-
-#, fuzzy
-#~ msgid "Delete entry?"
-#~ msgstr "Adress Eintrag löschen"
-
-#, fuzzy
-#~ msgid "Contact"
-#~ msgstr "Kontakt"
-
-#, fuzzy
-#~ msgid "Contacts"
-#~ msgstr "Kontakt"
-
-#, fuzzy
-#~ msgid "Default Shipping Address"
-#~ msgstr "Versandadresse"
-
-#, fuzzy
-#~ msgid "Default Billing Address"
-#~ msgstr "Rechnungsadresse"
-
-#, fuzzy
-#~ msgid "Address Book"
-#~ msgstr "Adressen"
-
-#, fuzzy
-#~ msgid "Address Books"
-#~ msgstr "Adressen"
-
-#~ msgid "Zipcode/Postcode"
-#~ msgstr "Postleitzahl"
-
-#~ msgid "You&apos;ll need to fill out at least the fields with a *"
-#~ msgstr "Diese Felder sind obligatorisch"
-
-#~ msgid "Address Information"
-#~ msgstr "Ihre Adressen"
-
-#~ msgid "Addressee Full Name"
-#~ msgstr "Vollständiger Name"
-
-#~ msgid "Address Description"
-#~ msgstr "Zusatz-Information"
-
-#~ msgid "Update"
-#~ msgstr "Aktualisieren"
-
-#~ msgid "Save"
-#~ msgstr "Speichern"
-
-#~ msgid "Delete address book entry"
-#~ msgstr "Adress Eintrag löschen"
-
-#~ msgid "Delete"
-#~ msgstr "Löschen"
-
-#~ msgid "Profiles Settings"
-#~ msgstr "Einstellungen"
-
-#~ msgid "Change your address"
-#~ msgstr "Adresse ändern"
-
-#~ msgid "Add address book entry"
-#~ msgstr "Adresse hinzufügen"
-
-#~ msgid "Your profile"
-#~ msgstr "Ihr Profil"
-
-#~ msgid "Email:"
-#~ msgstr "Email:"
-
-#~ msgid "Newsletter:"
-#~ msgstr "Newsletter"
-
-#~ msgid "Billing Address:"
-#~ msgstr "Rechnungsadresse"
-
-#~ msgid "Shipping Address:"
-#~ msgstr "Versandadresse"
-
-#~ msgid "Address Book Entries"
-#~ msgstr "Adressen"
-
-#~ msgid "Edit"
-#~ msgstr "Bearbeiten"
-
-#~ msgid ""
-#~ "Sorry, the user you've logged in as doesn't have any contact information."
-#~ msgstr "Keine Informationen vorhanden"
-
-#~ msgid "Probably because you are an admin."
-#~ msgstr "Als Admin eingelogt?"
-
-#~ msgid "Update Profile"
-#~ msgstr "Profil bearbeiten"
-
-#~ msgid "Your Profile"
-#~ msgstr "Ihr Profil"
-
-#, fuzzy
-#~ msgid "Update your profile"
-#~ msgstr "Profil bearbeiten"

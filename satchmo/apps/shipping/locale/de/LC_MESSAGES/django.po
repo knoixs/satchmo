@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-06 07:20+0000\n"
+"POT-Creation-Date: 2012-10-05 16:34+0200\n"
 "PO-Revision-Date: 2010-03-01 16:59+0100\n"
 "Last-Translator: Martin Bornhold <mb@bo-tech.de>\n"
 "Language-Team: \n"
@@ -89,13 +89,13 @@ msgstr ""
 msgid "Access production Canada Post server"
 msgstr ""
 
-#: modules/canadapost/config.py:65 modules/fedex/config.py:71
-#: modules/ups/config.py:95 modules/usps/config.py:82
+#: modules/canadapost/config.py:65 modules/ups/config.py:95
+#: modules/usps/config.py:82
 msgid "Use this when your store is in production."
 msgstr ""
 
-#: modules/canadapost/config.py:70 modules/fedex/config.py:76
-#: modules/ups/config.py:100 modules/usps/config.py:87
+#: modules/canadapost/config.py:70 modules/ups/config.py:100
+#: modules/usps/config.py:87
 msgid "Submit to URL"
 msgstr ""
 
@@ -103,8 +103,7 @@ msgstr ""
 msgid "Canada Post Sell Online server to submit live transactions."
 msgstr ""
 
-#: modules/canadapost/config.py:76 modules/fedex/config.py:82
-#: modules/ups/config.py:106
+#: modules/canadapost/config.py:76 modules/ups/config.py:106
 msgid "Submit to TestURL"
 msgstr ""
 
@@ -123,7 +122,7 @@ msgid ""
 "merchant's profile"
 msgstr ""
 
-#: modules/canadapost/config.py:89 modules/fedex/config.py:94
+#: modules/canadapost/config.py:89 modules/fedex_web_services/config.py:154
 #: modules/ups/config.py:112 modules/usps/config.py:99
 msgid "Verbose logs"
 msgstr "Ausführliche Logs"
@@ -143,20 +142,17 @@ msgstr ""
 msgid "Canada Post"
 msgstr ""
 
-#: modules/canadapost/shipper.py:90 modules/fedex/shipper.py:95
-#: modules/ups/shipper.py:107
+#: modules/canadapost/shipper.py:90 modules/ups/shipper.py:107
 #, python-format
 msgid "%s business days"
 msgstr "%s Werktage"
 
-#: modules/canadapost/shipper.py:92 modules/fedex/shipper.py:97
-#: modules/ups/shipper.py:109
+#: modules/canadapost/shipper.py:92 modules/ups/shipper.py:109
 #, python-format
 msgid "%s business day"
 msgstr "%s Werktag"
 
-#: modules/canadapost/shipper.py:127 modules/fedex/shipper.py:151
-#: modules/ups/shipper.py:139
+#: modules/canadapost/shipper.py:127 modules/ups/shipper.py:139
 msgid "3 - 4"
 msgstr "3 - 4"
 
@@ -172,73 +168,112 @@ msgstr ""
 msgid "3 - 4 business days"
 msgstr "3 - 4 Werktage"
 
-#: modules/fedex/config.py:10
-msgid "FedEx Shipping Settings"
+#: modules/fedex_web_services/config.py:27
+#, fuzzy
+msgid "FedEx Web Services Shipping Settings"
 msgstr "FedEx Einstellungen"
 
-#: modules/fedex/config.py:20
+#: modules/fedex_web_services/config.py:37
 msgid "FedEx Meter Number"
 msgstr ""
 
-#: modules/fedex/config.py:21
+#: modules/fedex_web_services/config.py:38
 msgid "Meter Number provided by FedEx."
 msgstr ""
 
-#: modules/fedex/config.py:26
+#: modules/fedex_web_services/config.py:43
 #, fuzzy
 msgid "FedEx Account Number"
 msgstr "UPS Account Nummer"
 
-#: modules/fedex/config.py:27
+#: modules/fedex_web_services/config.py:44
 #, fuzzy
 msgid "FedEx Account Number."
 msgstr "UPS Account Nummer."
 
-#: modules/fedex/config.py:32
+#: modules/fedex_web_services/config.py:49
+msgid "FedEx Authentication Key"
+msgstr ""
+
+#: modules/fedex_web_services/config.py:50
+msgid "FedEx Authentication Key."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:55
+msgid "FedEx Authentication Password"
+msgstr ""
+
+#: modules/fedex_web_services/config.py:56
+msgid "FedEx Authentication Password."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:61
+msgid "The region you are sending your package from."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:62
+msgid "i.e. the region the package leaves from."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:75
 msgid "FedEx Shipping Choices Available to customers."
 msgstr ""
 
-#: modules/fedex/config.py:56
+#: modules/fedex_web_services/config.py:103
 msgid "Type of container/package used to ship product."
 msgstr ""
 
-#: modules/fedex/config.py:70
-msgid "Access production FedEx server"
+#: modules/fedex_web_services/config.py:118
+msgid "Default/Minimum Item Weight"
 msgstr ""
 
-#: modules/fedex/config.py:77 modules/ups/config.py:101
-#: modules/usps/config.py:88
-msgid "Address to submit live transactions."
+#: modules/fedex_web_services/config.py:119
+msgid ""
+"The default weight for items which lack a defined weight and the minimum an "
+"item is allowed to be, enter a positive value."
 msgstr ""
 
-#: modules/fedex/config.py:83 modules/ups/config.py:107
-#: modules/usps/config.py:94
-msgid "Address to submit test transactions."
+#: modules/fedex_web_services/config.py:124
+msgid "Default weight units"
 msgstr ""
 
-#: modules/fedex/config.py:88 modules/ups/config.py:71
+#: modules/fedex_web_services/config.py:134 modules/ups/config.py:71
 msgid "Single Box?"
 msgstr ""
 
-#: modules/fedex/config.py:89 modules/ups/config.py:72
+#: modules/fedex_web_services/config.py:135 modules/ups/config.py:72
 msgid ""
 "Use just one box and ship by weight?  If no then every item will be sent in "
 "its own box."
 msgstr ""
 
-#: modules/fedex/config.py:95
+#: modules/fedex_web_services/config.py:140
+msgid "The method used to give the package to Fedex."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:148
+msgid "Most users will keep the default Regular Pickup."
+msgstr ""
+
+#: modules/fedex_web_services/config.py:155
 msgid ""
 "Send the entire request and response to the log - for debugging help when "
 "setting up FedEx."
 msgstr ""
 
-#: modules/fedex/shipper.py:70
-#, python-format
-msgid "FedEx - %s"
+#: modules/fedex_web_services/config.py:160
+msgid "Use test server?"
 msgstr ""
 
-#: modules/fedex/shipper.py:86
-msgid "FedEx"
+#: modules/fedex_web_services/config.py:161
+msgid ""
+"Check if you want to use the fedex test servers rather than the production "
+"server."
+msgstr ""
+
+#: modules/fedex_web_services/shipper.py:93
+#, python-format
+msgid "Fedex - %s"
 msgstr ""
 
 #: modules/flat/config.py:5
@@ -450,6 +485,12 @@ msgstr ""
 msgid "min weight"
 msgstr "Mindestgewicht"
 
+#: modules/tieredweight/models.py:262
+msgid ""
+"This tier will be used for weights up to this value. i.e.: this is the "
+"MAXIMUM weight this tier will be used for."
+msgstr ""
+
 #: modules/tieredweight/models.py:263
 msgid "handling adjustment"
 msgstr ""
@@ -536,6 +577,14 @@ msgstr ""
 
 #: modules/ups/config.py:94
 msgid "Access production UPS server"
+msgstr ""
+
+#: modules/ups/config.py:101 modules/usps/config.py:88
+msgid "Address to submit live transactions."
+msgstr ""
+
+#: modules/ups/config.py:107 modules/usps/config.py:94
+msgid "Address to submit test transactions."
 msgstr ""
 
 #: modules/ups/config.py:113
