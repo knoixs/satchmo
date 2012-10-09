@@ -137,7 +137,7 @@ INSTALLED_APPS = (
     #'typogrify',            # dependency on  http://code.google.com/p/typogrify/
     'debug_toolbar',
     'app_plugins',
-    #'store.localsite',
+    'store.localsite',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -152,7 +152,7 @@ DEBUG_TOOLBAR_CONFIG = {
 #### Satchmo unique variables ####
 #from django.conf.urls.defaults import patterns, include
 SATCHMO_SETTINGS = {
-    'SHOP_BASE': '',
+    'SHOP_BASE': '/shop',
     'MULTISHOP': False,
     #'SHOP_URLS' : patterns('satchmo_store.shop.views',)
 }

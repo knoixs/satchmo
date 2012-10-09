@@ -32,6 +32,8 @@ from l10n.urls import urlpatterns as l10npatterns
 from satchmo_store.shop import get_satchmo_setting
 from satchmo_utils import urlhelper
 
+from store.localsite.urls import urlpatterns as localsite_patterns
+
 shop_base = get_satchmo_setting('SHOP_BASE')
 if shop_base in ('', '/'):
     from satchmo_store.shop.urls import urlpatterns as shoppatterns
@@ -41,6 +43,6 @@ else:
         (shopregex, include('satchmo_store.shop.urls')),
     )
 
-urlpatterns = basepatterns + shoppatterns + defaultpatterns + l10npatterns
+urlpatterns = basepatterns + shoppatterns + defaultpatterns + l10npatterns + localsite_patterns
 
 urlhelper.remove_duplicate_urls(urlpatterns, [])

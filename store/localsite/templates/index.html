@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>potstar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link href="/static/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="/static/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+        <link href="/static/css/jQuery.iPicture.css" rel="stylesheet" />
+        <link href="/static/css/localsite.css" rel="stylesheet" />
+
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link rel="shortcut icon" href="/static/assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="/static/assets/ico/apple-touch-icon-57-precomposed.png">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                </div>
+            </div>
+        </div> <!-- /container -->
+        <script src="/static/assets/js/jquery.js"></script>
+        <script src="/static/js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script src="/static/js/jQuery.iPicture.js"></script>
+        <script src="/static/assets/js/bootstrap-transition.js"></script>
+        <script src="/static/assets/js/bootstrap-alert.js"></script>
+        <script src="/static/assets/js/bootstrap-modal.js"></script>
+        <script src="/static/assets/js/bootstrap-dropdown.js"></script>
+        <script src="/static/assets/js/bootstrap-scrollspy.js"></script>
+        <script src="/static/assets/js/bootstrap-tab.js"></script>
+        <script src="/static/assets/js/bootstrap-tooltip.js"></script>
+        <script src="/static/assets/js/bootstrap-popover.js"></script>
+        <script src="/static/assets/js/bootstrap-button.js"></script>
+        <script src="/static/assets/js/bootstrap-collapse.js"></script>
+        <script src="/static/assets/js/bootstrap-carousel.js"></script>
+        <script src="/static/assets/js/bootstrap-typeahead.js"></script>
+
+        <script>
+jQuery(document).ready(function(){
+	$( "#iPicture" ).iPicture({
+		animation: true,
+		animationBg: "bgblack",
+		animationType: "ltr-slide",
+		pictures: ["picture1","picture2","picture3","picture4","picture5"],
+		button: "moreblack",
+		moreInfos:{"picture1":[{"id":"tooltip1","descr":"furniture: 299$","top":"185px","left":"393px"},{"id":"tooltip2","descr":"sofa: 199$","top":"346px","left":"483px"},{"id":"tooltip3","descr":"silver candle: 2.99$","top":"461px","left":"556px"}],"picture2":[{"id":"tooltip4","descr":"window","top":"71px","left":"423px"},{"id":"tooltip5","descr":"basket","top":"438px","left":"192px"},{"id":"tooltip6","descr":"hoven","top":"460px","left":"673px"}],"picture3":[{"id":"tooltip7","descr":"Organize the kitchen!","top":"391px","left":"560px"},{"id":"tooltip8","descr":"Hoven: 399$","top":"160px","left":"268px"},{"id":"tooltip9","descr":"chest of drawers","top":"386px","left":"180px"}],"picture4":[{"id":"tooltip10","descr":"pasta maker","top":"277px","left":"672px"},{"id":"tooltip11","descr":"stool","top":"291px","left":"281px"},{"id":"tooltip12","descr":"shelf","top":"144px","left":"579px"},{"id":"tooltip13","descr":"Dishes","top":"183px","left":"181px"}],"picture5":[{"id":"tooltip14","descr":"bed: 199$","top":"398px","left":"351px"},{"id":"tooltip15","descr":"asian style lamp","top":"146px","left":"380px"},{"id":"tooltip16","descr":"console: 105$","top":"273px","left":"567px"}]}
+	});
+	//set animation false and uncomment this block for a different animation effect
+/*	$('.descr').css("display","none");
+	$('.more').mouseover(function(){
+		$(this).find('.descr').css("display","");
+	}).mouseout(function(){
+		$(this).find('.descr').css("display","none");
+	});*/
+});
+</script>
+
+    </body>
+</html>
+
