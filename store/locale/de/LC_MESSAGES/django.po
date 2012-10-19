@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-04 08:45+0200\n"
+"POT-Creation-Date: 2012-10-17 21:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,6 +24,16 @@ msgstr ""
 
 #: local_settings.py:24
 msgid "English"
+msgstr ""
+
+#: localsite/templates/index.html:7
+msgid "Solar powered LED flower pots - Get the stars from the sky"
+msgstr ""
+
+#: localsite/templates/index.html:8
+msgid ""
+"solar powered flowerpots, LED flowerpots, potstar, handmade, LED, flowerpot, "
+"garden"
 msgstr ""
 
 #: templates/404.html:5 templates/500.html:5
@@ -295,6 +305,7 @@ msgstr ""
 #: templates/product/detail_customproduct.html:51
 #: templates/product/detail_subscriptionproduct.html:50
 #: templates/product/product.html:55 templates/shop/cart.html:33
+#: templates/shop/pdf/invoice.rml:131 templates/shop/pdf/packing-slip.rml:125
 msgid "Quantity"
 msgstr ""
 
@@ -441,6 +452,7 @@ msgid "Inventory"
 msgstr ""
 
 #: templates/product/admin/inventory_form.html:85
+#: templates/shop/pdf/invoice.rml:132
 msgid "Unit Price"
 msgstr ""
 
@@ -957,7 +969,8 @@ msgstr ""
 #: templates/shop/_order_details.html:31
 #: templates/shop/email/_order_detail.txt:20
 #: templates/shop/email/_order_detail_table.html:24
-#: templates/shop/email/order_shipped.txt:7
+#: templates/shop/email/order_shipped.txt:7 templates/shop/pdf/invoice.rml:25
+#: templates/shop/pdf/packing-slip.rml:25
 msgid "Shipping Address"
 msgstr ""
 
@@ -973,16 +986,18 @@ msgstr ""
 #: templates/shop/order_history.html:24
 #: templates/shop/email/_order_detail.txt:35
 #: templates/shop/email/_order_detail.txt:40
+#: templates/shop/pdf/invoice.rml:134 templates/shop/pdf/invoice.rml.py:177
 msgid "Total"
 msgstr ""
 
-#: templates/shop/_order_details.html:50
+#: templates/shop/_order_details.html:50 templates/shop/pdf/invoice.rml:154
 msgid "Subtotal"
 msgstr ""
 
 #: templates/shop/_order_details.html:56
 #: templates/shop/_order_tracking_details.html:30
 #: templates/shop/email/_order_detail.txt:37
+#: templates/shop/pdf/invoice.rml:133 templates/shop/pdf/invoice.rml.py:159
 msgid "Discount"
 msgstr ""
 
@@ -990,7 +1005,7 @@ msgstr ""
 msgid "Base Shipping"
 msgstr ""
 
-#: templates/shop/_order_details.html:60
+#: templates/shop/_order_details.html:60 templates/shop/pdf/invoice.rml:169
 msgid "Shipping Discount"
 msgstr ""
 
@@ -1011,6 +1026,7 @@ msgstr ""
 #: templates/shop/_order_details.html:69
 #: templates/shop/_order_tracking_details.html:34
 #: templates/shop/email/_order_detail.txt:39
+#: templates/shop/pdf/invoice.rml:174
 msgid "Tax"
 msgstr ""
 
@@ -1125,7 +1141,9 @@ msgstr ""
 msgid "Order History"
 msgstr ""
 
-#: templates/shop/order_history.html:22
+#: templates/shop/order_history.html:22 templates/shop/pdf/invoice.rml:15
+#: templates/shop/pdf/invoice.rml.py:57 templates/shop/pdf/packing-slip.rml:15
+#: templates/shop/pdf/packing-slip.rml:57
 msgid "Date"
 msgstr ""
 
@@ -1349,4 +1367,75 @@ msgstr ""
 
 #: templates/shop/email/order_shipped.txt:15
 msgid "This completes your order."
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:5
+msgid "Store Invoice"
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:14 templates/shop/pdf/invoice.rml.py:56
+#: templates/shop/pdf/packing-slip.rml:14
+#: templates/shop/pdf/packing-slip.rml:56
+msgid "Invoice #"
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:21 templates/shop/pdf/invoice.rml.py:63
+msgid "INVOICE"
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:24 templates/shop/pdf/packing-slip.rml:24
+msgid "Billing Address"
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:63 templates/shop/pdf/packing-slip.rml:63
+msgid "Page"
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:111 templates/shop/pdf/packing-slip.rml:101
+msgid "Phone"
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:112 templates/shop/pdf/packing-slip.rml:102
+msgid "Email"
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:130 templates/shop/pdf/packing-slip.rml:124
+msgid "Description"
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:181
+msgid "Payments Made"
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:185
+msgid "Balance Due"
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:192
+#, python-format
+msgid "Payment total %(order_total)s due to:"
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:197
+msgid "Accounts Receivable"
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:212
+#, python-format
+msgid ""
+"%(order_total)s was charged to your %(credit_card_type)s card (x"
+"%(credit_card_number)s) on %(order_date)s."
+msgstr ""
+
+#: templates/shop/pdf/invoice.rml:215
+msgid "This invoice has been paid in full. Thank you for your business!"
+msgstr ""
+
+#: templates/shop/pdf/packing-slip.rml:21
+#: templates/shop/pdf/packing-slip.rml:63
+msgid "PACKING SLIP"
+msgstr ""
+
+#: templates/shop/pdf/packing-slip.rml:138
+msgid "Thank you for your business!"
 msgstr ""

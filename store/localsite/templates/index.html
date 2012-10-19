@@ -1,40 +1,39 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title>potstar</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="{% trans 'Solar powered LED flower pots - Get the stars from the sky' %}">
+        <meta name="keywords" content="{% trans 'solar powered flowerpots, LED flowerpots, potstar, handmade, LED, flowerpot, garden' %}">
+        <meta name="author" content="Thomas Rega">
 
         <link href="/static/assets/css/bootstrap.css" rel="stylesheet">
         <link href="/static/assets/css/bootstrap-responsive.css" rel="stylesheet">
-
         <link href="/static/css/jQuery.iPicture.css" rel="stylesheet" />
+        <link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet'>
         <link href="/static/css/localsite.css" rel="stylesheet" />
-
 
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
-        <link rel="shortcut icon" href="/static/assets/ico/favicon.ico">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/assets/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/assets/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/assets/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="/static/assets/ico/apple-touch-icon-57-precomposed.png">
     </head>
     <body>
-        <div class="container-fluid">
-            <div id="iPicture">
-                <div class="slide">
-                    <div id="picture1"
-                        style="background: url('/static/images/potstar-landing-page.jpg') no-repeat center center fixed; background-size: cover; height: 800px; position: relative; margin:0 auto;">
-                    </div>
+        <h1 class="lpage"><a class="lpage" href="#">potstar shop</a></h1>
+        <div id="iPicture">
+            <div class="slide">
+                <div id="picture1">
+                    <img src="/static/images/potstar-gartenhaus.jpg" alt="potstar bild gartenhaus"/>
                 </div>
-	        </div>
-        </div> <!-- /container -->
+            </div>
+        </div>
         <script src="/static/assets/js/jquery.js"></script>
         <script src="/static/js/jquery-ui-1.8.24.custom.min.js"></script>
         <script src="/static/js/jQuery.iPicture.js"></script>
@@ -59,22 +58,16 @@
 		        animationType: "ltr-slide",
 		        pictures: ["picture1"],
 		        button: "moreblack",
-                moreInfos:{"picture1":[
-                    {"id":"tooltip1", "descr":"furniture: 299$", "top":"185px", "left":"393px"},
-                    {"id":"tooltip2","descr":"sofa: 199$","top":"346px","left":"483px"},
-                    {"id":"tooltip3","descr":"silver candle: 2.99$","top":"461px","left":"556px"}]}
+                moreInfos:{
+                    "picture1":[
+                        {"id":"tooltip1","descr":"potstar XL 299€","top":"50em","left":"16em"},
+                        {"id":"tooltip2","descr":"potstar XL 299€","top":"41em","left":"43em"},
+                        {"id":"tooltip3","descr":"potstar XL 299€","top":"61em","left":"82em"},
+                    ]
+                }
 	        });
-	        //set animation false and uncomment this block for a different animation effect
-            /*	$('.descr').css("display","none");
-	            $('.more').mouseover(function(){
-		            $(this).find('.descr').css("display","");
-	            }).mouseout(function(){
-		            $(this).find('.descr').css("display","none");
-	            });*/
         });
         </script>
 
     </body>
 </html>
-
-<!-- style="background: url('/static/images/potstar-landing-page.jpg') no-repeat scroll 0 0 #393737; width: 900px; height: 528px;position: relative; margin:0 auto;"> -->
