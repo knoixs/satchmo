@@ -5,13 +5,13 @@
 
             <section class="quicklinks fl">
             {% url satchmo_product_recently_added as recenturl %}
-            {% if recenturl %}<a href="{{ recenturl }}">{% trans "Recently Added" %}</a>{% endif %}
+            {% if recenturl %}<a href="#">{% trans "Recently Added" %}</a>{% endif %}
             {% url satchmo_product_best_selling as popularurl %}
-            {% if popularurl %}<br/><a href="{{ popularurl }}">{% trans "Best Sellers" %}</a><br/>{% endif %}
+            {% if popularurl %}<br/><a href="#">{% trans "Best Sellers" %}</a><br/>{% endif %}
             {% url satchmo_category_index as category_index %}
-            {% if category_index %} <a href="{{ category_index }}">{% trans "Category Index" %}</a><br /> {% endif %}
+            {% if category_index %} <a href="#">{% trans "Category Index" %}</a><br /> {% endif %}
             {% url satchmo_quick_order as quick_order %}
-            {% if quick_order %}<a href="{{ quick_order }}">{% trans "Quick Order" %}</a> {% endif %}
+            {% if quick_order %}<a href="#">{% trans "Quick Order" %}</a> {% endif %}
             {% plugin_point "sidebar_links" %}
             </section>
 

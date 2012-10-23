@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% load email_munge %}
+
+{% block navigation %}
+{% endblock %}
+
 {% block navbar %}
 {% endblock %}
 
@@ -17,7 +22,7 @@
     </p>
     <br/>
     <h2>Kontakt:</h2>
-    <p>E-Mail: <a href="mailto:{{ email }}">{{ email }}</a><br/>
+    <p>E-Mail: {{ email|mungify }}<br/>
        Telefon: {{ telephone }}<br/>
        {% if fax %}
         Fax: {{ fax }}
