@@ -3,6 +3,26 @@ body {
     background-color: #000;
 }
 
+#impressum_link {
+    margin: 2em auto;
+    text-align: center;
+}
+
+#impressum_link a{
+    color: #fff;
+    text-decoration:none;
+}
+
+#impressum_link a:hover{
+    color: #9B1400;
+}
+
+#picture1{
+    padding-top:5em;
+    padding-left:5em;
+    min-width:900px;
+}
+
 a.lpage {
     color:#fff;
     opacity: .5;
@@ -22,8 +42,4 @@ h1.lpage{
     text-shadow: 3px 3px #333333;
 }
 
-#picture1{
-    padding-top:5em;
-    padding-left:5em;
-    min-width:900px;
-}
+

@@ -5,5 +5,6 @@ ssl = get_satchmo_setting('SSL', default_value=False)
 
 urlpatterns = patterns('store.localsite.views',
     (r'^$', 'index', {}, 'localsite_index'),
+    (r'^impressum/$', 'impressum', {}, 'localsite_impressum'),
 )
 
