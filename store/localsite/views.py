@@ -18,5 +18,8 @@ def impressum(request):
 
 
 def index(request):
-    ctx = RequestContext(request, {})
+    ctx = RequestContext(request, {
+        'keywords': 'Solar betriebene Blumentöpfe, LED Blumentöpfe, Gartenbeleuchtung, Balkonbeleuchtung, Garten Party, Solar Blumentopf, LED, Licht Design',
+        'description': 'Holen Sie sich die Sterne vom Himmel. potstar - LED - Licht Design für drinnen und draußen.',
+    })
     return render_to_response('index.html', context_instance=ctx)
