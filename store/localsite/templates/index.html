@@ -23,25 +23,26 @@
 {% endblock %}
 
 {% block content %}
-<h1 class="lpage"><a class="lpage" href="#">potstar shop</a></h1>
-<div id="iPicture">
-    <div class="slide">
-        <div id="picture1">
-            <img src="/static/images/potstar-gartenhaus.jpg" alt="potstar bild gartenhaus"/>
+    <h1 class="lpage"><a class="lpage" href="#">potstar shop</a></h1>
+    <div id="iPicture">
+        <div class="slide">
+            <div id="picture1">
+                <img src="/static/images/potstar-gartenhaus.jpg" alt="potstar - Katalog Beispiel - Gartenhaus"/>
+            </div>
         </div>
     </div>
-</div>
-{% include "social_networks/as_horizontal_table.html" %}
-<div class="row-fluid">
-    <div class="span6 offset1">
-        <div id="impressum_link">
-            <a href="/impressum/">Impressum</a>
+    {% include "social_networks/as_horizontal_table.html" %}
+    <div class="row-fluid">
+        <div class="span6 offset1">
+            <div id="impressum_link">
+                <a href="/impressum/">Impressum</a>
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block extra_js %}
+<script src="/static/js/jquery-ui-1.8.24.custom.min.js"></script>
 <script src="/static/js/jQuery.iPicture.js"></script>
 <script>
     jQuery(document).ready(function(){
@@ -53,9 +54,9 @@
 		    button: "moreblack",
             moreInfos:{
                 "picture1":[
-                    {"id":"tooltip1","descr":"potstar XL 299€","top":"50em","left":"16em"},
-                    {"id":"tooltip2","descr":"potstar XL 299€","top":"41em","left":"43em"},
-                    {"id":"tooltip3","descr":"potstar XL 299€","top":"61em","left":"82em"},
+                    {"id":"tooltip1","descr":"potstar XL 299€","top":"58em","left":"19em"},
+                    {"id":"tooltip2","descr":"potstar XL 299€","top":"48em","left":"51em"},
+                    {"id":"tooltip3","descr":"potstar XL 299€","top":"71em","left":"96em"},
                 ]
             }
 	    });
