@@ -11,13 +11,14 @@
     <meta name="description" content="{{ description }}">
     <meta name="keywords" content="{{ keywords }}">
     <meta name="author" content="Thomas Rega">
+    <meta name="google-site-verification" content="GDIZDuyJAX_iYsed3KYmHRnRVsV4yagsWsYDH-W_HSQ" />
 
-    {% block stylesheet %}
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
-    {% endblock %}
     <link href="{{ STATIC_URL }}assets/css/bootstrap.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}css/base.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet"/>
+    {% block extra_css %}
+    {% endblock %}
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -32,7 +33,19 @@
      href="{{ STATIC_URL }}assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed"
      href="{{ STATIC_URL }}assets/ico/apple-touch-icon-57-precomposed.png">
-    {% block extra-head %}{% endblock %}
+    {% block extra-head %}
+    {% endblock %}
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-731101-10']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 </head>
 {% block body %}
 <body{% if bodyid %} id="{{ bodyid }}"{% endif %}{% if bodyclass %} class="{{ bodyclass }}"{% endif %}>
@@ -110,6 +123,7 @@
     {% endblock %}
 
     <div class="container-fluid">
+        {% block breadcrumbs %}
         <!-- breadcrumbs -->
         <div class="row-fluid">
             <div class="span12">
@@ -120,6 +134,7 @@
                 </div>
             </div>
         </div>
+        {% endblock %}
         <!-- sidebar left -->
         <div class="row-fluid">
 		    {% block sidebar-secondary %}
@@ -171,15 +186,9 @@
         </div>
     </div><!--/.fluid-container-->
 
-    {% include "footer.html" %}
-
-	{% block page-close %}
-    {% block google-tracker %}
-    {% if shop.options.GOOGLE.ANALYTICS.value %}
-        {% show_tracker is_secure %}
-    {% endif %}
+    {% block footer %}
+        {% include "footer.html" %}
     {% endblock %}
-	{% endblock %}
 
     <script src="{{ STATIC_URL }}assets/js/jquery.js"></script>
     <script src="{{ STATIC_URL }}assets/js/bootstrap-transition.js"></script>
@@ -195,12 +204,15 @@
     <script src="{{ STATIC_URL }}assets/js/bootstrap-carousel.js"></script>
     <script src="{{ STATIC_URL }}assets/js/bootstrap-typeahead.js"></script>
     <script src="https://apis.google.com/js/plusone.js"></script>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
-                              if(!d.getElementById(id)){js=d.createElement(s);
-                                  js.id=id;js.src="https://platform.twitter.com/widgets.js";
-                                  fjs.parentNode.insertBefore(js,fjs);}
-                              }(document,"script","twitter-wjs");
+    <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+                          if(!d.getElementById(id)){js=d.createElement(s);
+                              js.id=id;js.src="https://platform.twitter.com/widgets.js";
+                              fjs.parentNode.insertBefore(js,fjs);}
+                          }(document,"script","twitter-wjs");
     </script>
+    {% block extra_js %}
+    {% endblock %}
 </body>
 {% endblock %}
 </html>
