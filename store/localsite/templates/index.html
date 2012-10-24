@@ -1,76 +1,67 @@
+{% extends "base.html" %}
 {% load i18n %}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>potstar</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="{% trans 'Solar powered LED flower pots - Get the stars from the sky' %}">
-        <meta name="keywords" content="{% trans 'solar powered flowerpots, LED flowerpots, potstar, handmade, LED, flowerpot, garden' %}">
-        <meta name="author" content="Thomas Rega">
 
-        <link href="/static/assets/css/bootstrap.css" rel="stylesheet">
-        <link href="/static/assets/css/bootstrap-responsive.css" rel="stylesheet">
-        <link href="/static/css/jQuery.iPicture.css" rel="stylesheet" />
-        <link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet'>
-        <link href="/static/css/localsite.css" rel="stylesheet" />
+{% block extra_css %}
+<link href="/static/css/jQuery.iPicture.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet'>
+<link href="/static/css/localsite.css" rel="stylesheet" />
+{% endblock %}
 
-        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+{% block navigation %}
+{% endblock %}
 
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="/static/assets/ico/apple-touch-icon-57-precomposed.png">
-    </head>
-    <body>
-        <h1 class="lpage"><a class="lpage" href="#">potstar shop</a></h1>
-        <div id="iPicture">
-            <div class="slide">
-                <div id="picture1">
-                    <img src="/static/images/potstar-gartenhaus.jpg" alt="potstar bild gartenhaus"/>
-                </div>
-            </div>
+{% block navbar %}
+{% endblock %}
+
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block sidebar-secondary %}
+{% endblock %}
+
+{% block right_sidebar %}
+{% endblock %}
+
+{% block content %}
+<h1 class="lpage"><a class="lpage" href="#">potstar shop</a></h1>
+<div id="iPicture">
+    <div class="slide">
+        <div id="picture1">
+            <img src="/static/images/potstar-gartenhaus.jpg" alt="potstar bild gartenhaus"/>
         </div>
+    </div>
+</div>
+{% include "social_networks/as_horizontal_table.html" %}
+<div class="row-fluid">
+    <div class="span6 offset1">
         <div id="impressum_link">
             <a href="/impressum/">Impressum</a>
         </div>
-        <script src="/static/assets/js/jquery.js"></script>
-        <script src="/static/js/jquery-ui-1.8.24.custom.min.js"></script>
-        <script src="/static/js/jQuery.iPicture.js"></script>
-        <script src="/static/assets/js/bootstrap-transition.js"></script>
-        <script src="/static/assets/js/bootstrap-alert.js"></script>
-        <script src="/static/assets/js/bootstrap-modal.js"></script>
-        <script src="/static/assets/js/bootstrap-dropdown.js"></script>
-        <script src="/static/assets/js/bootstrap-scrollspy.js"></script>
-        <script src="/static/assets/js/bootstrap-tab.js"></script>
-        <script src="/static/assets/js/bootstrap-tooltip.js"></script>
-        <script src="/static/assets/js/bootstrap-popover.js"></script>
-        <script src="/static/assets/js/bootstrap-button.js"></script>
-        <script src="/static/assets/js/bootstrap-collapse.js"></script>
-        <script src="/static/assets/js/bootstrap-carousel.js"></script>
-        <script src="/static/assets/js/bootstrap-typeahead.js"></script>
+    </div>
+</div>
+{% endblock %}
 
-        <script>
-        jQuery(document).ready(function(){
-	        $( "#iPicture" ).iPicture({
-		        animation: true,
-		        animationBg: "bgblack",
-		        animationType: "ltr-slide",
-		        pictures: ["picture1"],
-		        button: "moreblack",
-                moreInfos:{
-                    "picture1":[
-                        {"id":"tooltip1","descr":"potstar XL 299€","top":"50em","left":"16em"},
-                        {"id":"tooltip2","descr":"potstar XL 299€","top":"41em","left":"43em"},
-                        {"id":"tooltip3","descr":"potstar XL 299€","top":"61em","left":"82em"},
-                    ]
-                }
-	        });
-        });
-        </script>
+{% block extra_js %}
+<script src="/static/js/jQuery.iPicture.js"></script>
+<script>
+    jQuery(document).ready(function(){
+	    $( "#iPicture" ).iPicture({
+		    animation: true,
+		    animationBg: "bgblack",
+		    animationType: "ltr-slide",
+		    pictures: ["picture1"],
+		    button: "moreblack",
+            moreInfos:{
+                "picture1":[
+                    {"id":"tooltip1","descr":"potstar XL 299€","top":"50em","left":"16em"},
+                    {"id":"tooltip2","descr":"potstar XL 299€","top":"41em","left":"43em"},
+                    {"id":"tooltip3","descr":"potstar XL 299€","top":"61em","left":"82em"},
+                ]
+            }
+	    });
+    });
+</script>
+{% endblock %}
 
-    </body>
-</html>
+{% block footer %}
+{% endblock %}
