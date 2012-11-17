@@ -35,9 +35,13 @@ a.lpage:hover {
 
 h1.lpage{
     position:absolute;
-    top:10.2em;
-    left:2em;
+    top: 515px;
+    left: 130px;
     color:#fff!important;
     font-size:4em;
     text-shadow: 3px 3px #333333;
+}
+
+.content {
+    background-color: #000!important;
 }
