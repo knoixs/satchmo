@@ -171,14 +171,28 @@ border-bottom: 1px solid silver;
 
 
 #content {
-margin-left: 200px;
-margin-right: 200px;
-padding: 1em;
+    color: #555;
+    background-color: #fff;
+    padding: 20px 25px;
+    margin: 1em 0;
+    max-width: 1550px;
+
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+    border-radius: .3em;
+    box-shadow: .2em .2em .2em #000;
+
+    font-size: 1.5em;
+    line-height: 1.8em;
+}
+
+#content h1 {
+    text-align: center;
 }
 
 body {
-	font-family:  "Arial", serif;
-	font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
 	background-color: #555;
 	margin-top: 0px;
 	padding-top: 0px;
@@ -482,6 +496,8 @@ div.upsell .upselldescription {
 
 #myCarousel{
     margin-top: 1em;
+    width: 100%;
+    max-width: 1600px;
 }
 
 .carousel-inner {

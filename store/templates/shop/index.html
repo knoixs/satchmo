@@ -1,42 +1,46 @@
 {% extends "shop/base.html" %}
-{% load i18n %}
-{% load thumbnail %}
-{% load satchmo_util %}
-
+{% load i18n satchmo_category satchmo_google satchmo_util satchmo_currency satchmo_discounts app_plugins normalize_decimal thumbnail %}
 {% block extra-css %}
     <link href="{{ STATIC_URL }}css/nivo-slider.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}css/index.css" rel="stylesheet">
 {% endblock %}
+
 {% block navbar %}
-   <li class="first">{% trans "Home" %}</li>
+   <li class="first"><a href="{{ shop_home_url }}">{% trans "Home" %}</a></li>
 {% endblock %}
 
-{% block content %}
-    <div id="myCarousel" class="span12 carousel slide">
+{% block content_head %}
+    <div id="myCarousel" class="carousel slide">
         <div class="carousel-inner">
             <div class="active item">
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-1.jpg" alt="potstar-1"/>
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-1.jpg" alt="potstar habor Berlin 1"/>
             </div>
             <div class="item">
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-2.jpg" alt="potstar-1"/>
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-2.jpg" alt="potstar habor Berlin 2"/>
             </div>
             <div class="item">
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-3.jpg" alt="potstar-1"/>
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-3.jpg" alt="potstar habor Berlin 3"/>
             </div>
             <div class="item">
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-4.jpg" alt="potstar-1"/>
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-4.jpg" alt="potstar castle Berlin 1"/>
             </div>
             <div class="item">
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-5.jpg" alt="potstar-1"/>
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-5.jpg" alt="potstar castle Berlin 2"/>
             </div>
         </div>
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
     <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
-
+{% endblock %}
+{% block content %}
+<div align=center>
+    <h1>{% trans "potstar - we can get the stars from the sky for you " %}</h1>
+    {% url satchmo_contact as contact_url %}
     {% blocktrans %}
-        <h1>Get down the stars from the sky to enlighten your life.</h1>
+    We would be honored to answer any questions you may have about our company, product, or people.
+    Please use our <a href="{{ contact_url }}"> contact form</a>.
     {% endblocktrans %}
+</div>
 {% endblock %}
 
 {% block extra-js %}

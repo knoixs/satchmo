@@ -13,6 +13,7 @@
     <meta name="author" content="Thomas Rega">
     <meta name="google-site-verification" content="GDIZDuyJAX_iYsed3KYmHRnRVsV4yagsWsYDH-W_HSQ" />
 
+    <link href='http://fonts.googleapis.com/css?family=Oswald|Oleo+Script|Contrail+One' rel='stylesheet' type='text/css'>
     <link href="{{ STATIC_URL }}assets/css/bootstrap.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}css/base.css" rel="stylesheet">
@@ -75,26 +76,30 @@
         <!-- sidebar left -->
         <div class="row-fluid">
 
-            <div class="span2">
             {% block left_sidebar %}
                 {% comment %}
+                <div class="span2">
                 {% include "left.html" %}
+                </div>
                 {% endcomment %}
             {% endblock %}
-	        </div>
 
-            <div class="span7 content">
+            {% block content_head %}
+            {% endblock %}
+
+            <div id="content">
             {% block content %}
             {% endblock %}
-	        </div>
+            </div>
 
-            <div class="span2">
+
             {% block right_sidebar %}
                 {% comment %}
-                {% include "shop/right.html" %}
+                <div class="span2">
+                {% include "right.html" %}
+                </div>
                 {% endcomment %}
             {% endblock %}
-	        </div>
 
         </div>
     </div><!--/.fluid-container-->
@@ -134,6 +139,7 @@
                               fjs.parentNode.insertBefore(js,fjs);}
                           }(document,"script","twitter-wjs");
     </script>
+    <script src="{{ STATIC_URL }}/js/base.js"></script>
     {% block extra_js %}
     {% endblock %}
 </body>

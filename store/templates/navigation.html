@@ -11,6 +11,8 @@
             </a>
             <a class="brand" href="/"><img src="{{ STATIC_URL }}images/potstar-logo-white.png" /></a>
             <div class="nav-collapse collapse">
+
+                {% comment %}
                 <p class="navbar-text pull-right">
                     {% if user.is_staff %}
                     <a href="{% url admin:index %}" class="navbar-link" target="blank">
@@ -46,10 +48,17 @@
                         {% if checkouturl %}<a href="{{ checkouturl }}">{% trans "Check out" %}</a>{% endif %}
                     {% endif %}
                 </p>
+                {% endcomment %}
+
                 <ul class="nav">
-                    <li class="active"><a href="/shop/">Home</a></li>
+                    {% url satchmo_shop_home as shop_home_url %}
+                    {% if shop_home_url %}
+                        <li><a href="{{ shop_home_url }}">Home</a></li>
+                    {% endif %}
                     {% url satchmo_contact as contact_url %}
-                    {% if contact_url %}<li><a href="{{ contact_url }}">{% trans "Contact Us" %}</a></li>{% endif %}
+                    {% if contact_url %}
+                        <li><a href="{{ contact_url }}">{% trans "Contact Us" %}</a></li>
+                    {% endif %}
                 </ul>
                 <ul class="nav language_settings">
                     <li><a href="/set_language?language=de">
