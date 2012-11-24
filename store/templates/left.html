@@ -1,0 +1,34 @@
+{% load i18n satchmo_category satchmo_google satchmo_util satchmo_currency satchmo_discounts app_plugins normalize_decimal %}
+{% block sidebar-secondary %}
+{% comment %}
+later ...
+<div>
+    {% satchmo_search_form %}
+</div>
+{% endcomment %}
+{% block sidebar %}
+<div class="well sidebar-nav">
+    <ul class="nav nav-list">
+        <li class="nav-header">{% trans "Shop Categories" %}</li>
+        {% block sidebar-categories %}
+        {% comment %}
+        mark the current as active ...
+        <li class="active"><a href="#">Link</a></li>
+        {% endcomment %}
+        {% if category.id %}
+            {% category_tree category.id %}
+        {% else %}
+            {% if product.get_category %}
+                {% category_tree product.get_category.id %}
+            {% else %}
+                {% category_tree %}
+            {% endif %}
+        {% endif %}
+        {% endblock sidebar-categories %}
+    </ul>
+</div><!--/.well -->
+{% endblock sidebar %}
+{% block sidebar-secondary-bottom %}
+    {% plugin_point "sidebar_secondary_bottom" %}
+{% endblock %}
+{% endblock sidebar-secondary %}

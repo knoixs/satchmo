@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-17 21:24+0200\n"
+"POT-Creation-Date: 2012-11-21 08:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,122 +20,20 @@ msgstr ""
 
 #: local_settings.py:23
 msgid "German"
-msgstr ""
+msgstr "Deutsch"
 
 #: local_settings.py:24
 msgid "English"
-msgstr ""
+msgstr "Englisch"
 
-#: localsite/templates/index.html:7
-msgid "Solar powered LED flower pots - Get the stars from the sky"
-msgstr ""
-
-#: localsite/templates/index.html:8
-msgid ""
-"solar powered flowerpots, LED flowerpots, potstar, handmade, LED, flowerpot, "
-"garden"
-msgstr ""
-
-#: templates/404.html:5 templates/500.html:5
-#: templates/product/best_ratings.html:8 templates/product/best_sellers.html:7
-#: templates/product/category.html:13 templates/product/category_index.html:7
-#: templates/product/minimum_order.html:5 templates/product/product.html:23
-#: templates/product/recently_added.html:7
-#: templates/product/admin/inventory_form.html:67
-#: templates/product/admin/product_export_form.html:51
-#: templates/product/admin/product_import_result.html:11
-#: templates/product/admin/variation_manager.html:6
-#: templates/product/admin/variation_manager_list.html:6
-#: templates/registration/account_info.html:5
-#: templates/registration/activate.html:6 templates/registration/login.html:5
-#: templates/registration/logout.html:5
-#: templates/registration/password_change_done.html:5
-#: templates/registration/password_change_form.html:5
-#: templates/registration/password_reset_complete.html:5
-#: templates/registration/password_reset_confirm.html:5
-#: templates/registration/password_reset_done.html:5
-#: templates/registration/password_reset_form.html:5
-#: templates/registration/registration_complete.html:6
-#: templates/registration/registration_form.html:5
-#: templates/registration/repeat_activation.html:5 templates/shop/404.html:5
-#: templates/shop/500.html:5 templates/shop/cart.html:11
-#: templates/shop/contact_form.html:5 templates/shop/contact_thanks.html:5
-#: templates/shop/download.html:5 templates/shop/index.html:10
-#: templates/shop/multiple_product_form.html:10
-#: templates/shop/order_history.html:8 templates/shop/order_tracking.html:6
-#: templates/shop/search.html:6
-msgid "Home"
-msgstr ""
-
-#: templates/404.html:10 templates/500.html:10 templates/shop/404.html:10
-#: templates/shop/500.html:10
-msgid "Error"
-msgstr ""
-
-#: templates/404.html:11 templates/shop/404.html:11
-msgid "Could not find the page you were looking for."
-msgstr ""
-
-#: templates/500.html:11 templates/shop/500.html:11
-msgid "There was an error with the store.  The admin has been notified."
-msgstr ""
-
-#: templates/base.html:61 templates/shop/base.html:61
-msgid "Admin"
-msgstr ""
-
-#: templates/base.html:68 templates/shop/base.html:68
-msgid "Account Details"
-msgstr ""
-
-#: templates/base.html:72 templates/product/admin/inventory_form.html:64
-#: templates/product/admin/product_export_form.html:48
-#: templates/product/admin/product_import_result.html:8
-#: templates/shop/base.html:72
-msgid "Log out"
-msgstr ""
-
-#: templates/base.html:75
-#: templates/registration/password_reset_complete.html:14
-#: templates/shop/base.html:75
-msgid "Log in"
-msgstr ""
-
-#: templates/base.html:80 templates/product/minimum_order.html:6
-#: templates/shop/base.html:80 templates/shop/cart.html:12
-msgid "Cart"
-msgstr ""
-
-#: templates/base.html:90 templates/shop/base.html:90
-#: templates/shop/cart.html:73
-msgid "Check out"
-msgstr ""
-
-#: templates/base.html:97 templates/shop/base.html:97
-#: templates/shop/contact_form.html:6 templates/shop/contact_thanks.html:6
-msgid "Contact Us"
-msgstr ""
-
-#: templates/base.html:135 templates/shop/base.html:135
+#: templates/left.html:12
 msgid "Shop Categories"
-msgstr ""
+msgstr "Kategorien"
 
-#: templates/footer.html:8 templates/product/recently_added.html:8
-#: templates/product/recently_added.html:12
-msgid "Recently Added"
-msgstr ""
-
-#: templates/footer.html:10 templates/product/best_sellers.html:8
-msgid "Best Sellers"
-msgstr ""
-
-#: templates/footer.html:12 templates/product/category_index.html:8
-msgid "Category Index"
-msgstr ""
-
-#: templates/footer.html:14
-msgid "Quick Order"
-msgstr ""
+#: templates/navigation.html:61 templates/shop/contact_form.html:5
+#: templates/shop/contact_thanks.html:6
+msgid "Contact Us"
+msgstr "Kontakt"
 
 #: templates/admin/base_site.html:46 templates/admin/base_site.html.py:49
 #: templates/shop/admin/base_site.html:46
@@ -233,6 +131,35 @@ msgstr ""
 msgid "Product Subtypes"
 msgstr ""
 
+#: templates/product/best_ratings.html:8 templates/product/best_sellers.html:7
+#: templates/product/category.html:13 templates/product/category_index.html:7
+#: templates/product/minimum_order.html:5 templates/product/product.html:23
+#: templates/product/recently_added.html:7
+#: templates/product/admin/inventory_form.html:67
+#: templates/product/admin/product_export_form.html:51
+#: templates/product/admin/product_import_result.html:11
+#: templates/product/admin/variation_manager.html:6
+#: templates/product/admin/variation_manager_list.html:6
+#: templates/registration/account_info.html:5
+#: templates/registration/activate.html:6 templates/registration/login.html:5
+#: templates/registration/logout.html:5
+#: templates/registration/password_change_done.html:5
+#: templates/registration/password_change_form.html:5
+#: templates/registration/password_reset_complete.html:5
+#: templates/registration/password_reset_confirm.html:5
+#: templates/registration/password_reset_done.html:5
+#: templates/registration/password_reset_form.html:5
+#: templates/registration/registration_complete.html:6
+#: templates/registration/registration_form.html:5
+#: templates/registration/repeat_activation.html:5 templates/shop/404.html:5
+#: templates/shop/500.html:5 templates/shop/cart.html:11
+#: templates/shop/contact_thanks.html:5 templates/shop/download.html:5
+#: templates/shop/index.html:9 templates/shop/multiple_product_form.html:10
+#: templates/shop/order_history.html:8 templates/shop/order_tracking.html:6
+#: templates/shop/search.html:6
+msgid "Home"
+msgstr ""
+
 #: templates/product/best_ratings.html:9
 msgid "Most Popular"
 msgstr ""
@@ -244,6 +171,10 @@ msgstr ""
 #: templates/product/best_ratings.html:26
 #, python-format
 msgid "Rating %(rating)s"
+msgstr ""
+
+#: templates/product/best_sellers.html:8
+msgid "Best Sellers"
 msgstr ""
 
 #: templates/product/best_sellers.html:13
@@ -281,16 +212,20 @@ msgid ""
 "a>."
 msgstr ""
 
+#: templates/product/category_index.html:8
+msgid "Category Index"
+msgstr "Kategorien Index"
+
 #: templates/product/category_index.html:12 templates/shop/search.html:19
 msgid "Categories"
-msgstr ""
+msgstr "Kategorien"
 
 #: templates/product/detail_configurableproduct.html:38
 #: templates/product/detail_customproduct.html:14
 #: templates/product/product.html:34 templates/shop/cart.html:39
 #: templates/shop/multiple_product_form.html:22
 msgid "Price"
-msgstr ""
+msgstr "Preis"
 
 #: templates/product/detail_configurableproduct.html:38
 #: templates/product/product.html:34
@@ -299,7 +234,7 @@ msgstr ""
 
 #: templates/product/detail_configurableproduct.html:62
 msgid "Please choose your options"
-msgstr ""
+msgstr "Bitte wählen"
 
 #: templates/product/detail_configurableproduct.html:77
 #: templates/product/detail_customproduct.html:51
@@ -307,14 +242,14 @@ msgstr ""
 #: templates/product/product.html:55 templates/shop/cart.html:33
 #: templates/shop/pdf/invoice.rml:131 templates/shop/pdf/packing-slip.rml:125
 msgid "Quantity"
-msgstr ""
+msgstr "Anzahl"
 
 #: templates/product/detail_configurableproduct.html:79
 #: templates/product/detail_customproduct.html:53
 #: templates/product/detail_subscriptionproduct.html:52
 #: templates/product/product.html:57
 msgid "Add to cart"
-msgstr ""
+msgstr "In den Einkauskorb legen"
 
 #: templates/product/detail_customproduct.html:12
 #, python-format
@@ -358,6 +293,10 @@ msgstr ""
 msgid "months"
 msgstr ""
 
+#: templates/product/minimum_order.html:6 templates/shop/cart.html:12
+msgid "Cart"
+msgstr "Einkaufskorb"
+
 #: templates/product/minimum_order.html:7
 msgid "Notice"
 msgstr ""
@@ -376,15 +315,18 @@ msgid ""
 "%(enddate)s.</p>\n"
 msgstr ""
 
+#: templates/product/recently_added.html:8
+#: templates/product/recently_added.html:12
+msgid "Recently Added"
+msgstr ""
+
 #: templates/product/recently_added.html:32
-#: templates/product/recently_added.html:34 templates/shop/index.html:64
-#: templates/shop/index.html.py:67
+#: templates/product/recently_added.html:34
 msgid "Previous"
 msgstr ""
 
 #: templates/product/recently_added.html:37
-#: templates/product/recently_added.html:39 templates/shop/index.html:78
-#: templates/shop/index.html.py:81
+#: templates/product/recently_added.html:39
 msgid "Next"
 msgstr ""
 
@@ -419,7 +361,13 @@ msgstr ""
 #: templates/product/admin/product_import_result.html:8
 #: templates/registration/password_change_form.html:37
 msgid "Change password"
-msgstr ""
+msgstr "Passwort ändern"
+
+#: templates/product/admin/inventory_form.html:64
+#: templates/product/admin/product_export_form.html:48
+#: templates/product/admin/product_import_result.html:8
+msgid "Log out"
+msgstr "Ausloggen"
 
 #: templates/product/admin/inventory_form.html:68
 #: templates/product/admin/product_export_form.html:52
@@ -432,8 +380,8 @@ msgstr ""
 #: templates/product/admin/variation_manager.html:233
 msgid "Please correct the error below."
 msgid_plural "Please correct the errors below."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Bitte berichtigen Sie den unten aufgeführten Fehler"
+msgstr[1] "Bitte berichtigen Sie die unten aufgeführten Fehler"
 
 #: templates/product/admin/inventory_form.html:82
 #: templates/product/admin/product_export_form.html:80
@@ -713,32 +661,32 @@ msgstr ""
 msgid "Registration Confirmation"
 msgstr ""
 
-#: templates/registration/login.html:17
+#: templates/registration/login.html:20
 #: templates/registration/password_reset_form.html:16
 msgid "Email address"
-msgstr ""
+msgstr "Email Adresse"
 
-#: templates/registration/login.html:19
+#: templates/registration/login.html:24
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
-#: templates/registration/login.html:23
+#: templates/registration/login.html:30
 msgid "Login"
-msgstr ""
+msgstr "Einloggen"
 
-#: templates/registration/login.html:37
+#: templates/registration/login.html:45
 msgid "If you do not have an account, please"
 msgstr ""
 
-#: templates/registration/login.html:37
+#: templates/registration/login.html:46
 msgid "click here"
 msgstr ""
 
-#: templates/registration/login.html:40
+#: templates/registration/login.html:51
 msgid "If you do not remember your password, please"
 msgstr ""
 
-#: templates/registration/login.html:40
+#: templates/registration/login.html:52
 msgid "click here</a> to have it reset."
 msgstr ""
 
@@ -819,6 +767,10 @@ msgstr ""
 #: templates/registration/password_reset_complete.html:12
 msgid "Your password has been set.  You may go ahead and log in now."
 msgstr ""
+
+#: templates/registration/password_reset_complete.html:14
+msgid "Log in"
+msgstr "Einloggen"
 
 #: templates/registration/password_reset_confirm.html:12
 msgid "Enter new password"
@@ -947,18 +899,30 @@ msgstr ""
 msgid "Store Management"
 msgstr ""
 
+#: templates/shop/404.html:10 templates/shop/500.html:10
+msgid "Error"
+msgstr ""
+
+#: templates/shop/404.html:11
+msgid "Could not find the page you were looking for."
+msgstr ""
+
+#: templates/shop/500.html:11
+msgid "There was an error with the store.  The admin has been notified."
+msgstr ""
+
 #: templates/shop/_order_details.html:8
 #: templates/shop/_order_tracking_details.html:16
 #: templates/shop/email/_order_detail.txt:1
 msgid "Items Ordered"
 msgstr ""
 
-#: templates/shop/_order_details.html:17 templates/shop/contact_form.html:10
+#: templates/shop/_order_details.html:17 templates/shop/contact_form.html:9
 #: templates/shop/contact_thanks.html:10
 #: templates/shop/email/_order_detail.txt:5
 #: templates/shop/email/_order_detail_table.html:8
 msgid "Contact Information"
-msgstr ""
+msgstr "Nehmen Sie mit uns Kontakt auf"
 
 #: templates/shop/_order_details.html:22
 #: templates/shop/email/_order_detail.txt:11
@@ -1088,23 +1052,48 @@ msgstr ""
 msgid "Cart Total"
 msgstr ""
 
+#: templates/shop/cart.html:73
+msgid "Check out"
+msgstr "Bestellen"
+
 #: templates/shop/contact_form.html:13
-msgid "Please correct the following error:"
-msgid_plural "Please correct the following errors:"
+msgid ""
+"\n"
+"        Please correct the following error:\n"
+"        "
+msgid_plural ""
+"\n"
+"        Please correct the following errors:\n"
+"    "
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/shop/contact_form.html:19
-msgid "Send Email"
+#: templates/shop/contact_form.html:22
+msgid ""
+"\n"
+"We would be honored to answer any questions you may have about our company, "
+"product, or people.\n"
+"Feel free to contact us for any reason whatsoever. Please fill out the form "
+"below and we'll\n"
+"get back to you as soon as we can with an answer.\n"
 msgstr ""
+"Wir beantworten gerne Ihre Fragen zur Firma, unserem Produkt oder unseren "
+"Mitarbeitern. Bitte nutzen Sie dazu das unten aufgeführte Kontakt Formular. "
+"Wir werden Ihre Anfrage so schnell wie möglich beantworten."
+
+#: templates/shop/contact_form.html:32
+msgid "Send Email"
+msgstr "Senden"
 
 #: templates/shop/contact_thanks.html:12
 msgid "Thank you for contacting us."
 msgstr ""
+"Vielen Dank für Ihr Interesse - Ihre Anfrage wird so schnell wie möglich "
+"bearbeitet."
 
 #: templates/shop/contact_thanks.html:14
 msgid "We will attempt to get back to you within 48 hours."
-msgstr ""
+msgstr "Wir versuchen jede Anfrage innerhalb von 48 Stunden zu beantworten."
 
 #: templates/shop/download.html:13
 msgid "Downloading of"
@@ -1120,9 +1109,23 @@ msgid ""
 "with the download, please refresh your browser and try the download again"
 msgstr ""
 
+#: templates/shop/index.html:37
+msgid "potstar - we can get the stars from the sky for you "
+msgstr "potstar - wir holen Ihnen die Sterne vom Himmel"
+
 #: templates/shop/index.html:39
-msgid "Featured Items"
+#, python-format
+msgid ""
+"\n"
+"    We would be honored to answer any questions you may have about our "
+"company, product, or people.\n"
+"    Please use our <a href=\"%(contact_url)s\"> contact form</a>.\n"
+"    "
 msgstr ""
+"Wir beantworten gerne Ihre Fragen zur Firma, unserem Produkt oder unseren "
+"Mitarbeitern.    Bitte benutzen Sie dazu unser <a href=\"%(contact_url)s"
+"\">Kontakt Formular</a>.\n"
+"    "
 
 #: templates/shop/multiple_product_form.html:11
 #: templates/shop/multiple_product_form.html:15
@@ -1294,6 +1297,8 @@ msgid ""
 "Here's a %(request_type)s from %(name)s ( %(email)s ) sent via the web "
 "contact form."
 msgstr ""
+"Diese Anfrage ist heute via Kontakt Formular eingegangen: Anfrage Typ: "
+"%(request_type)s von %(name)s ( %(email)s )"
 
 #: templates/shop/email/gift_certificate_recipient.html:6
 #: templates/shop/email/gift_certificate_recipient.txt:5
@@ -1439,3 +1444,9 @@ msgstr ""
 #: templates/shop/pdf/packing-slip.rml:138
 msgid "Thank you for your business!"
 msgstr ""
+
+#~ msgid "Admin"
+#~ msgstr "Admin Bereich"
+
+#~ msgid "Account Details"
+#~ msgstr "Mein Konto"

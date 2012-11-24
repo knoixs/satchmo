@@ -1,0 +1,73 @@
+{% load i18n satchmo_category satchmo_google satchmo_util satchmo_currency satchmo_discounts app_plugins normalize_decimal %}
+
+{% block navigation %}
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="/"><img src="{{ STATIC_URL }}images/potstar-logo-white.png" /></a>
+            <div class="nav-collapse collapse">
+
+                {% comment %}
+                <p class="navbar-text pull-right">
+                    {% if user.is_staff %}
+                    <a href="{% url admin:index %}" class="navbar-link" target="blank">
+                        {% trans "Admin" %}</a>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                        Logged in as
+                        {% if user.is_staff %} Admin {% else %} {{ user.get_full_name }} {% endif %}&#9733;
+                        {% url satchmo_account_info as accounturl %}
+                        {% if accounturl %}
+                        <a href="{{ accounturl }}" class="navbar-link">{% trans "Account Details" %}
+                        </a> &#9733;
+                        {% endif %}
+                        <a href="{{ logout_url }}?next={{request.path}}" class="navbar-link">
+                            {% trans "Log out" %}</a>
+                    {% else %}
+                    <a href="{{ login_url }}?next={{request.path}}" class="navbar-link">
+                        {% trans "Log in" %}</a>
+                    {% endif %}
+                </p>
+                <p class="navbar-text frmr">
+                    {% url satchmo_cart as carturl %}
+                    {% if carturl %}<a href="{{ carturl }}">{% trans "Cart" %}</a>{% endif %}
+
+                    {% if not cart.is_empty %}
+                        ({{ cart_count|normalize_decimal }} -
+                        {% if sale %}
+                            {{ cart|discount_cart_total:sale|currency }}
+                        {% else %}
+                            {{cart.total|currency}}
+                        {% endif%})
+                        {% url satchmo_checkout-step1 as checkouturl %}
+                        {% if checkouturl %}<a href="{{ checkouturl }}">{% trans "Check out" %}</a>{% endif %}
+                    {% endif %}
+                </p>
+                {% endcomment %}
+
+                <ul class="nav">
+                    {% url satchmo_shop_home as shop_home_url %}
+                    {% if shop_home_url %}
+                        <li><a href="{{ shop_home_url }}">Home</a></li>
+                    {% endif %}
+                    {% url satchmo_contact as contact_url %}
+                    {% if contact_url %}
+                        <li><a href="{{ contact_url }}">{% trans "Contact Us" %}</a></li>
+                    {% endif %}
+                </ul>
+                <ul class="nav language_settings">
+                    <li><a href="/set_language?language=de">
+                        <img class="flag" src="/static/images/ico/de.png"></a></li>
+                    <li><a href="/set_language?language=en">
+                        <img class="flag" src="/static/images/ico/en.png"></a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+{% endblock %}

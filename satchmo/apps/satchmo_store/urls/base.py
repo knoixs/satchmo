@@ -1,6 +1,8 @@
-"""Base urls used by Satchmo.
+"""
+Base urls used by Satchmo.
 
 Split out from urls.py to allow much easier overriding and integration with larger apps.
+
 """
 from django.conf.urls.defaults import patterns, include
 from signals_ahoy.signals import collect_urls
@@ -12,9 +14,9 @@ import satchmo_store
 log = logging.getLogger('shop.urls')
 
 urlpatterns = patterns('',
-    (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    (r'^accounts/', include('satchmo_store.accounts.urls')),
-    (r'^settings/', include('livesettings.urls')),
+    #(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    #(r'^accounts/', include('satchmo_store.accounts.urls')),
+    #(r'^settings/', include('livesettings.urls')),
     (r'^cache/', include('keyedcache.urls')),
 ) + prodpatterns + shippatterns
 

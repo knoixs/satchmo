@@ -13,10 +13,10 @@
     <meta name="author" content="Thomas Rega">
     <meta name="google-site-verification" content="GDIZDuyJAX_iYsed3KYmHRnRVsV4yagsWsYDH-W_HSQ" />
 
+    <link href='http://fonts.googleapis.com/css?family=Oswald|Oleo+Script|Contrail+One' rel='stylesheet' type='text/css'>
     <link href="{{ STATIC_URL }}assets/css/bootstrap.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}css/base.css" rel="stylesheet">
-    <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet"/>
     {% block extra_css %}
     {% endblock %}
 
@@ -58,69 +58,7 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-    {% block navigation %}
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container-fluid">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <a class="brand" href="/"><img src="{{ STATIC_URL }}images/potstar-logo-white.png" /></a>
-                <div class="nav-collapse collapse">
-                    <p class="navbar-text pull-right">
-                        {% if user.is_staff %}
-                        <a href="{% url admin:index %}" class="navbar-link" target="blank">
-                            {% trans "Admin" %}</a>
-                        {% endif %}
-                        {% if user.is_authenticated %}
-                            Logged in as
-                            {% if user.is_staff %} Admin {% else %} {{ user.get_full_name }} {% endif %}&#9733;
-                            {% url satchmo_account_info as accounturl %}
-                            {% if accounturl %}
-                            <a href="{{ accounturl }}" class="navbar-link">{% trans "Account Details" %}
-                            </a> &#9733;
-                            {% endif %}
-                            <a href="{{ logout_url }}?next={{request.path}}" class="navbar-link">
-                                {% trans "Log out" %}</a>
-                        {% else %}
-                        <a href="{{ login_url }}?next={{request.path}}" class="navbar-link">
-                            {% trans "Log in" %}</a>
-                        {% endif %}
-                    </p>
-                    <p class="navbar-text frmr">
-                        {% url satchmo_cart as carturl %}
-                        {% if carturl %}<a href="{{ carturl }}">{% trans "Cart" %}</a>{% endif %}
-
-                        {% if not cart.is_empty %}
-                            ({{ cart_count|normalize_decimal }} -
-                            {% if sale %}
-                                {{ cart|discount_cart_total:sale|currency }}
-                            {% else %}
-                                {{cart.total|currency}}
-                            {% endif%})
-                            {% url satchmo_checkout-step1 as checkouturl %}
-                            {% if checkouturl %}<a href="{{ checkouturl }}">{% trans "Check out" %}</a>{% endif %}
-                        {% endif %}
-                    </p>
-                    <ul class="nav">
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        {% url satchmo_contact as contact_url %}
-                        {% if contact_url %}<li><a href="{{ contact_url }}">{% trans "Contact Us" %}</a></li>{% endif %}
-                    </ul>
-                    <ul class="nav language_settings">
-                        <li><a href="/set_language?language=de">
-                            <img class="flag" src="/static/images/ico/de.png"></a></li>
-                        <li><a href="/set_language?language=en">
-                            <img class="flag" src="/static/images/ico/en.png"></a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div>
-        </div>
-    </div>
-    {% endblock %}
+    {% include "navigation.html" %}
 
     <div class="container-fluid">
         {% block breadcrumbs %}
@@ -137,58 +75,48 @@
         {% endblock %}
         <!-- sidebar left -->
         <div class="row-fluid">
-		    {% block sidebar-secondary %}
-            <div class="span2">
+
+            {% block left_sidebar %}
                 {% comment %}
-                later ...
-                <div>
-			        {% satchmo_search_form %}
-		        </div>
+                <div class="span2">
+                {% include "left.html" %}
+                </div>
                 {% endcomment %}
-			    {% block sidebar %}
-                <div class="well sidebar-nav">
-                    <ul class="nav nav-list">
-                        <li class="nav-header">{% trans "Shop Categories" %}</li>
-			            {% block sidebar-categories %}
-                        {% comment %}
-                        mark the current as active ...
-                        <li class="active"><a href="#">Link</a></li>
-                        {% endcomment %}
-                        {% if category.id %}
-                            {% category_tree category.id %}
-                        {% else %}
-                            {% if product.get_category %}
-                                {% category_tree product.get_category.id %}
-                            {% else %}
-                                {% category_tree %}
-                            {% endif %}
-                        {% endif %}
-                        {% endblock sidebar-categories %}
-                    </ul>
-                </div><!--/.well -->
-                {% endblock sidebar %}
-                {% block sidebar-secondary-bottom %}
-                    {% plugin_point "sidebar_secondary_bottom" %}
-                {% endblock %}
-            </div><!--/span-->
-		    {% endblock sidebar-secondary %}
+            {% endblock %}
 
+            {% block content_head %}
+            {% endblock %}
+
+            <div id="content">
             {% block content %}
-            <div class="span8 content">
-	        </div>
+            {% endblock %}
+            </div>
+
+
+            {% block right_sidebar %}
+                {% comment %}
+                <div class="span2">
+                {% include "right.html" %}
+                </div>
+                {% endcomment %}
             {% endblock %}
 
-            <div class="span2">
-            {% block right_sidebar %}
-                {% include "shop/right.html" %}
-            {% endblock %}
-	        </div>
         </div>
     </div><!--/.fluid-container-->
 
-    {% block footer %}
-        {% include "footer.html" %}
-    {% endblock %}
+    <div class="container-fluid w100">
+        <div class="row-fluid">
+        {% block footer %}
+            {% include "footer.html" %}
+        {% endblock %}
+        </div>
+    </div>
+    <div class="container-fluid w100 appendix">
+        <div class="row-fluid">
+            {% include "social_networks/as_horizontal_table.html" %}
+        </div>
+    </div>
+
 
     <script src="{{ STATIC_URL }}assets/js/jquery.js"></script>
     <script src="{{ STATIC_URL }}assets/js/bootstrap-transition.js"></script>
@@ -211,6 +139,7 @@
                               fjs.parentNode.insertBefore(js,fjs);}
                           }(document,"script","twitter-wjs");
     </script>
+    <script src="{{ STATIC_URL }}/js/base.js"></script>
     {% block extra_js %}
     {% endblock %}
 </body>

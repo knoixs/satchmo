@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-05 16:34+0200\n"
+"POT-Creation-Date: 2012-11-21 08:03+0100\n"
 "PO-Revision-Date: 2010-03-01 16:59+0100\n"
 "Last-Translator: Martin Bornhold <mb@bo-tech.de>\n"
 "Language-Team: \n"
@@ -24,22 +24,15 @@ msgstr "WebShop Kontakt"
 msgid "Shipping Countries"
 msgstr "Versandländer"
 
-#: admin.py:73 models.py:683 templates/shop/_order_details.html:39
-#: templates/shop/_order_tracking_details.html:22
-#: templates/shop/email/_order_detail.txt:29
+#: admin.py:73 models.py:683
 msgid "Shipping Method"
 msgstr "Liefermethode"
 
-#: admin.py:74 templates/shop/_order_details.html:31
-#: templates/shop/email/_order_detail.txt:20
-#: templates/shop/email/_order_detail_table.html:24
-#: templates/shop/email/order_shipped.txt:7 templates/shop/pdf/invoice.rml:25
-#: templates/shop/pdf/packing-slip.rml:25
+#: admin.py:74
 msgid "Shipping Address"
 msgstr "Lieferadresse"
 
-#: admin.py:75 templates/shop/pdf/invoice.rml:24
-#: templates/shop/pdf/packing-slip.rml:24
+#: admin.py:75
 msgid "Billing Address"
 msgstr "Rechnungsadresse"
 
@@ -198,12 +191,10 @@ msgid "Store Name"
 msgstr "WebShop Name"
 
 #: models.py:79 models.py:285 models.py:1393
-#: templates/shop/pdf/invoice.rml:130 templates/shop/pdf/packing-slip.rml:124
 msgid "Description"
 msgstr "Beschreibung"
 
-#: models.py:80 templates/shop/pdf/invoice.rml:112
-#: templates/shop/pdf/packing-slip.rml:102
+#: models.py:80
 msgid "Email"
 msgstr "E-Mail"
 
@@ -264,7 +255,7 @@ msgstr "Warenkorb"
 msgid "Shopping Carts"
 msgstr "Warenkörbe"
 
-#: models.py:467 templates/base.html:84 templates/shop/cart.html:12
+#: models.py:467 templates/base.html:84
 msgid "Cart"
 msgstr "Warenkorb"
 
@@ -272,8 +263,7 @@ msgstr "Warenkorb"
 msgid "Product"
 msgstr "Produkt"
 
-#: models.py:469 models.py:1141 templates/shop/cart.html:33
-#: templates/shop/pdf/invoice.rml:131 templates/shop/pdf/packing-slip.rml:125
+#: models.py:469 models.py:1141
 msgid "Quantity"
 msgstr "Anzahl"
 
@@ -387,19 +377,11 @@ msgstr "Adressat"
 msgid "Notes"
 msgstr "Notizen"
 
-#: models.py:670 templates/shop/_order_details.html:50
-#: templates/shop/pdf/invoice.rml:154
+#: models.py:670
 msgid "Subtotal"
 msgstr "Zwischensumme"
 
-#: models.py:672 templates/shop/_order_details.html:49
-#: templates/shop/_order_details.html:71
-#: templates/shop/_order_tracking_details.html:28
-#: templates/shop/_order_tracking_details.html:36 templates/shop/cart.html:41
-#: templates/shop/order_history.html:24
-#: templates/shop/email/_order_detail.txt:35
-#: templates/shop/email/_order_detail.txt:40
-#: templates/shop/pdf/invoice.rml:134 templates/shop/pdf/invoice.rml.py:177
+#: models.py:672
 msgid "Total"
 msgstr "Gesamt"
 
@@ -432,25 +414,19 @@ msgstr "Liefermethode"
 msgid "Shipping Cost"
 msgstr "Versandkosten"
 
-#: models.py:689 templates/shop/_order_details.html:60
-#: templates/shop/pdf/invoice.rml:169
+#: models.py:689
 msgid "Shipping Discount"
 msgstr "Versandrabatt"
 
-#: models.py:691 models.py:1394 templates/shop/_order_details.html:69
-#: templates/shop/_order_tracking_details.html:34
-#: templates/shop/email/_order_detail.txt:39
-#: templates/shop/pdf/invoice.rml:174
+#: models.py:691 models.py:1394
 msgid "Tax"
 msgstr "Mehrwertsteuer"
 
 #: models.py:693 models.py:1249
-#: templates/shop/admin/_orderpayment_list.html:11
 msgid "Timestamp"
 msgstr "Zeitstempel"
 
-#: models.py:694 models.py:1246 templates/shop/_order_tracking_details.html:9
-#: templates/shop/order_history.html:21
+#: models.py:694 models.py:1246
 msgid "Status"
 msgstr "Status"
 
@@ -462,10 +438,7 @@ msgstr "Wird automatisch gesetzt."
 msgid "View"
 msgstr ""
 
-#: models.py:978 templates/shop/_order_details.html:56
-#: templates/shop/_order_tracking_details.html:30
-#: templates/shop/email/_order_detail.txt:37
-#: templates/shop/pdf/invoice.rml:133 templates/shop/pdf/invoice.rml.py:159
+#: models.py:978
 msgid "Discount"
 msgstr "Rabatt"
 
@@ -567,7 +540,7 @@ msgstr "Betrag"
 msgid "timestamp"
 msgstr "Zeitstempel"
 
-#: models.py:1272 templates/shop/admin/_orderpayment_list.html:12
+#: models.py:1272
 msgid "Transaction ID"
 msgstr "Transaktions ID"
 
@@ -591,7 +564,7 @@ msgstr "Zahlungs Authorisationen"
 msgid "Order Payment"
 msgstr "Bezahlung"
 
-#: models.py:1361 templates/shop/admin/_orderpayment_list.html:3
+#: models.py:1361
 msgid "Order Payments"
 msgstr "Bezahlungen"
 
@@ -630,17 +603,12 @@ msgstr "Neue Bestellung bei%(shop_name)s."
 msgid "Your order from %(shop_name)s has shipped"
 msgstr "Ihre Bestellung bei %(shop_name)s wurde verschickt"
 
-#: templates/404.html:5 templates/500.html:5 templates/shop/404.html:5
-#: templates/shop/cart.html:11 templates/shop/contact_form.html:5
-#: templates/shop/contact_thanks.html:5 templates/shop/download.html:5
-#: templates/shop/index.html:7 templates/shop/multiple_product_form.html:10
-#: templates/shop/order_history.html:8 templates/shop/order_tracking.html:6
-#: templates/shop/search.html:6
+#: templates/404.html:5 templates/500.html:5
 msgid "Home"
 msgstr "Start"
 
-#: templates/404.html:10 templates/500.html:10 templates/shop/404.html:10
-#: views/cart.py:263 views/cart.py:301
+#: templates/404.html:10 templates/500.html:10 views/cart.py:263
+#: views/cart.py:301
 msgid "Error"
 msgstr "Fehler"
 
@@ -698,12 +666,11 @@ msgstr "Abmelden"
 msgid "Log in"
 msgstr "Anmelden"
 
-#: templates/base.html:89 templates/shop/cart.html:73
+#: templates/base.html:89
 msgid "Check out"
 msgstr "Bestellen"
 
-#: templates/base.html:95 templates/shop/contact_form.html:6
-#: templates/shop/contact_thanks.html:6
+#: templates/base.html:95
 msgid "Contact Us"
 msgstr "Kontakt"
 
@@ -780,493 +747,6 @@ msgstr "Produktvariationen Manager"
 #: templates/admin/index.html:143
 msgid "Cache Status"
 msgstr "Cachestatus"
-
-#: templates/shop/_order_details.html:8
-#: templates/shop/_order_tracking_details.html:16
-#: templates/shop/email/_order_detail.txt:1
-msgid "Items Ordered"
-msgstr "Bestellte Artikel"
-
-#: templates/shop/_order_details.html:17 templates/shop/contact_form.html:10
-#: templates/shop/contact_thanks.html:10
-#: templates/shop/email/_order_detail.txt:5
-#: templates/shop/email/_order_detail_table.html:8
-msgid "Contact Information"
-msgstr "Kontaktinformation"
-
-#: templates/shop/_order_details.html:22
-#: templates/shop/email/_order_detail.txt:11
-#: templates/shop/email/_order_detail_table.html:23
-msgid "Billing Information"
-msgstr "Rechnungsinformationen"
-
-#: templates/shop/_order_details.html:59
-#, fuzzy
-msgid "Base Shipping"
-msgstr "Lieferung"
-
-#: templates/shop/_order_details.html:61
-msgid "Shipping (incl. Tax)"
-msgstr "Versand (inkl. MwSt.)"
-
-#: templates/shop/_order_details.html:63
-#: templates/shop/_order_tracking_details.html:32
-#: templates/shop/email/_order_detail.txt:38
-msgid "Shipping"
-msgstr "Versand"
-
-#: templates/shop/_order_details.html:67
-msgid "Tax included"
-msgstr "inklusive Steuer"
-
-#: templates/shop/_order_tracking_details.html:8
-#: templates/shop/order_history.html:20
-msgid "Order #"
-msgstr "Bestellung Nr."
-
-#: templates/shop/_order_tracking_details.html:41
-msgid "Shipping To"
-msgstr "Lieferadresse"
-
-#: templates/shop/_search.html:2 templates/shop/_search.html.py:13
-msgid "Search"
-msgstr "Suche"
-
-#: templates/shop/_search.html:6
-msgid "All Products"
-msgstr "Alle Produkte"
-
-#: templates/shop/cart.html:29
-msgid "Your cart is empty."
-msgstr "Ihr Warenkorb ist leer."
-
-#: templates/shop/cart.html:31
-msgid "Your Cart"
-msgstr "Ihr Warenkorb"
-
-#: templates/shop/cart.html:34
-msgid "Item"
-msgstr "Artikel"
-
-#: templates/shop/cart.html:36
-msgid "Regular Price"
-msgstr "Regulärer Preis"
-
-#: templates/shop/cart.html:37
-msgid "Sale Price"
-msgstr "Verkaufspreis"
-
-#: templates/shop/cart.html:39 templates/shop/multiple_product_form.html:22
-msgid "Price"
-msgstr "Preis"
-
-#: templates/shop/cart.html:41
-msgid "Total<br/>(incl.&nbsp;tax)"
-msgstr "Gesamt<br/>(inkl.&nbsp;MwSt.)"
-
-#: templates/shop/cart.html:48
-msgid "Remove"
-msgstr "Entfernen"
-
-#: templates/shop/cart.html:55
-msgid "update amount"
-msgstr "Preis aktualisieren"
-
-#: templates/shop/cart.html:66
-msgid "Cart Total"
-msgstr "Gesamt Warenkorb"
-
-#: templates/shop/contact_form.html:13
-msgid "Please correct the following error:"
-msgid_plural "Please correct the following errors:"
-msgstr[0] "Bitte korrigieren sie folgenden Fehler:"
-msgstr[1] "Bitte korrigieren sie folgende Fehler:"
-
-#: templates/shop/contact_form.html:19
-msgid "Send Email"
-msgstr "E-Mail senden"
-
-#: templates/shop/contact_thanks.html:12
-msgid "Thank you for contacting us."
-msgstr "Danke für Ihre E-Mail."
-
-#: templates/shop/contact_thanks.html:14
-msgid "We will attempt to get back to you within 48 hours."
-msgstr "Wir werden Ihnen innerhalb 48 Stunden antworten."
-
-#: templates/shop/download.html:13
-msgid "Downloading of"
-msgstr "Das herunterladen von"
-
-#: templates/shop/download.html:13
-msgid "will commence after clicking the link below:"
-msgstr "wird beginnen sobald sie dem Link unten folgen:"
-
-#: templates/shop/download.html:15
-msgid ""
-"Once you click the link, the download will be counted.  If you have trouble "
-"with the download, please refresh your browser and try the download again"
-msgstr ""
-"Sobald sie dem Link folgen wird ihr Download gezählt. Wenn Sie Probleme mit "
-"dem Herunterladen haben, laden Sie bitte diese Seite neu und probieren Sie "
-"es erneut"
-
-#: templates/shop/index.html:11
-msgid "Welcome to the shop."
-msgstr "Willkommen im WebShop."
-
-#: templates/shop/index.html:14
-msgid "Featured Items"
-msgstr "Sonderartikel"
-
-#: templates/shop/index.html:33 templates/shop/index.html.py:35
-msgid "Previous"
-msgstr "Zurück"
-
-#: templates/shop/index.html:45 templates/shop/index.html.py:47
-msgid "Next"
-msgstr "Weiter"
-
-#: templates/shop/multiple_product_form.html:11
-#: templates/shop/multiple_product_form.html:15
-msgid "Quick Order Form"
-msgstr ""
-
-#: templates/shop/multiple_product_form.html:23
-msgid "Qty"
-msgstr ""
-
-#: templates/shop/multiple_product_form.html:55
-msgid "Add to Cart"
-msgstr "Zum Warenkorb hinzufügen"
-
-#: templates/shop/order_history.html:9 templates/shop/order_tracking.html:7
-msgid "Account"
-msgstr "Konto"
-
-#: templates/shop/order_history.html:10 templates/shop/order_history.html:15
-msgid "Order History"
-msgstr "Frühere Bestellungen"
-
-#: templates/shop/order_history.html:22 templates/shop/pdf/invoice.rml:15
-#: templates/shop/pdf/invoice.rml.py:57 templates/shop/pdf/packing-slip.rml:15
-#: templates/shop/pdf/packing-slip.rml:57
-msgid "Date"
-msgstr "Datum"
-
-#: templates/shop/order_history.html:23
-msgid "Items"
-msgstr "Artikel"
-
-#: templates/shop/order_history.html:53
-msgid "You haven't made any orders yet."
-msgstr "Sie haben noch keine Bestellung aufgegeben."
-
-#: templates/shop/order_tracking.html:8 templates/shop/order_tracking.html:13
-msgid "Order Tracking"
-msgstr "Bestellungs-Verfolgung"
-
-#: templates/shop/search.html:12 templates/shop/search.html.py:38
-msgid "Nothing found"
-msgstr "Nichts gefunden"
-
-#: templates/shop/search.html:15
-#, python-format
-msgid "Search results for %(category_name)s products"
-msgstr "Suchergebnisse für die Kategorie %(category_name)s"
-
-#: templates/shop/search.html:19
-msgid "Categories"
-msgstr "Kategorien"
-
-#: templates/shop/search.html:29
-msgid "Products"
-msgstr "Produkte"
-
-#: templates/shop/search.html:33
-msgid "for"
-msgstr "für"
-
-#: templates/shop/admin/_customorder_management.html:3
-#, fuzzy
-msgid "Custom Order Management"
-msgstr "WebShop Leitung"
-
-#: templates/shop/admin/_customorder_management.html:8
-msgid "Fully charged"
-msgstr "Vollständig bezahlt"
-
-#: templates/shop/admin/_customorder_management.html:10
-msgid "Charge remaining amount"
-msgstr "Restbetrag"
-
-#: templates/shop/admin/_customorder_management.html:13
-msgid "Product Details"
-msgstr "Produktdetails"
-
-#: templates/shop/admin/_ordercount_list.html:7
-msgid "on"
-msgstr "auf"
-
-#: templates/shop/admin/_orderpayment_list.html:8
-#: templates/shop/email/order_complete.txt:13
-#: templates/shop/email/order_placed_notice.txt:9
-msgid "Payment"
-msgstr "Bezahlung"
-
-#: templates/shop/admin/_orderpayment_list.html:9
-msgid "Amount"
-msgstr "Betrag"
-
-#: templates/shop/admin/_orderpayment_list.html:10
-msgid "Method"
-msgstr "Methode"
-
-#: templates/shop/admin/_orderpayment_list.html:35
-msgid "No payments."
-msgstr "Keine Bezahlungen"
-
-#: templates/shop/admin/_orderpayment_list.html:40
-msgid "Paid in full"
-msgstr "Komplett bezahlt"
-
-#: templates/shop/admin/_orderpayment_list.html:42
-msgid "Balance on order:"
-msgstr "Restbetrag der Bestellung:"
-
-#: templates/shop/admin/order_sidebar.html:4
-msgid "Satchmo Orders"
-msgstr "Bestellungen"
-
-#: templates/shop/admin/order_sidebar.html:6
-msgid "New Orders"
-msgstr "Neue Bestellungen"
-
-#: templates/shop/admin/order_sidebar.html:8
-msgid "Orders in Process"
-msgstr "Bestellungen in Bearbeitung"
-
-#: templates/shop/admin/order_sidebar.html:10
-msgid "View all Orders"
-msgstr "Alle Bestellungen anzeigen"
-
-#: templates/shop/email/_order_detail_table.html:65
-#, fuzzy
-msgid "Discount:"
-msgstr "Rabatt"
-
-#: templates/shop/email/_order_detail_table.html:74
-#, fuzzy
-msgid "Shipping:"
-msgstr "Versand"
-
-#: templates/shop/email/_order_detail_table.html:83
-msgid "Tax:"
-msgstr ""
-
-#: templates/shop/email/_order_detail_table.html:91
-#, fuzzy
-msgid "Total:"
-msgstr "Gesamt"
-
-#: templates/shop/email/_order_detail_table.html:99
-#: templates/shop/email/order_complete.txt:19
-#, fuzzy
-msgid "Your"
-msgstr "Ihr Warenkorb"
-
-#: templates/shop/email/_order_detail_table.html:99
-#: templates/shop/email/order_complete.txt:19
-msgid "ending in"
-msgstr ""
-
-#: templates/shop/email/_order_detail_table.html:99
-#: templates/shop/email/_order_detail_table.html:101
-#: templates/shop/email/order_complete.txt:19
-#: templates/shop/email/order_complete.txt:21
-#, fuzzy
-msgid "will be charged"
-msgstr "Vollständig bezahlt"
-
-#: templates/shop/email/_order_detail_table.html:112
-#: templates/shop/email/order_placed_notice.txt:15
-msgid "This is a downloadable product"
-msgstr ""
-
-#: templates/shop/email/contact_us.txt:1
-#, python-format
-msgid ""
-"Here's a %(request_type)s from %(name)s ( %(email)s ) sent via the web "
-"contact form."
-msgstr ""
-"Hier ist eine %(request_type)s von %(name)s ( %(email)s ), gesendet über das "
-"Web-Kontakt Formular."
-
-#: templates/shop/email/gift_certificate_recipient.html:6
-#: templates/shop/email/gift_certificate_recipient.txt:5
-#, python-format
-msgid ""
-"Congratulations, you have received a gift certificate for %(shop_name)s."
-msgstr ""
-
-#: templates/shop/email/gift_certificate_recipient.html:7
-#: templates/shop/email/gift_certificate_recipient.txt:6
-msgid "Your gift certificate was purchased by"
-msgstr ""
-
-#: templates/shop/email/gift_certificate_recipient.html:8
-#: templates/shop/email/gift_certificate_recipient.txt:7
-msgid "This gift certificate is for"
-msgstr ""
-
-#: templates/shop/email/gift_certificate_recipient.html:8
-#: templates/shop/email/gift_certificate_recipient.txt:7
-msgid "and may be redeemed online using the following code"
-msgstr ""
-
-#: templates/shop/email/gift_certificate_recipient.html:10
-#: templates/shop/email/gift_certificate_recipient.txt:9
-msgid "This gift certificate includes the following message: "
-msgstr ""
-
-#: templates/shop/email/gift_certificate_recipient.html:13
-#: templates/shop/email/gift_certificate_recipient.txt:13
-#: templates/shop/email/order_complete.html:12
-#: templates/shop/email/order_complete.txt:35
-msgid "Regards"
-msgstr "Mit freundlichen Grüßen"
-
-#: templates/shop/email/gift_certificate_recipient.html:14
-#: templates/shop/email/gift_certificate_recipient.txt:14
-#: templates/shop/email/order_complete.html:13
-#: templates/shop/email/order_complete.txt:37
-msgid "Store Management"
-msgstr "WebShop Leitung"
-
-#: templates/shop/email/order_complete.html:7
-#: templates/shop/email/order_complete.txt:5
-#: templates/shop/email/order_shipped.txt:3
-#, python-format
-msgid "Thank you for ordering with %(shop_name)s."
-msgstr "Vielen Dank für die Bestellung bei %(shop_name)s."
-
-#: templates/shop/email/order_complete.html:8
-#: templates/shop/email/order_complete.txt:7
-msgid "Your order is summarized below:"
-msgstr "Ihre Bestellung:"
-
-#: templates/shop/email/order_complete.txt:3
-#: templates/shop/email/order_shipped.txt:1
-#, python-format
-msgid "Dear %(first_name)s %(last_name)s,"
-msgstr "Sehr geehrte(r) %(first_name)s %(last_name)s,"
-
-#: templates/shop/email/order_complete.txt:28
-msgid "Your order contains products that can be downloaded"
-msgstr "Ihre Bestellung enthält Artikel die Sie herunterladen können"
-
-#: templates/shop/email/order_complete.txt:29
-#, fuzzy
-msgid "Please click the link to begin the download"
-msgstr "Bitte folgen Sie diesem Link zum Herunterladen"
-
-#: templates/shop/email/order_placed_notice.txt:3
-#, python-format
-msgid "Order placed on %(shop_name)s by %(customer)s<%(email)s>."
-msgstr ""
-
-#: templates/shop/email/order_placed_notice.txt:12
-#, fuzzy, python-format
-msgid ""
-"%(credit_card_type)s card ending in %(credit_card_number)s will be charged "
-"%(order_total)s."
-msgstr ""
-"Ihre %(credit_card_type)s Kreditkarte, die auf %(credit_card_number)s endet, "
-"wird mit %(order_total)s belastet."
-
-#: templates/shop/email/order_placed_notice.txt:12
-#, fuzzy, python-format
-msgid ""
-"This order will be charged on the customer's account for %(order_total)s."
-msgstr ""
-"Diese Bestellung wird per Nachnahme zum Gesamtpreis von %(order_total)s "
-"geliefert."
-
-#: templates/shop/email/order_shipped.txt:5
-#, python-format
-msgid "Your order #%(orderid)s has shipped today via %(shippingmethod)s."
-msgstr ""
-
-#: templates/shop/email/order_shipped.txt:15
-msgid "This completes your order."
-msgstr ""
-
-#: templates/shop/pdf/invoice.rml:5
-msgid "Store Invoice"
-msgstr "WebShop Bestellung"
-
-#: templates/shop/pdf/invoice.rml:14 templates/shop/pdf/invoice.rml.py:56
-#: templates/shop/pdf/packing-slip.rml:14
-#: templates/shop/pdf/packing-slip.rml:56
-msgid "Invoice #"
-msgstr "Bestellung #"
-
-#: templates/shop/pdf/invoice.rml:21 templates/shop/pdf/invoice.rml.py:63
-msgid "INVOICE"
-msgstr "Rechnung"
-
-#: templates/shop/pdf/invoice.rml:63 templates/shop/pdf/packing-slip.rml:63
-msgid "Page"
-msgstr "Seite"
-
-#: templates/shop/pdf/invoice.rml:111 templates/shop/pdf/packing-slip.rml:101
-msgid "Phone"
-msgstr "Telefon"
-
-#: templates/shop/pdf/invoice.rml:132
-msgid "Unit Price"
-msgstr "Stückpreis"
-
-#: templates/shop/pdf/invoice.rml:181
-#, fuzzy
-msgid "Payments Made"
-msgstr "Bezahlung"
-
-#: templates/shop/pdf/invoice.rml:185
-msgid "Balance Due"
-msgstr ""
-
-#: templates/shop/pdf/invoice.rml:192
-#, python-format
-msgid "Payment total %(order_total)s due to:"
-msgstr "Zahlbar gesamt %(order_total)s bis zum:"
-
-#: templates/shop/pdf/invoice.rml:197
-msgid "Accounts Receivable"
-msgstr "ausstehende Accounts"
-
-#: templates/shop/pdf/invoice.rml:212
-#, python-format
-msgid ""
-"%(order_total)s was charged to your %(credit_card_type)s card (x"
-"%(credit_card_number)s) on %(order_date)s."
-msgstr ""
-"%(order_total)s wurden Ihrer %(credit_card_type)s Kreditkarte (x"
-"%(credit_card_number)s) am %(order_date)s belastet."
-
-#: templates/shop/pdf/invoice.rml:215
-#, fuzzy
-msgid "This invoice has been paid in full. Thank you for your business!"
-msgstr "Danke für Ihre Bestellung!"
-
-#: templates/shop/pdf/packing-slip.rml:21
-#: templates/shop/pdf/packing-slip.rml:63
-msgid "PACKING SLIP"
-msgstr "Packzettel"
-
-#: templates/shop/pdf/packing-slip.rml:138
-msgid "Thank you for your business!"
-msgstr "Danke für Ihre Bestellung!"
 
 #: views/cart.py:64
 msgid "No cart to update."
@@ -1360,6 +840,302 @@ msgid ""
 msgstr ""
 "Das ausgewählte Bestellung existiert nicht oder sie haben Keinen Zugriff "
 "darauf."
+
+#~ msgid "Items Ordered"
+#~ msgstr "Bestellte Artikel"
+
+#~ msgid "Contact Information"
+#~ msgstr "Kontaktinformation"
+
+#~ msgid "Billing Information"
+#~ msgstr "Rechnungsinformationen"
+
+#, fuzzy
+#~ msgid "Base Shipping"
+#~ msgstr "Lieferung"
+
+#~ msgid "Shipping (incl. Tax)"
+#~ msgstr "Versand (inkl. MwSt.)"
+
+#~ msgid "Shipping"
+#~ msgstr "Versand"
+
+#~ msgid "Tax included"
+#~ msgstr "inklusive Steuer"
+
+#~ msgid "Order #"
+#~ msgstr "Bestellung Nr."
+
+#~ msgid "Shipping To"
+#~ msgstr "Lieferadresse"
+
+#~ msgid "Search"
+#~ msgstr "Suche"
+
+#~ msgid "All Products"
+#~ msgstr "Alle Produkte"
+
+#~ msgid "Your cart is empty."
+#~ msgstr "Ihr Warenkorb ist leer."
+
+#~ msgid "Your Cart"
+#~ msgstr "Ihr Warenkorb"
+
+#~ msgid "Item"
+#~ msgstr "Artikel"
+
+#~ msgid "Regular Price"
+#~ msgstr "Regulärer Preis"
+
+#~ msgid "Sale Price"
+#~ msgstr "Verkaufspreis"
+
+#~ msgid "Price"
+#~ msgstr "Preis"
+
+#~ msgid "Total<br/>(incl.&nbsp;tax)"
+#~ msgstr "Gesamt<br/>(inkl.&nbsp;MwSt.)"
+
+#~ msgid "Remove"
+#~ msgstr "Entfernen"
+
+#~ msgid "update amount"
+#~ msgstr "Preis aktualisieren"
+
+#~ msgid "Cart Total"
+#~ msgstr "Gesamt Warenkorb"
+
+#~ msgid "Please correct the following error:"
+#~ msgid_plural "Please correct the following errors:"
+#~ msgstr[0] "Bitte korrigieren sie folgenden Fehler:"
+#~ msgstr[1] "Bitte korrigieren sie folgende Fehler:"
+
+#~ msgid "Send Email"
+#~ msgstr "E-Mail senden"
+
+#~ msgid "Thank you for contacting us."
+#~ msgstr "Danke für Ihre E-Mail."
+
+#~ msgid "We will attempt to get back to you within 48 hours."
+#~ msgstr "Wir werden Ihnen innerhalb 48 Stunden antworten."
+
+#~ msgid "Downloading of"
+#~ msgstr "Das herunterladen von"
+
+#~ msgid "will commence after clicking the link below:"
+#~ msgstr "wird beginnen sobald sie dem Link unten folgen:"
+
+#~ msgid ""
+#~ "Once you click the link, the download will be counted.  If you have "
+#~ "trouble with the download, please refresh your browser and try the "
+#~ "download again"
+#~ msgstr ""
+#~ "Sobald sie dem Link folgen wird ihr Download gezählt. Wenn Sie Probleme "
+#~ "mit dem Herunterladen haben, laden Sie bitte diese Seite neu und "
+#~ "probieren Sie es erneut"
+
+#~ msgid "Welcome to the shop."
+#~ msgstr "Willkommen im WebShop."
+
+#~ msgid "Featured Items"
+#~ msgstr "Sonderartikel"
+
+#~ msgid "Previous"
+#~ msgstr "Zurück"
+
+#~ msgid "Next"
+#~ msgstr "Weiter"
+
+#~ msgid "Add to Cart"
+#~ msgstr "Zum Warenkorb hinzufügen"
+
+#~ msgid "Account"
+#~ msgstr "Konto"
+
+#~ msgid "Order History"
+#~ msgstr "Frühere Bestellungen"
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Items"
+#~ msgstr "Artikel"
+
+#~ msgid "You haven't made any orders yet."
+#~ msgstr "Sie haben noch keine Bestellung aufgegeben."
+
+#~ msgid "Order Tracking"
+#~ msgstr "Bestellungs-Verfolgung"
+
+#~ msgid "Nothing found"
+#~ msgstr "Nichts gefunden"
+
+#~ msgid "Search results for %(category_name)s products"
+#~ msgstr "Suchergebnisse für die Kategorie %(category_name)s"
+
+#~ msgid "Categories"
+#~ msgstr "Kategorien"
+
+#~ msgid "Products"
+#~ msgstr "Produkte"
+
+#~ msgid "for"
+#~ msgstr "für"
+
+#, fuzzy
+#~ msgid "Custom Order Management"
+#~ msgstr "WebShop Leitung"
+
+#~ msgid "Fully charged"
+#~ msgstr "Vollständig bezahlt"
+
+#~ msgid "Charge remaining amount"
+#~ msgstr "Restbetrag"
+
+#~ msgid "Product Details"
+#~ msgstr "Produktdetails"
+
+#~ msgid "on"
+#~ msgstr "auf"
+
+#~ msgid "Payment"
+#~ msgstr "Bezahlung"
+
+#~ msgid "Amount"
+#~ msgstr "Betrag"
+
+#~ msgid "Method"
+#~ msgstr "Methode"
+
+#~ msgid "No payments."
+#~ msgstr "Keine Bezahlungen"
+
+#~ msgid "Paid in full"
+#~ msgstr "Komplett bezahlt"
+
+#~ msgid "Balance on order:"
+#~ msgstr "Restbetrag der Bestellung:"
+
+#~ msgid "Satchmo Orders"
+#~ msgstr "Bestellungen"
+
+#~ msgid "New Orders"
+#~ msgstr "Neue Bestellungen"
+
+#~ msgid "Orders in Process"
+#~ msgstr "Bestellungen in Bearbeitung"
+
+#~ msgid "View all Orders"
+#~ msgstr "Alle Bestellungen anzeigen"
+
+#, fuzzy
+#~ msgid "Discount:"
+#~ msgstr "Rabatt"
+
+#, fuzzy
+#~ msgid "Shipping:"
+#~ msgstr "Versand"
+
+#, fuzzy
+#~ msgid "Total:"
+#~ msgstr "Gesamt"
+
+#, fuzzy
+#~ msgid "Your"
+#~ msgstr "Ihr Warenkorb"
+
+#, fuzzy
+#~ msgid "will be charged"
+#~ msgstr "Vollständig bezahlt"
+
+#~ msgid ""
+#~ "Here's a %(request_type)s from %(name)s ( %(email)s ) sent via the web "
+#~ "contact form."
+#~ msgstr ""
+#~ "Hier ist eine %(request_type)s von %(name)s ( %(email)s ), gesendet über "
+#~ "das Web-Kontakt Formular."
+
+#~ msgid "Regards"
+#~ msgstr "Mit freundlichen Grüßen"
+
+#~ msgid "Store Management"
+#~ msgstr "WebShop Leitung"
+
+#~ msgid "Thank you for ordering with %(shop_name)s."
+#~ msgstr "Vielen Dank für die Bestellung bei %(shop_name)s."
+
+#~ msgid "Your order is summarized below:"
+#~ msgstr "Ihre Bestellung:"
+
+#~ msgid "Dear %(first_name)s %(last_name)s,"
+#~ msgstr "Sehr geehrte(r) %(first_name)s %(last_name)s,"
+
+#~ msgid "Your order contains products that can be downloaded"
+#~ msgstr "Ihre Bestellung enthält Artikel die Sie herunterladen können"
+
+#, fuzzy
+#~ msgid "Please click the link to begin the download"
+#~ msgstr "Bitte folgen Sie diesem Link zum Herunterladen"
+
+#, fuzzy
+#~ msgid ""
+#~ "%(credit_card_type)s card ending in %(credit_card_number)s will be "
+#~ "charged %(order_total)s."
+#~ msgstr ""
+#~ "Ihre %(credit_card_type)s Kreditkarte, die auf %(credit_card_number)s "
+#~ "endet, wird mit %(order_total)s belastet."
+
+#, fuzzy
+#~ msgid ""
+#~ "This order will be charged on the customer's account for %(order_total)s."
+#~ msgstr ""
+#~ "Diese Bestellung wird per Nachnahme zum Gesamtpreis von %(order_total)s "
+#~ "geliefert."
+
+#~ msgid "Store Invoice"
+#~ msgstr "WebShop Bestellung"
+
+#~ msgid "Invoice #"
+#~ msgstr "Bestellung #"
+
+#~ msgid "INVOICE"
+#~ msgstr "Rechnung"
+
+#~ msgid "Page"
+#~ msgstr "Seite"
+
+#~ msgid "Phone"
+#~ msgstr "Telefon"
+
+#~ msgid "Unit Price"
+#~ msgstr "Stückpreis"
+
+#, fuzzy
+#~ msgid "Payments Made"
+#~ msgstr "Bezahlung"
+
+#~ msgid "Payment total %(order_total)s due to:"
+#~ msgstr "Zahlbar gesamt %(order_total)s bis zum:"
+
+#~ msgid "Accounts Receivable"
+#~ msgstr "ausstehende Accounts"
+
+#~ msgid ""
+#~ "%(order_total)s was charged to your %(credit_card_type)s card (x"
+#~ "%(credit_card_number)s) on %(order_date)s."
+#~ msgstr ""
+#~ "%(order_total)s wurden Ihrer %(credit_card_type)s Kreditkarte (x"
+#~ "%(credit_card_number)s) am %(order_date)s belastet."
+
+#, fuzzy
+#~ msgid "This invoice has been paid in full. Thank you for your business!"
+#~ msgstr "Danke für Ihre Bestellung!"
+
+#~ msgid "PACKING SLIP"
+#~ msgstr "Packzettel"
+
+#~ msgid "Thank you for your business!"
+#~ msgstr "Danke für Ihre Bestellung!"
 
 #, fuzzy
 #~ msgid "Payment: "

@@ -1,88 +1,46 @@
 {% extends "shop/base.html" %}
-{% load i18n %}
-{% load thumbnail %}
-{% load satchmo_util %}
-
+{% load i18n satchmo_category satchmo_google satchmo_util satchmo_currency satchmo_discounts app_plugins normalize_decimal thumbnail %}
 {% block extra-css %}
     <link href="{{ STATIC_URL }}css/nivo-slider.css" rel="stylesheet">
-{% endblock %}
-{% block navbar %}
-   <li class="first">{% trans "Home" %}</li>
+    <link href="{{ STATIC_URL }}css/index.css" rel="stylesheet">
 {% endblock %}
 
-{% block content %}
-    <!--
-    <div id="myCarousel" class="span12 carousel slide">
+{% block navbar %}
+   <li class="first"><a href="{{ shop_home_url }}">{% trans "Home" %}</a></li>
+{% endblock %}
+
+{% block content_head %}
+    <div id="myCarousel" class="carousel slide">
         <div class="carousel-inner">
             <div class="active item">
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-1.jpg" alt="potstar-1"/>
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-1.jpg" alt="potstar habor Berlin 1"/>
             </div>
             <div class="item">
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-2.jpg" alt="potstar-1"/>
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-2.jpg" alt="potstar habor Berlin 2"/>
             </div>
             <div class="item">
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-3.jpg" alt="potstar-1"/>
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-3.jpg" alt="potstar habor Berlin 3"/>
             </div>
             <div class="item">
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-4.jpg" alt="potstar-1"/>
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-4.jpg" alt="potstar castle Berlin 1"/>
             </div>
             <div class="item">
-                <img src="{{ STATIC_URL }}images/products/gallery/potstar-5.jpg" alt="potstar-1"/>
+                <img src="{{ STATIC_URL }}images/products/gallery/potstar-5.jpg" alt="potstar castle Berlin 2"/>
             </div>
         </div>
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
     <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
-    -->
-
-    {% if all_products_list %}
-        <h4>{% trans "Featured Items" %}</h4>
-        {% for product in all_products_list %}
-            <div class = "productImage">
-                {% if product.main_image %}
-                    <center>
-                        {% thumbnail product.main_image.picture "85x85" as image %}
-                        <a href="{{ product.get_absolute_url }}">
-                            <img src="{{ image.url }}"
-                                 width="{{ image.width }}"
-                                 height="{{ image.height }}" /></a>
-                        {% endthumbnail %}
-                    </center>
-                {% endif %}
-                <p>
-                    <a href="{{ product.get_absolute_url }}">{{ product.translated_name }}</a>
-                </p>
-            </div>
-        {% endfor %}
-    {% endif %}
-
-    {% if is_paginated %}
-        <div id = "pagination">
-        <ul>
-            {% if page_obj.has_previous %}
-                <li> <a href="{{shop_base}}/?page={{page_obj.previous_page_number}}">
-                    {% trans "Previous" %}</a>
-                </li>
-            {% else %}
-                <li> {% trans "Previous" %} </li>
-            {% endif %}
-            {% for page_number in paginator.num_pages|template_range %}
-                {% ifequal page_number page_obj.number %}
-                    <li class="currentpage">{{page_number}}</li>
-                {% else %}
-                    <li> <a href="{{shop_base}}/?page={{page_number}}">{{page_number}}</a> </li>
-                {% endifequal %}
-            {% endfor %}
-            {% if page_obj.has_next %}
-                <li> <a href="{{shop_base}}/?page={{page_obj.next_page_number}}">
-                    {% trans "Next" %}</a>
-                </li>
-            {% else %}
-                <li> {% trans "Next" %} </li>
-            {% endif %}
-        </ul>
-        </div>
-    {% endif %}
+{% endblock %}
+{% block content %}
+<div align=center>
+    <h1>{% trans "potstar - we can get the stars from the sky for you " %}</h1>
+    {% url satchmo_contact as contact_url %}
+    {% blocktrans %}
+    We would be honored to answer any questions you may have about our company, product, or people.
+    Please use our <a href="{{ contact_url }}"> contact form</a>.
+    {% endblocktrans %}
+</div>
 {% endblock %}
 
 {% block extra-js %}

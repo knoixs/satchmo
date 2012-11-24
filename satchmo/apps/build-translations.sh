@@ -1,6 +1,6 @@
 #!/bin/bash
 set -x
-MANAGE=/Users/thoreg/.virtualenvs/potstar/bin/django-admin.py
+MANAGE=`which django-admin.py`
 DIRS=`find . -name locale`
 for dir in $DIRS
 do
