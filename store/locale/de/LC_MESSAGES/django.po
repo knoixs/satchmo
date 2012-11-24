@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-21 08:19+0100\n"
+"POT-Creation-Date: 2012-11-24 15:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: local_settings.py:23
+#: local_settings.py:21
 msgid "German"
 msgstr "Deutsch"
 
-#: local_settings.py:24
+#: local_settings.py:22
 msgid "English"
 msgstr "Englisch"
 
@@ -1077,9 +1077,10 @@ msgid ""
 "below and we'll\n"
 "get back to you as soon as we can with an answer.\n"
 msgstr ""
+"\n"
 "Wir beantworten gerne Ihre Fragen zur Firma, unserem Produkt oder unseren "
 "Mitarbeitern. Bitte nutzen Sie dazu das unten aufgeführte Kontakt Formular. "
-"Wir werden Ihre Anfrage so schnell wie möglich beantworten."
+"Wir werden Ihre Anfrage so schnell wie möglich beantworten.\n"
 
 #: templates/shop/contact_form.html:32
 msgid "Send Email"
@@ -1122,8 +1123,9 @@ msgid ""
 "    Please use our <a href=\"%(contact_url)s\"> contact form</a>.\n"
 "    "
 msgstr ""
+"\n"
 "Wir beantworten gerne Ihre Fragen zur Firma, unserem Produkt oder unseren "
-"Mitarbeitern.    Bitte benutzen Sie dazu unser <a href=\"%(contact_url)s"
+"Mitarbeitern.<br/>Bitte benutzen Sie dazu unser <a href=\"%(contact_url)s"
 "\">Kontakt Formular</a>.\n"
 "    "
 
