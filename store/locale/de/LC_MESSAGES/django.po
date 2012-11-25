@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-24 15:07+0100\n"
+"POT-Creation-Date: 2012-11-25 14:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: local_settings.py:21
+#: local_settings.py:23
 msgid "German"
 msgstr "Deutsch"
 
-#: local_settings.py:22
+#: local_settings.py:24
 msgid "English"
 msgstr "Englisch"
+
+#: templates/base.html:11 templates/shop/base.html:11
+msgid "Pretty solar powered flower pots from Berlin"
+msgstr "Wir holen Ihnen die Sterne vom Himmel - Solar betriebene Blumentöpfe aus Berlin"
+
+#: templates/base.html:12 templates/shop/base.html:12
+msgid "solar powered flower pots, stars, garden, solar, flower pots"
+msgstr "Solar betriebene Blumentöpfe, Sterne, Garten, Solar, Blumentöpfe, LED"
 
 #: templates/left.html:12
 msgid "Shop Categories"
@@ -1092,7 +1100,7 @@ msgstr ""
 "Vielen Dank für Ihr Interesse - Ihre Anfrage wird so schnell wie möglich "
 "bearbeitet."
 
-#: templates/shop/contact_thanks.html:14
+#: templates/shop/contact_thanks.html:15
 msgid "We will attempt to get back to you within 48 hours."
 msgstr "Wir versuchen jede Anfrage innerhalb von 48 Stunden zu beantworten."
 
