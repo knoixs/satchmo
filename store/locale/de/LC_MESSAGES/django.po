@@ -28,7 +28,7 @@ msgstr "Englisch"
 
 #: templates/base.html:11 templates/shop/base.html:11
 msgid "Pretty solar powered flower pots from Berlin"
-msgstr "Wir holen Ihnen die Sterne vom Himmel - Solar betriebene Blumentöpfe aus Berlin"
+msgstr "Wir holen Ihnen die Sterne vom Himmel - LED Licht Design f&uuml; drinnen und draussen - Solar betriebene Blumentöpfe aus Berlin"
 
 #: templates/base.html:12 templates/shop/base.html:12
 msgid "solar powered flower pots, stars, garden, solar, flower pots"
