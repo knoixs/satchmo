@@ -20,27 +20,15 @@
         <li>Community</li>
         <li>History</li>
         <li>Social Life</li>
-    <ul>
+    </ul>
     </section>
 {% endcomment %}
 
-    <section class="copyright fl">
-    <p>
-        &copy; potstar 2012 - 2055
-    </p>
-    <p>
-        <img src="/static/images/ico/potstar-logo-white-on-black.jpg" />
-    </p>
-    <p>
-        potstar is powered by:
-    </p>
-    <ul>
-        <li><a href="http://www.satchmoproject.com/">Satchmo</a></li>
-        <li><a href="https://www.djangoproject.com/">django</a></li>
-        <li><a href="http://jquery.com/">jQuery</a></li>
-        <li><a href="http://twitter.github.com/bootstrap/">Bootstrap</a></li>
-        <li><a href="http://www.vim.org/">Vim</a></li>
-    </ul>
+    <section class="quicklinks">
+        {% url localsite_impressum as impressum_url %}
+        {% if impressum_url %}
+            <a href="{{ impressum_url }}">{% trans "Impressum" %}</a>
+        {% endif %}
     </section>
 
 </footer>

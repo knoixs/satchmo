@@ -69,27 +69,23 @@ ul.nav li{
     padding-top:1em;
 }
 
-.main-footer section {
-    border-left: 1px dotted #595959;
-    display: block;
+section {
 }
 
-.main-footer .misc {
+.misc {
     color: #aeaeae;
     padding-left: 28px;
     width: 173px;
 }
 
-.main-footer .copyright {
+.copyright {
     padding-left: 28px;
     width: 200px;
 }
 
-.main-footer .quicklinks {
-    border: 0 none;
-    color: #fff;
-    padding-right: 28px;
-    width: 173px;
+.quicklinks {
+    padding-left: 2em;
+    padding-top: 2em;
 }
 
 .navbar img {
@@ -251,7 +247,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 25em;
+    height: 5em;
     margin: 0;
     padding: 0;
 }
@@ -517,7 +513,6 @@ div.upsell .upselldescription {
 }
 
 .copyright {
-    margin: 2em;
 }
 
 .appendix {

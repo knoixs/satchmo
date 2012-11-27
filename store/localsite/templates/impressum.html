@@ -3,14 +3,6 @@
 {% block extra_css %}
     <link href="/static/css/impressum.css" rel="stylesheet" />
 {% endblock %}
-{% block navigation %}
-{% endblock %}
-
-{% block navbar %}
-{% endblock %}
-
-{% block breadcrumbs %}
-{% endblock %}
 
 {% block sidebar-secondary %}
 {% endblock %}
@@ -20,23 +12,45 @@
 
 {% block content %}
 <article class="impressum">
-    <h1>Impressum</h1>
-    <h2>Betreiber der Webseite (Angaben gem&auml;&szlig; &sect; 5 TMG):</h2>
-    <p>{{ full_name }}<br/>
-       {{ full_address|safe }}<br/>
-    </p>
-    <br/>
-    <h2>Kontakt:</h2>
-    <p>E-Mail: {{ email|mungify }}<br/>
-       Telefon: {{ telephone }}<br/>
-       {% if fax %}
-        Fax: {{ fax }}
-       {% endif %}
-    </p>
-    <p>Webdesign by <a href="http://pyt3ch.com">pyt3ch.com</a>
-    </p>
-    <br/>
-    <br/>
+    <section class="contact-informations">
+        <h1 style="text-align:left;">Impressum</h1>
+        <h2>Betreiber der Webseite (Angaben gem&auml;&szlig; &sect; 5 TMG):</h2>
+        <p>{{ full_name }}<br/>
+        {{ full_address|safe }}<br/>
+        </p>
+        <br/>
+        <h2>Kontakt:</h2>
+        <p>E-Mail: {{ email|mungify }}<br/>
+        Telefon: {{ telephone }}<br/>
+        {% if fax %}
+            Fax: {{ fax }}
+        {% endif %}
+        </p>
+    </section>
+
+    <section class="webdesign-informations">
+        <p>
+            Webdesign by <a href="http://pyt3ch.com">pyt3ch.com</a>
+        </p>
+        <p>
+            &copy; potstar 2012 - 2055
+        </p>
+        <p>
+            <img src="/static/images/ico/potstar-logo-white-on-black.jpg"
+            alt="potstar logo white on black"
+            style="width:9em;" />
+        </p>
+        <p>
+            potstar is powered by:
+        </p>
+        <ul>
+            <li><a href="http://www.satchmoproject.com/">Satchmo</a></li>
+            <li><a href="https://www.djangoproject.com/">django</a></li>
+            <li><a href="http://jquery.com/">jQuery</a></li>
+            <li><a href="http://twitter.github.com/bootstrap/">Bootstrap</a></li>
+            <li><a href="http://www.vim.org/">Vim</a></li>
+        </ul>
+    </section>
     <hr />
     <p><strong>Haftung f&uuml;r Inhalte</strong></p>
     <p>Die Inhalte unserer Seiten wurden mit gr&ouml;&szlig;ter Sorgfalt erstellt. F&uuml;r die
@@ -88,7 +102,6 @@
        behalten sich ausdr&uuml;cklich rechtliche Schritte im Falle der unverlangten Zusendung von
        Werbeinformationen, etwa durch Spam-Mails, vor.
     </p>
-{% if google_analytics %}
     <p><strong>Datenschutzerkl&auml;rung f&uuml;r die Nutzung von Google Analytics</strong></p>
     <p>Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (&quot;Google&quot;).
        Google Analytics verwendet sog. &quot;Cookies&quot;, Textdateien, die auf Ihrem Computer gespeichert
@@ -116,15 +129,12 @@
        herunterladen und installieren: <a href="http://tools.google.com/dlpage/gaoptout?hl=de">
        http://tools.google.com/dlpage/gaoptout?hl=de</a>.
     </p>
-{% endif %}
     <br />
     <br />
     <p>Quellenangaben: <a href="http://www.e-recht24.de/muster-disclaimer.htm" target="_blank">Disclaimer</a>
        von eRecht24, dem Portal zum Internetrecht von Rechtsanwalt S&ouml;ren Siebert
-{% if google_analytics %}
-       ,<a href="http://www.google.com/intl/de_ALL/analytics/tos.html" target="_blank">
-          Datenschutzerkl&auml;rung f&uuml;r Google Analytics</a>
-{% endif %}
-    .</p>
+       ,<a href="http://www.google.com/intl/de_DE/policies/privacy/" target="_blank">
+           Datenschutzerkl&auml;rung f&uuml;r Google Analytics</a>.
+    </p>
 </article>
 {% endblock %}
