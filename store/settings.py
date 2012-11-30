@@ -55,7 +55,9 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    "transurlvania.middleware.URLTransMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "transurlvania.middleware.URLCacheResetMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.middleware.locale.LocaleMiddleware",
@@ -79,6 +81,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
         # but will be
         'django.core.context_processors.media',   # MEDIA_URL
         'django.core.context_processors.static',  # STATIC_URL
+        'transurlvania.context_processors.translate',
 )
 
 ROOT_URLCONF = 'store.urls'
@@ -139,6 +142,7 @@ INSTALLED_APPS = (
     'app_plugins',
     #
     'store.localsite',
+    'transurlvania',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -159,6 +163,8 @@ SATCHMO_SETTINGS = {
 }
 
 SKIP_SOUTH_TESTS = True
+EXAMPLE_IMAGE_PATH = os.path.join('static', 'images', 'products', 'examples')
+#EXAMPLE_IMAGE_PATH = os.path.join(DIRNAME, 'static', 'images', 'products', 'examples')
 
 # Load the local settings
 from local_settings import *

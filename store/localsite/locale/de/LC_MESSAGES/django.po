@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-17 21:24+0200\n"
+"POT-Creation-Date: 2012-11-30 06:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: templates/index.html:7
-msgid "Solar powered LED flower pots - Get the stars from the sky"
-msgstr ""
-"Solar betriebene LED Blumentöpfe - Holen Sie sich die Sterne vom Himmel"
-
-#: templates/index.html:8
+#: views.py:13 views.py:29
 msgid ""
-"solar powered flowerpots, LED flowerpots, potstar, handmade, LED, flowerpot, "
-"garden"
+"Get the stars from the sky. potstar - LED - light design for indoors and "
+"outdoors."
 msgstr ""
-"solar betriebene Blumentöpfe, LED Blumentöpfe, potstar, handgerfertigt, LED, "
-"Blumentopf, Garten"
+"Holen Sie sich die Sterne vom Himmel. potstar - LED - Licht Design für "
+"drinnen und draußen."
+
+#: views.py:17 views.py:28
+msgid ""
+"Solar powered flower pots, LED flower pots, garden lighting, balcony "
+"lighting, garden party, solar Flowerpot, LED, lighting design"
+msgstr ""
+"Solar betriebene Blumentöpfe, LED Blumentöpfe, Gartenbeleuchtung, "
+"Balkonbeleuchtung, Garten Party, Solar Blumentopf, LED, Licht Design"
+
+#: views.py:45
+msgid "Solar powered flower pots, LED flowerpots, prices, deals"
+msgstr "Solar betriebene Blumentöpfe, LED Blumentöpfe, Preise, Angebote"
+
+#: views.py:46
+msgid ""
+"LED - light design for indoors and outdoors - prices and special offers."
+msgstr "LED - Licht Design für drinnen und draußen - Preise und Angebote."
+
+#: templates/offers_and_prices.html:11
+msgid "Home"
+msgstr ""
+
+#: templates/offers_and_prices.html:26
+msgid "Our products are exclusively manufactured in hand for you."
+msgstr ""
+
+#: templates/offers_and_prices.html:27
+msgid "Prices on request under"
+msgstr ""
+
+#: templates/offers_and_prices.html:30
+msgid "Contact Us"
+msgstr ""
+
+#~ msgid "^offers-and-prices/$"
+#~ msgstr "^angebote-und-preise/$"

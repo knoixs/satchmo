@@ -8,8 +8,8 @@
     <meta charset="utf-8">
     <title>{% block title %}{{ shop_name }}{% if pagetitle %}: {{ pagetitle }}{% endif %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% trans "Pretty solar powered flower pots from Berlin"%}">
-    <meta name="keywords" content="{% trans "solar powered flower pots, stars, garden, solar, flower pots" %}">
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
     <meta name="author" content="Thomas Rega">
     <meta name="google-site-verification" content="GDIZDuyJAX_iYsed3KYmHRnRVsV4yagsWsYDH-W_HSQ" />
 
@@ -73,10 +73,9 @@
             </div>
         </div>
         {% endblock %}
-        <!-- sidebar left -->
         <div class="row-fluid">
-
             {% block left_sidebar %}
+            <!-- sidebar left -->
                 {% comment %}
                 <div class="span2">
                 {% include "left.html" %}
@@ -92,7 +91,6 @@
             {% endblock %}
             </div>
 
-
             {% block right_sidebar %}
                 {% comment %}
                 <div class="span2">
@@ -100,8 +98,8 @@
                 </div>
                 {% endcomment %}
             {% endblock %}
-
         </div>
+
     </div><!--/.fluid-container-->
 
     <div class="container-fluid w100">

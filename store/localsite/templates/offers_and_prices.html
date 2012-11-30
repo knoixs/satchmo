@@ -1,0 +1,59 @@
+{% extends "shop/base.html" %}
+{% load i18n satchmo_category satchmo_google satchmo_util satchmo_currency satchmo_discounts app_plugins normalize_decimal thumbnail %}
+{% block extra_css %}
+    <link href="{{ STATIC_URL }}css/colorbox.css" rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+   <li class="first"><a href="{{ shop_home_url }}">{% trans "Home" %}</a></li>
+   <li><a href="{{ localsite_offers_and_prices }}">{% trans "Prices" %}</a></li>
+{% endblock %}
+
+{% block content_head %}
+{% endblock %}
+
+{% block content %}
+<article class="clearfix">
+    {% for image_path_name in image_path_names %}
+    <a class="product-offer-thumb group1" href="/static/images/products/examples/{{ image_path_name }}"
+       title="{{ image_path_name }}">
+        <img class="product-offer-thumb" src="/static/images/products/examples/{{ image_path_name }}" />
+    </a>
+    {% endfor %}
+</article>
+<p class="txt_centered">
+    <span class="big">{% trans "Our products are exclusively manufactured in hand for you." %}</span>
+</p>
+<p class="txt_centered">
+    {% trans "Prices on request under" %}
+    {% url satchmo_contact as contact_url %}
+    {% if contact_url %}
+        <a href="{{ contact_url }}">{% trans "Contact Us" %}</a>
+    {% endif %}
+</p>
+<hr/>
+<p>
+    <table class="centered made_in_germany">
+        <tr>
+            <td class="yellow"></td>
+            <td class="plho"></td>
+            <td class="red"></td>
+            <td class="plho"></td>
+            <td class="black"></td>
+            <td class="plho"></td>
+            <td class="text">potstar is made in Germany</td>
+            <td class="plho"></td>
+            <td class="black"></td>
+            <td class="plho"></td>
+            <td class="red"></td>
+            <td class="plho"></td>
+            <td class="yellow"></td>
+        </tr>
+    </table>
+</p>
+{% endblock %}
+
+{% block extra_js %}
+    <script type="text/javascript" src="/static/js/lib/plugins/colorbox/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="/static/js/offers_and_products.js"></script>
+{% endblock %}

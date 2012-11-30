@@ -19,7 +19,7 @@ admin.autodiscover()
 urlpatterns = getattr(settings, 'URLS', [])
 
 adminpatterns = patterns('',
-     (r'^esad/', include(admin.site.urls)),
+     (r'^\+/', include(admin.site.urls)),
 )
 
 if urlpatterns:

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-25 14:30+0100\n"
+"POT-Creation-Date: 2012-11-30 06:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,22 +26,93 @@ msgstr "Deutsch"
 msgid "English"
 msgstr "Englisch"
 
-#: templates/base.html:11 templates/shop/base.html:11
-msgid "Pretty solar powered flower pots from Berlin"
-msgstr "Wir holen Ihnen die Sterne vom Himmel - LED Licht Design f&uuml; drinnen und draussen - Solar betriebene Blumentöpfe aus Berlin"
+#: urls.py:14
+msgid "^contact/$"
+msgstr "^kontakt/$"
 
-#: templates/base.html:12 templates/shop/base.html:12
-msgid "solar powered flower pots, stars, garden, solar, flower pots"
+#: urls.py:15
+msgid "^offers-and-prices/$"
+msgstr "^angebote-und-preise/$"
+
+#: localsite/views.py:13 localsite/views.py:29
+msgid ""
+"Get the stars from the sky. potstar - LED - light design for indoors and "
+"outdoors."
+msgstr ""
+"Wir holen Ihnen die Sterne vom Himmel - potstar - LED - Lichtdesign für "
+"drinnen und draußen"
+
+#: localsite/views.py:17 localsite/views.py:28
+msgid ""
+"Solar powered flower pots, LED flower pots, garden lighting, balcony "
+"lighting, garden party, solar Flowerpot, LED, lighting design"
+msgstr ""
+"Solar-angetriebene Blumentöpfe, LED-Blumentöpfe, Garten Beleuchtung, "
+"Beleuchtung Balkon, Gartenparty, solar-Blumentopf, LED, Licht-design"
+
+#: localsite/views.py:45
+msgid "Solar powered flower pots, LED flowerpots, prices, deals"
 msgstr "Solar betriebene Blumentöpfe, Sterne, Garten, Solar, Blumentöpfe, LED"
+
+#: localsite/views.py:46
+msgid ""
+"LED - light design for indoors and outdoors - prices and special offers."
+msgstr "LED - Licht-Design für drinnen und draußen - Preise und Sonderangebote"
+
+#: localsite/templates/offers_and_prices.html:11
+#: templates/product/best_ratings.html:8 templates/product/best_sellers.html:7
+#: templates/product/category.html:13 templates/product/category_index.html:7
+#: templates/product/minimum_order.html:5 templates/product/product.html:23
+#: templates/product/recently_added.html:7
+#: templates/product/admin/inventory_form.html:67
+#: templates/product/admin/product_export_form.html:51
+#: templates/product/admin/product_import_result.html:11
+#: templates/product/admin/variation_manager.html:6
+#: templates/product/admin/variation_manager_list.html:6
+#: templates/registration/account_info.html:5
+#: templates/registration/activate.html:6 templates/registration/login.html:5
+#: templates/registration/logout.html:5
+#: templates/registration/password_change_done.html:5
+#: templates/registration/password_change_form.html:5
+#: templates/registration/password_reset_complete.html:5
+#: templates/registration/password_reset_confirm.html:5
+#: templates/registration/password_reset_done.html:5
+#: templates/registration/password_reset_form.html:5
+#: templates/registration/registration_complete.html:6
+#: templates/registration/registration_form.html:5
+#: templates/registration/repeat_activation.html:5 templates/shop/404.html:5
+#: templates/shop/500.html:5 templates/shop/cart.html:11
+#: templates/shop/contact_thanks.html:5 templates/shop/download.html:5
+#: templates/shop/index.html:9 templates/shop/multiple_product_form.html:10
+#: templates/shop/order_history.html:8 templates/shop/order_tracking.html:6
+#: templates/shop/search.html:6
+msgid "Home"
+msgstr ""
+
+#: localsite/templates/offers_and_prices.html:26
+msgid "Our products are exclusively manufactured in hand for you."
+msgstr "Unsere Produkte werden exklusiv in Handarbeit für Sie hergestellt."
+
+#: localsite/templates/offers_and_prices.html:27
+msgid "Prices on request under"
+msgstr "Preise auf Anfrage unter"
+
+#: localsite/templates/offers_and_prices.html:30 templates/navigation.html:61
+#: templates/shop/contact_form.html:5 templates/shop/contact_thanks.html:6
+msgid "Contact Us"
+msgstr "Kontakt"
+
+#: templates/footer.html:30
+msgid "Impressum"
+msgstr ""
 
 #: templates/left.html:12
 msgid "Shop Categories"
 msgstr "Kategorien"
 
-#: templates/navigation.html:61 templates/shop/contact_form.html:5
-#: templates/shop/contact_thanks.html:6
-msgid "Contact Us"
-msgstr "Kontakt"
+#: templates/navigation.html:65
+msgid "Prices"
+msgstr "Preise"
 
 #: templates/admin/base_site.html:46 templates/admin/base_site.html.py:49
 #: templates/shop/admin/base_site.html:46
@@ -137,35 +208,6 @@ msgstr ""
 
 #: templates/admin/product/product/change_form.html:8
 msgid "Product Subtypes"
-msgstr ""
-
-#: templates/product/best_ratings.html:8 templates/product/best_sellers.html:7
-#: templates/product/category.html:13 templates/product/category_index.html:7
-#: templates/product/minimum_order.html:5 templates/product/product.html:23
-#: templates/product/recently_added.html:7
-#: templates/product/admin/inventory_form.html:67
-#: templates/product/admin/product_export_form.html:51
-#: templates/product/admin/product_import_result.html:11
-#: templates/product/admin/variation_manager.html:6
-#: templates/product/admin/variation_manager_list.html:6
-#: templates/registration/account_info.html:5
-#: templates/registration/activate.html:6 templates/registration/login.html:5
-#: templates/registration/logout.html:5
-#: templates/registration/password_change_done.html:5
-#: templates/registration/password_change_form.html:5
-#: templates/registration/password_reset_complete.html:5
-#: templates/registration/password_reset_confirm.html:5
-#: templates/registration/password_reset_done.html:5
-#: templates/registration/password_reset_form.html:5
-#: templates/registration/registration_complete.html:6
-#: templates/registration/registration_form.html:5
-#: templates/registration/repeat_activation.html:5 templates/shop/404.html:5
-#: templates/shop/500.html:5 templates/shop/cart.html:11
-#: templates/shop/contact_thanks.html:5 templates/shop/download.html:5
-#: templates/shop/index.html:9 templates/shop/multiple_product_form.html:10
-#: templates/shop/order_history.html:8 templates/shop/order_tracking.html:6
-#: templates/shop/search.html:6
-msgid "Home"
 msgstr ""
 
 #: templates/product/best_ratings.html:9
@@ -1118,11 +1160,11 @@ msgid ""
 "with the download, please refresh your browser and try the download again"
 msgstr ""
 
-#: templates/shop/index.html:37
+#: templates/shop/index.html:38
 msgid "potstar - we can get the stars from the sky for you "
 msgstr "potstar - wir holen Ihnen die Sterne vom Himmel"
 
-#: templates/shop/index.html:39
+#: templates/shop/index.html:40
 #, python-format
 msgid ""
 "\n"
@@ -1454,6 +1496,15 @@ msgstr ""
 #: templates/shop/pdf/packing-slip.rml:138
 msgid "Thank you for your business!"
 msgstr ""
+
+#~ msgid "Pretty solar powered flower pots from Berlin"
+#~ msgstr ""
+#~ "Wir holen Ihnen die Sterne vom Himmel - LED Licht Design f&uuml; drinnen "
+#~ "und draussen - Solar betriebene Blumentöpfe aus Berlin"
+
+#~ msgid "solar powered flower pots, stars, garden, solar, flower pots"
+#~ msgstr ""
+#~ "Solar betriebene Blumentöpfe, Sterne, Garten, Solar, Blumentöpfe, LED"
 
 #~ msgid "Admin"
 #~ msgstr "Admin Bereich"

@@ -102,14 +102,15 @@ section {
 }
 
 #container {
-width: 90%;
-margin: 10px auto;
-background-color: #fff;
-color: #333;
-border: 1px solid gray;
-line-height: 130%;
-padding: 0;
-margin-top: 0;
+    width: 90%;
+    margin: 10px auto;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid gray;
+    line-height: 130%;
+    padding: 0;
+    margin-top: 0;
+    position:relative;
 }
 
 #navbar {
@@ -180,6 +181,8 @@ border-bottom: 1px solid silver;
 
     font-size: 1.5em;
     line-height: 1.8em;
+
+    position: relative;
 }
 
 #content h1 {
@@ -503,18 +506,57 @@ div.upsell .upselldescription {
     box-shadow: .2em .2em .2em #000;
 }
 
-.content {
-    background-color: #fff;
-    padding: 1em 2em;
-    min-height: 100%;
-    -moz-box-shadow: inset 0 0 5px #888;
-    -webkit-box-shadow: inset 0 0 5px#888;
-    box-shadow: inner 0 0 5px #888;
-}
-
 .copyright {
 }
 
 .appendix {
     background-color: #000;
+}
+
+img.product-offer-thumb {
+    position:relative;
+    margin: 1em;
+    max-width: 30%;
+    float: left;
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+    border-radius: .3em;
+    box-shadow: .2em .2em .2em #000;
+
+    opacity: 0;
+    text-decoration: none;
+
+    position: relative;
+}
+
+.big {
+    font-size:2em;
+    line-height:2.5em;
+}
+
+.txt_centered {
+    text-align:center;
+}
+
+td.black {
+    background-color:black;
+    width: 1em;
+}
+
+td.red {
+    background-color:red;
+    width: 1em;
+}
+
+td.yellow {
+    background-color:yellow;
+    width: 1em;
+}
+
+td.plho {
+    width: 1em;
+}
+
+table.made_in_germany {
+    line-height: 1em;
 }

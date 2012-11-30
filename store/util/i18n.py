@@ -12,7 +12,7 @@ def set_language(request):
     if not next:
         next = '/'
 
-    response = HttpResponseRedirect(next)
+    response = HttpResponseRedirect('/')
     if request.method == 'GET':
         lang_code = request.GET.get('language', None)
         if lang_code and check_for_language(lang_code):

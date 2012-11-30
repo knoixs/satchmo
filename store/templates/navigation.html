@@ -59,6 +59,10 @@
                     {% if contact_url %}
                         <li><a href="{{ contact_url }}">{% trans "Contact Us" %}</a></li>
                     {% endif %}
+                    {% url localsite_offers_and_prices as offers_and_prices_url %}
+                    {% if offers_and_prices_url %}
+                        <li><a href="{{ offers_and_prices_url }}">{% trans "Prices" %}</a></li>
+                    {% endif %}
                 </ul>
                 <ul class="nav language_settings">
                     <li><a href="/set_language?language=de">

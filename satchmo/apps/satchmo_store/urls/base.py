@@ -14,9 +14,9 @@ import satchmo_store
 log = logging.getLogger('shop.urls')
 
 urlpatterns = patterns('',
-    #(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    #(r'^accounts/', include('satchmo_store.accounts.urls')),
-    #(r'^settings/', include('livesettings.urls')),
+    (r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    (r'^accounts/', include('satchmo_store.accounts.urls')),
+    (r'^settings/', include('livesettings.urls')),
     (r'^cache/', include('keyedcache.urls')),
 ) + prodpatterns + shippatterns
 
